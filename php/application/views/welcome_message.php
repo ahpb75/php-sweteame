@@ -210,7 +210,7 @@ section.codeigniter p {
 
 <section class='container'>
           <hgroup>
-            <h1>Welcome to your CodeIgniter application on OpenShift</h1>
+            <h1>TEST</h1>
           </hgroup>		
 
         <div class="row">
