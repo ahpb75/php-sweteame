@@ -21,15 +21,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-	public function test2()
+	public function forfun()
 	{
-		$this->load->view('test2');
+		$this->load->view('lmj');
 	}
-	public function test()
-	{
-		$this->load->view('test');
-	}
-
 }
 
 /* End of file welcome.php */
