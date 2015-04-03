@@ -157,8 +157,8 @@ h1:after {
   content: "";
   display: block;
   width: 100%;
-  height: 1px;
-  background-color: #ddd;
+  height: 5px;
+  background-color: #f3c;
 }
 h2 {
   font-size: 19px;
@@ -190,7 +190,7 @@ pre {
   padding: 13.333px 20px;
   margin: 0 0 20px;
   font-size: 13px;
-line-height: 1.4;
+  line-height: 1.4;
   background-color: #fff;
   border-left: 2px solid rgba(120,120,120,0.35);
   white-space: pre;
@@ -210,14 +210,14 @@ section.codeigniter p {
 
 <section class='container'>
           <hgroup>
-            <h1>$$$$$$$$$$$$$$$$</h1>
+            <h1><b>ALEX WAS HERE TESTING TOO</b></h1>
           </hgroup>		
 
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
               <h2>Deploying code changes</h2>
-                <p><b>ANDREW WAS HERE TESTING <b>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://www.openshift.com/developers/remote-access">public SSH key</a>. You can upload it within the web console or install the <a href="https://www.openshift.com/developers/rhc-client-tools-install">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
+                <p><b>ANDREW WAS HERE TESTING </b>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://www.openshift.com/developers/remote-access">public SSH key</a>. You can upload it within the web console or install the <a href="https://www.openshift.com/developers/rhc-client-tools-install">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
 
                 <h3>Working in your local Git repository</h3>
                 <p>If you created your application from the command line and uploaded your SSH key, rhc will automatically download a copy of that source code repository (Git calls this 'cloning') to your local system.</p>
