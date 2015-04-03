@@ -18,7 +18,7 @@
 				<br>
 				<input type="submit" name="submit" value="submit">
 			</form>
-			<p>Register <a href="registration.php">here</a></p>
+			<p>Register <a href="../registration.php">here</a></p>
 			</p>
 			</div>
 </div>
