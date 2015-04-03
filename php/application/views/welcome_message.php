@@ -180,7 +180,7 @@ html {
   height: 100%;
 }
 code {
-  background-color: white;
+  background-color: blue;
   border: 1px solid #ccc;
   padding: 1px 5px;
   color: #888;
