@@ -275,7 +275,7 @@ $ git push</pre>
 
 
         <footer>
-          <div class="logo"><a /*href="https://www.openshift.com/"*/ href = "https://php-sweteame.rhcloud.com/loginPHP></a></div>
+          <div class="logo"><a href=""https://php-sweteame.rhcloud.com/loginPHP"></a></div>
         </footer>
 </section>
 
