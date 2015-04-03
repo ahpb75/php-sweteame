@@ -18,14 +18,13 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index(){
+		$this->load->view('welcome_message');
+	}
 
+	public function login(){
 		$this->load->view('login');
 	}
-}
-class registration extends CI_Controller{
-
-	public function index(){
-
+	public function registration(){
 		$this->load->view('registration');
 	}
 }
