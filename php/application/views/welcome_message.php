@@ -148,7 +148,7 @@ h1, h2, h3 {
   margin: 1.5em 0 .3em;
 }
 h1 {
-  font-size: 25px;
+  font-size: 60px;
   font-weight: 300;
   border-bottom: 1px solid #fff;
   margin-bottom: .5em;
