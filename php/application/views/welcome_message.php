@@ -210,7 +210,7 @@ section.codeigniter p {
 
 <section class='container'>
           <hgroup>
-            <h1>$$$$$$$$$$$$$$$$</h1>
+            <h1>Now we should be serious</h1>
           </hgroup>		
 
         <div class="row">
