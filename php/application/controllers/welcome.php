@@ -21,6 +21,11 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('login');
 	}
+
+	public function registration(){
+
+		$this->load->view('registration');
+	}
 }
 
 /* End of file welcome.php */
