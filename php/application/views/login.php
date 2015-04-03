@@ -10,7 +10,7 @@
 	<div align = "center">
 		<div id ="login">
 			<p>Please login</p>
-			<form action = "/~aapcnc/cs3380/lab8/index.php" method='post'>
+			<form action = "" method='post'>
 				<label for="username">username:</label>
 				<input type="text" name="username" id="username">
 				<label for="password">password:</label>
