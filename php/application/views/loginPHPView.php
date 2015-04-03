@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=UTF-8>
-<div algin = "center">
+<div align = "center">
 <titel>Welcome to apply TA/PLA</title>
 </div>
 </head>
