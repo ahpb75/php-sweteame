@@ -45,6 +45,7 @@ body {
   font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.4;
+  background-image: url("http://www.asset1.net/tv/pictures/movie/toy-story-of-terror!-2013/DI-Toy-Story-Of-Terror-2.jpg");
 }
 
 html {
