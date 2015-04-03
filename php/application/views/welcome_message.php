@@ -208,6 +208,7 @@ section.codeigniter p {
 
 </head>
 <body>
+	background-image: url("http://www.asset1.net/tv/pictures/movie/toy-story-of-terror!-2013/DI-Toy-Story-Of-Terror-2.jpg");
 
 <section class='container'>
           <hgroup>
