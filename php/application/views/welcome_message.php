@@ -280,7 +280,7 @@ To sit on my throne as the Prince of Bel Air </u></p>
 
 $ git commit -a -m 'Some commit message'
 DO NOT PUSH YOUR MASTER BRANCH
-$ git push -u origin <branch name>
+$ git push -u origin "branch name"
 The above command should take whatever local branch you are in and push it to the remote repo and create a remote branch.
 $ git branch -a
 This will show all branches associated with the repo. Your local branches will be on top, remote branches will be on bottom.
