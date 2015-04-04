@@ -279,7 +279,10 @@ To sit on my throne as the Prince of Bel Air </u></p>
 # Commit your changes and push to OpenShift
 
 $ git commit -a -m 'Some commit message'
-$ git push</pre>
+$ git push
+DO NOT PUSH YOUR MASTER BRANCH
+$ git push -u origin <branch name>
+The above command should take whatever local branch you are in and push it to the remote repo and create a remote branch.</pre>
 
 
                   <ul>
