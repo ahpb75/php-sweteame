@@ -280,12 +280,13 @@ To sit on my throne as the Prince of Bel Air </u></p>
 
 $ git commit -a -m 'Some commit message'
 DO NOT PUSH YOUR MASTER BRANCH
+PLEASE MAKE SURE YOU ARE NOT IN YOUR LOCAL MASTER BEFORE PUSHING UNLESS YOU USE THE COMMAND BELOW
 $ git push -u origin "branch name"
-The above command should take whatever local branch you are in and push it to the remote repo and create a remote branch.
+The above command should take whatever local branch you are in and push it to a brand new remote branch that you just named.
 $ git branch -a
 This will show all branches associated with the repo. Your local branches will be on top, remote branches will be on bottom.
-$ git merge origin 
-should never be ran or even typed without the groups approval. All merges into the remote master will be done by logging into the application itself. It does have its own ssh shell.
+$ git merge origin
+should never be ran or even typed without the groups approval.
 $ git merge
 might be used, not sure on the symbolic link stuff. Might be ok for you to merge your local branches into your local master if we can set up that whole dev1/dev2/dev3 personal testing space he was talking about. Still not ok to push this.</pre>
 
