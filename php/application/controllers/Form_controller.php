@@ -50,16 +50,17 @@ class Form_controller extends CI_Controller {
                 'advisor' => @$this->input->post('advisor'),
                 'phone' => @$this->input->post('phone'),
                 'email' => @$this->input->post('email'),
-                'graduation_date' => @$this->input->post('graduation_date'),
+                'graduation_date' => @$this->input->post('gradDate'),
                 'current_course' => @$this->input->post('current_course'),
                 'previous_course' => @$this->input->post('previous_course'),
                 'want_teach' => @$this->input->post('want_teach'),
-                'opt_score' => @$this->input->post('opt_score'),
-                'lastopt_date' => @$this->input->post('lastopt_date'),
+                'opt_score' => @$this->input->post('optScore'),
+                'lastopt_date' => @$this->input->post('optWhen'),
                 'participated_in_gato' => @$this->input->post('participated_in_gato'),
                 'taken_speak_test' => @$this->input->post('taken_speak_test'),
                 'speak_assigned_date' => @$this->input->post('speak_assigned_date'),
-                'onita_requirement' => @$this->input->post('onita_requirement')
+                'onita_requirement' => @$this->input->post('onita_requirement'),
+                'ONITA_date' => @$this->input->post('ONITA_date')
             );
 
             // run insert model to write data to db

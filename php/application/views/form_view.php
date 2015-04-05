@@ -23,11 +23,11 @@
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
             <label for="app_type" class="radio">
-                <input id="app_type" name="app_type" type="radio" class="" value="TA" <?php echo $this->form_validation->set_radio('app_type', 'TA'); ?> />
+                <input id="app_type" name="app_type" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('app_type', 'TA'); ?> />
                 TA
             </label>
             <label for="app_type" class="radio">
-                <input id="app_type" name="app_type" type="radio" class="" value="PLA" <?php echo $this->form_validation->set_radio('app_type', 'PLA'); ?> />
+                <input id="app_type" name="app_type" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('app_type', 'PLA'); ?> />
                PLA
             </label>
             <?php echo form_error('app_type'); ?>
@@ -170,6 +170,11 @@
                 Will Attend in Aug/Jan
             </label>
             <?php echo form_error('onita_requirement'); ?>
+            <label for="ONITA_date" class="control-label">*ONITA Assigned Date</label>
+            <div class='controls'>
+                <input class="datepicker" type="text" name="ONITA_date"  value="<?php echo set_value('ONITA_date'); ?>"  />
+                <?php echo form_error('ONITA_date'); ?>
+            </div>
         </div>
     </div>
 
