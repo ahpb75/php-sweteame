@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to CodeIgniter on OpenShift</title>
-
+<meta charset=UTF-8>
+<div align = "center">
+<titel>Welcome to apply TA/PLA</title>
+</div>
 <style>
 
 /*!
@@ -45,7 +45,6 @@ body {
   font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  background-image: url("http://www.asset1.net/tv/pictures/movie/toy-story-of-terror!-2013/DI-Toy-Story-Of-Terror-2.jpg");
 }
 
 html {
@@ -205,141 +204,23 @@ section.codeigniter p {
 	margin-bottom: 1em;
 }
 </style>
-
 </head>
 <body>
-	background-image: url("http://www.asset1.net/tv/pictures/movie/toy-story-of-terror!-2013/DI-Toy-Story-Of-Terror-2.jpg");
-
-<section class='container'>
-          <hgroup>
-<<<<<<< HEAD
-            <h1>Now we should be serious</h1>
-=======
-            <h1><b>ALEX WAS HERE TESTING TOO</b></h1>
-	     <p><u>Now, this is a story all about how
-My life got flipped-turned upside down
-And I'd like to take a minute
-Just sit right there
-I'll tell you how I became the prince of a town called Bel Air
-
-In west Philadelphia born and raised
-On the playground was where I spent most of my days
-Chillin' out maxin' relaxin' all cool
-And all shootin some b-ball outside of the school
-When a couple of guys who were up to no good
-Started making trouble in my neighborhood
-I got in one little fight and my mom got scared
-She said 'You're movin' with your auntie and uncle in Bel Air'
-
-I begged and pleaded with her day after day
-But she packed my suit case and sent me on my way
-She gave me a kiss and then she gave me my ticket.
-I put my Walkman on and said, 'I might as well kick it'.
-
-First class, yo this is bad
-Drinking orange juice out of a champagne glass.
-Is this what the people of Bel-Air living like?
-Hmmmmm this might be alright.
-
-But wait I hear they're prissy, bourgeois, all that
-Is this the type of place that they just send this cool cat?
-I don't think so
-I'll see when I get there
-I hope they're prepared for the prince of Bel-Air
-
-Well, the plane landed and when I came out
-There was a dude who looked like a cop standing there with my name out
-I ain't trying to get arrested yet
-I just got here
-I sprang with the quickness like lightning, disappeared
-
-I whistled for a cab and when it came near
-The license plate said fresh and it had dice in the mirror
-If anything I could say that this cab was rare
-But I thought 'Nah, forget it' - 'Yo, homes to Bel Air'
-
-I pulled up to the house about 7 or 8
-And I yelled to the cabbie 'Yo homes smell ya later'
-I looked at my kingdom
-I was finally there
-To sit on my throne as the Prince of Bel Air </u></p>
->>>>>>> 5a79f86397b13676559c8b5ea004fd04b9dd6ae0
-          </hgroup>		
-
-        <div class="row">
-          <section class='col-xs-12 col-sm-6 col-md-6'>
-            <section>
-              <h2>Deploying code changes</h2>
-                <p><b>ANDREW PESTO WAS HERE TESTING </b>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://www.openshift.com/developers/remote-access">public SSH key</a>. You can upload it within the web console or install the <a href="https://www.openshift.com/developers/rhc-client-tools-install">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
-
-                <h3>Working in your local Git repository</h3>
-                <p>If you created your application from the command line and uploaded your SSH key, rhc will automatically download a copy of that source code repository (Git calls this 'cloning') to your local system.</p>
-
-                <p>If you created the application from the web console, you'll need to manually clone the repository to your local system. Copy the application's source code Git URL and then run:</p>
-
-<pre>$ git clone &lt;git_url&gt; &lt;directory_to_create&gt;
-
-# Within your project directory
-# Commit your changes and push to OpenShift
-
-$ git commit -a -m 'Some commit message'
-DO NOT PUSH YOUR MASTER BRANCH
-PLEASE MAKE SURE YOU ARE NOT IN YOUR LOCAL MASTER BEFORE PUSHING UNLESS YOU USE THE COMMAND BELOW
-$ git push -u origin "branch name"
-The above command should take whatever local branch you are in and push it to a brand new remote branch that you just named.
-$ git branch -a
-This will show all branches associated with the repo. Your local branches will be on top, remote branches will be on bottom.
-$ git merge origin
-should never be ran or even typed without the groups approval.
-$ git merge
-might be used, not sure on the symbolic link stuff. Might be ok for you to merge your local branches into your local master if we can set up that whole dev1/dev2/dev3 personal testing space he was talking about. Still not ok to push this.</pre>
-
-
-                  <ul>
-                    <li><a href="https://developers.openshift.com/en/php-getting-started.html">Learn more about running PHP applications on OpenShift</a></li>
-                    <li><a href="https://developers.openshift.com/en/getting-started-overview.html">Read more about Getting Started on OpenShift</a></li>
-                  </ul>
-            </section>
-
-          </section>
-          <section class="col-xs-12 col-sm-6 col-md-6">
-	
-			  <section class="codeigniter">
-				<h2>About CodeIgniter</h2>
-				<p>The page you are looking at is being generated dynamically by CodeIgniter. If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="http://www.codeigniter.com/user_guide/">User Guide</a>.</p>
-				<p>If you would like to edit this page you'll find it located at: <br><code>php/application/views/welcome_message.php</code></p>
-				<p>The corresponding controller for this page is found at: <br><code>php/application/controllers/welcome.php</code></p>
-			  </section>
-			
-                <h2>Managing your application</h2>
-
-                <h3>Web Console</h3>
-                <p>You can use the OpenShift web console to enable additional capabilities via cartridges, add collaborator access authorizations, designate custom domain aliases, and manage domain memberships.</p>
-
-                <h3>Command Line Tools</h3>
-                <p>Installing the <a href="https://developers.openshift.com/en/getting-started-client-tools.html">OpenShift RHC client tools</a> allows you complete control of your cloud environment. Read more on how to manage your application from the command line in our <a href="https://www.openshift.com/user-guide">User Guide</a>.
-                </p>
-
-                <h2>Development Resources</h2>
-                  <ul>
-                    <li><a href="https://developers.openshift.com/">Developer Portal</a></li>
-                    <li><a href="https://www.openshift.com/user-guide">User Guide</a></li>
-                    <li><a href="https://help.openshift.com/">Help Center</a></li>
-                    <li><a href="http://stackoverflow.com/questions/tagged/openshift">Stack Overflow questions for OpenShift</a></li>
-                    <li><a href="http://webchat.freenode.net/?randomnick=1&channels=openshift&uio=d4">IRC channel at #openshift on freenode.net</a></li>
-                    <li><a href="http://git-scm.com/documentation">Git documentation</a></li>
-                  </ul>
-
-          </section>
-        </div>
-
-
-        <footer>
-
-          <div class="logo"><a href="https://php-sweteame.rhcloud.com/application/views/loginPHPView.php"></a></div>
-
-        </footer>
-</section>
-
+	<div align = "center">
+		<div id ="login">
+			<h1>Please login</h1>
+			<form action = "" method='post'>
+				<label for="username">username:</label>
+				<input type="text" name="username" id="username">
+				<label for="password">password:</label>
+				<input type="password" name="password" id="password">
+				<br>
+				<input type="submit" name="submit" value="submit">
+			</form>
+			<p>Register <a href="registration">here</a></p>
+			</p>
+			</div>
+</div>
+</form>
 </body>
 </html>
