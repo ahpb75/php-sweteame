@@ -13,10 +13,11 @@
 <h1>Computer Science Department<br/></h1>
 <h2>Graduate Teaching Assistant Application<br/></h2>
 
-<fieldset><legend>form_view</legend>
+<fieldset><legend>Apply Here</legend>
     <?php
     $attributes = array('class' => 'form-horizontal', 'id' => '');
     echo form_open('Form_controller', $attributes); ?>
+
     <div class="control-group">
         <label for="app_type" class="control-label">TA or PLA <span class="required">*</span></label>
         <div class="controls">
@@ -62,7 +63,7 @@
     </div>
 
     <div class="control-group">
-        <label for="advisor" class="control-label">Advisor's Name</label>
+        <label for="advisor" class="control-label">Advisors Name</label>
         <div class='controls'>
             <input id="advisor" type="text" name="advisor" maxlength="30" value="<?php echo set_value('advisor'); ?>"  />
             <?php echo form_error('advisor'); ?>
