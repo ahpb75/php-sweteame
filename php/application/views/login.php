@@ -3,7 +3,7 @@
 <head>
 <meta charset=UTF-8>
 <div align = "center">
-<titel>Welcome to apply TA/PLA</title>
+<title>Welcome to apply TA/PLA</title>
 </div>
 <style>
 
