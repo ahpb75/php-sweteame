@@ -50,9 +50,9 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
 $db['default']['port']     = getenv('OPENSHIFT_MYSQL_DB_PORT');
-$db['default']['username'] = getenv('adminac8xcUK');
-$db['default']['password'] = getenv('KnExIJcHpSb3');
-$db['default']['database'] = getenv('webapp');
+$db['default']['username'] = 'adminac8xcUK';
+$db['default']['password'] = 'KnExIJcHpSb3';
+$db['default']['database'] = 'webapp';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
