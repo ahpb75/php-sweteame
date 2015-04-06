@@ -19,26 +19,26 @@
     echo form_open('Form_controller', $attributes); ?>
 
     <div class="control-group">
-        <label for="app_type" class="control-label">TA or PLA <span class="required">*</span></label>
+        <label for="position" class="control-label">TA or PLA <span class="required">*</span></label>
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
-            <label for="app_type" class="radio">
-                <input id="app_type" name="app_type" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('app_type', 'TA'); ?> />
+            <label for="position" class="radio">
+                <input id="position" name="position" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('position', '1'); ?> />
                 TA
             </label>
-            <label for="app_type" class="radio">
-                <input id="app_type" name="app_type" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('app_type', 'PLA'); ?> />
+            <label for="position" class="radio">
+                <input id="position" name="position" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('position', '0'); ?> />
                PLA
             </label>
-            <?php echo form_error('app_type'); ?>
+            <?php echo form_error('position'); ?>
         </div>
     </div>
 
     <div class="control-group">
-        <label for="gpa" class="control-label">GPA <span class="required">*</span></label>
+        <label for="GPA" class="control-label">GPA <span class="required">*</span></label>
         <div class='controls'>
-            <input id="gpa" type="text" name="gpa"  value="<?php echo set_value('gpa'); ?>"  />
-            <?php echo form_error('gpa'); ?>
+            <input id="GPA" type="text" name="GPA"  value="<?php echo set_value('GPA'); ?>"  />
+            <?php echo form_error('GPA'); ?>
         </div>
     </div><div class="control-group">
         <label for="program_level" class="control-label">If undergraduate, indicate program and level (ex. CS BA jr.)</label>
@@ -51,11 +51,11 @@
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
             <label for="graduate_program" class="radio">
-                <input id="graduate_program" name="graduate_program" type="radio" class="" value="MS" <?php echo $this->form_validation->set_radio('graduate_program', 'option1'); ?> />
+                <input id="graduate_program" name="graduate_program" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('graduate_program', '1'); ?> />
                 MS
             </label>
             <label for="graduate_program" class="radio">
-                <input id="graduate_program" name="graduate_program" type="radio" class="" value="PhD" <?php echo $this->form_validation->set_radio('graduate_program', 'option2'); ?> />
+                <input id="graduate_program" name="graduate_program" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('graduate_program', '0'); ?> />
                 PhD
             </label>
             <?php echo form_error('graduate_program'); ?>
@@ -81,95 +81,75 @@
             <?php echo form_error('email'); ?>
         </div>
     </div><div class="control-group">
-        <label for="graduation_date" class="control-label">Graduation Date <span class="required">*</span></label>
+        <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD) <span class="required">*</span></label>
         <div class='controls'>
-            <input class="datepicker" type="text" name="graduation_date"  value="<?php echo set_value('graduation_date'); ?>"  />
-            <?php echo form_error('graduation_date'); ?>
-        </div>
-    </div><div class="control-group">
-        <label for="current_course" class="control-label">Course(s) currently teaching</label>
-        <div class='controls'>
-            <?php echo form_textarea( array( 'name' => 'current_course', 'rows' => '5', 'cols' => '80', 'value' => set_value('current_course') ) )?>
-            <?php echo form_error('current_course'); ?>
+            <input class="datepicker" type="text" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
+            <?php echo form_error('gradDate'); ?>
         </div>
     </div>
     <div class="control-group">
-        <label for="previous_course" class="control-label">Course(s) previously taught</label>
+        <label for="optScore" class="control-label">SPEAK/OPT Score</label>
         <div class='controls'>
-            <?php echo form_textarea( array( 'name' => 'previous_course', 'rows' => '5', 'cols' => '80', 'value' => set_value('previous_course') ) )?>
-            <?php echo form_error('previous_course'); ?>
-        </div>
-    </div>
-    <div class="control-group">
-        <label for="want_teach" class="control-label">Course(s) you would like to teach (must have taken previously, include grades received) <span class="required">*</span></label>
-        <div class='controls'>
-            <?php echo form_textarea( array( 'name' => 'want_teach', 'rows' => '5', 'cols' => '80', 'value' => set_value('want_teach') ) )?>
-            <?php echo form_error('want_teach'); ?>
-        </div>
-    </div>
-    <div class="control-group">
-        <label for="opt_score" class="control-label">SPEAK/OPT Score</label>
-        <div class='controls'>
-            <input id="opt_score" type="text" name="opt_score" maxlength="2" value="<?php echo set_value('opt_score'); ?>"  />
-            <?php echo form_error('opt_score'); ?>
+            <input id="optScore" type="text" name="optScore" maxlength="2" value="<?php echo set_value('optScore'); ?>"  />
+            <?php echo form_error('optScore'); ?>
         </div>
     </div><div class="control-group">
-        <label for="lastopt_date" class="control-label">Date of last OPT test</label>
+        <label for="optWhen" class="control-label">Date of last OPT test (YYYY-MM-DD)</label>
         <div class='controls'>
-            <input class="datepicker" type="text" name="lastopt_date"  value="<?php echo set_value('lastopt_date'); ?>"  />
-            <?php echo form_error('lastopt_date'); ?>
+            <input class="datepicker" type="text" name="optWhen"  value="<?php echo set_value('optWhen'); ?>"  />
+            <?php echo form_error('optWhen'); ?>
         </div>
     </div><div class="control-group">
-        <label for="participated_in_gato" class="control-label">Participated in GATO <span class="required">*</span></label>
+        <label for="GATO" class="control-label">Participated in GATO <span class="required">*</span></label>
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
-            <label for="participated_in_gato" class="radio">
-                <input id="participated_in_gato" name="participated_in_gato" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('participated_in_gato', 'option1'); ?> />
+            <label for="GATO" class="radio">
+                <input id="GATO" name="GATO" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('GATO', '1'); ?> />
                 Requirement Met
             </label>
-            <label for="participated_in_gato" class="radio">
-                <input id="participated_in_gato" name="participated_in_gato" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('participated_in_gato', 'option2'); ?> />
+            <label for="GATO" class="radio">
+                <input id="GATO" name="GATO" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('GATO', '0'); ?> />
                 Will Attend in Aug/Jan
             </label>
-            <?php echo form_error('participated_in_gato'); ?>
+            <?php echo form_error('GATO'); ?>
         </div>
     </div>
 
     <div class="control-group">
-        <label for="taken_speak_test" class="control-label">Taken SPEAK Test <span class="required">*</span></label>
+        <label for="SPEAK" class="control-label">Taken SPEAK Test <span class="required">*</span></label>
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
-            <label for="taken_speak_test" class="radio">
-                <input id="taken_speak_test" name="taken_speak_test" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('taken_speak_test', 'option1'); ?> />
+            <label for="SPEAK" class="radio">
+                <input id="SPEAK" name="SPEAK" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('SPEAK', '1'); ?> />
                 Requirement Met
             </label>
-            <label for="taken_speak_test" class="radio">
-                <input id="taken_speak_test" name="taken_speak_test" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('taken_speak_test', 'option2'); ?> />
+            <label for="SPEAK" class="radio">
+                <input id="SPEAK" name="SPEAK" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('SPEAK', '0'); ?> />
                 Not Met (Enter Date Below)
             </label>
-            <?php echo form_error('taken_speak_test'); ?>
+            <?php echo form_error('SPEAK'); ?>
         </div>
     </div>
 
     <div class="control-group">
-        <label for="speak_assigned_date" class="control-label">*SPEAK Assigned Date</label>
+        <label for="SPEAKdate" class="control-label">*SPEAK Assigned Date (YYYY-MM-DD)</label>
         <div class='controls'>
-            <input class="datepicker" type="text" name="speak_assigned_date"  value="<?php echo set_value('speak_assigned_date'); ?>"  />
-            <?php echo form_error('speak_assigned_date'); ?>
+            <input class="datepicker" type="text" name="SPEAKdate"  value="<?php echo set_value('SPEAKdate'); ?>"  />
+            <?php echo form_error('SPEAKdate'); ?>
         </div>
     </div><div class="control-group">
-        <label for="onita_requirement" class="control-label">ONITA requirement (international students)</label>
+        <label for="ONITA" class="control-label">ONITA requirement (international students)</label>
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
-            <label for="onita_requirement" class="radio">
-                <input id="onita_requirement" name="onita_requirement" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('onita_requirement', 'option1'); ?> />
+            <label for="ONITA" class="radio">
+                <input id="ONITA" name="ONITA" type="radio" class="" value="1" <?php echo $this->form_validation->set_radio('ONITA', '1'); ?> />
                 Requirement Met
             </label>
-            <label for="onita_requirement" class="radio">
-                <input id="onita_requirement" name="onita_requirement" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('onita_requirement', 'option2'); ?> />
+            <label for="ONITA" class="radio">
+                <input id="ONITA" name="ONITA" type="radio" class="" value="0" <?php echo $this->form_validation->set_radio('ONITA', '0'); ?> />
                 Will Attend in Aug/Jan
             </label>
-            <?php echo form_error('onita_requirement'); ?>
+            <?php echo form_error('ONITA'); ?>
             <label for="ONITA_date" class="control-label">*ONITA Assigned Date</label>
             <div class='controls'>
                 <input class="datepicker" type="text" name="ONITA_date"  value="<?php echo set_value('ONITA_date'); ?>"  />
