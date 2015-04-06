@@ -12,6 +12,7 @@ class Form_controller extends CI_Controller {
     }
     function index()
     {
+        $this->load->view('form_view');
         $this->form_validation->set_rules('position', 'TA or PLA', 'required|max_length[5]');
         $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean');
         $this->form_validation->set_rules('program_level', 'If undergraduate, indicate program and level (ex. CS BA jr.)', 'xss_clean|max_length[15]');
