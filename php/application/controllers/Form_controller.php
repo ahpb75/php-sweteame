@@ -1,7 +1,7 @@
 <?php
 class Form_controller extends CI_Controller {
     private $custom_errors = array();
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
@@ -10,9 +10,8 @@ class Form_controller extends CI_Controller {
         $this->load->helper('url');
         $this->load->model('Form_model');
     }
-    function index()
+    public function index()
     {
-        $this->load->view('form_view');
         $this->form_validation->set_rules('position', 'TA or PLA', 'required|max_length[5]');
         $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean');
         $this->form_validation->set_rules('program_level', 'If undergraduate, indicate program and level (ex. CS BA jr.)', 'xss_clean|max_length[15]');
@@ -74,7 +73,7 @@ class Form_controller extends CI_Controller {
 	}
 
 
-    function success()
+    public function success()
     {
         $this->load->view("success");
     }
