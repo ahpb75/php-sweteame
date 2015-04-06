@@ -8,7 +8,7 @@ class Form_controller extends CI_Controller {
         //$this->load->database();
         $this->load->helper('form');
         $this->load->helper('url');
-        $this->load->model('Form_model');
+        //$this->load->model('Form_model');
     }
     public function index()
     {
@@ -60,15 +60,15 @@ class Form_controller extends CI_Controller {
 
             // run insert model to write data to db
 
-            if ($this->Form_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
-            {
-                redirect('Form_controller/success');   // or whatever logic needs to occur
-            }
-            else
-            {
-                echo 'An error occurred saving your information. Please try again later';
+           // if ($this->Form_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
+            //{
+               // redirect('Form_controller/success');   // or whatever logic needs to occur
+            //}
+            //else
+            //{
+               // echo 'An error occurred saving your information. Please try again later';
                 // Or whatever error handling is necessary
-            }
+            //}
         }
 	}
 
