@@ -69,7 +69,7 @@ class Form_controller extends CI_Controller {
         //        echo 'An error occurred saving your information. Please try again later';
         //         // Or whatever error handling is necessary
         //     }
-        // }
+        }
 	}
 
 
