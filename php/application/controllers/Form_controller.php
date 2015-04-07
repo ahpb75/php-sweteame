@@ -5,10 +5,10 @@ class Form_controller extends CI_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation');
-        //$this->load->database();
+        $this->load->database();
         $this->load->helper('form');
         $this->load->helper('url');
-        //$this->load->model('Form_model');
+        $this->load->model('Form_model');
     }
     public function index()
     {
