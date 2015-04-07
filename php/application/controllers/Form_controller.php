@@ -60,7 +60,7 @@ class Form_controller extends CI_Controller {
 
             // run insert model to write data to db
 
-           if ($this->Form_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
+           if ($this->form->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
             {
                redirect('Form_controller/success');   // or whatever logic needs to occur
             }
