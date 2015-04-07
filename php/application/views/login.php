@@ -5,7 +5,7 @@
 <div align = "center">
 <title>Welcome to apply TA/PLA</title>
 </div>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../CSS/style.css" />
 </head>
 <body>
 	<div align = "center">
