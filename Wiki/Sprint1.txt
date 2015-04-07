@@ -104,8 +104,8 @@ Task: Cleaned up the repo.
 
 Adam Hitchens:
         Link to specific GIT repository hash:
-
-
+05dd54afb2304d2efe9dc10633fa9e0d52e424b8
+Task: Developed the wiki and handled sprint documentation.
 
 
 Chantal Lewis:
