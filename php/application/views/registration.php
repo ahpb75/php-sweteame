@@ -222,5 +222,8 @@ section.codeigniter p {
 			</div>
 </div>
 </form>
+<?php
+	$this->load->database();
+?>
 </body>
 </html>
