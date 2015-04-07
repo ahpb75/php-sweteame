@@ -8,7 +8,7 @@ class Form_controller extends CI_Controller {
         $this->load->database();
         $this->load->helper('form');
         $this->load->helper('url');
-        $this->load->model('Form_model');
+        $this->load->model('form');
     }
     public function index()
     {
