@@ -22,7 +22,8 @@
 			<p>Register <a href="registration">here</a></p>
 			</p>
 			<?php echo base_url();
-				echo "stupid" ;?>
+				echo "stupid" ;
+			?>
 			</div>
 </div>
 </form>
