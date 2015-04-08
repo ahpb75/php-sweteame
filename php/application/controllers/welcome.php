@@ -27,7 +27,7 @@ class Welcome extends CI_Controller {
 	public function registration(){
 		$this->load->view('registration');
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]xss_clean|is_unique[user.username]');
+		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]xss_clean');
 		$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
 		if($this->form_validation->run() == FALSE) {
