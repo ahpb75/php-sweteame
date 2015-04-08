@@ -11,18 +11,22 @@
 	<div align = "center">
 		<div id ="login">
 			<h1>Please Register</h1>
-			<form action = "" method='post'>
-				<label for="username">username:</label>
-				<input type="text" name="username" id="username">
+				<?php
+				echo form_open("welcome/registration");
+				?>
+				<label for="username">Username:</label>
+				<input type="text" name="username" id="username" value="<?php echo set_value('username')?>;">
 				<br>
-				<label for="password">password:</label>
-				<input type="password" name="password" id="password">
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" value="<?php echo set_value('password')?>;">
 				<br>
 				<label for="password">Confirm Password:</label>
-				<input type="password" name="cpassword" id="password">
+				<input type="password" name="cpassword" id="password" value="<?php echo set_value('cpassword')?>;">
 				<br>
 				<input type="submit" name="submit" value="submit">
-			</form>
+				<?php
+				echo form_close();
+				?>
 			<p>Back <a href=<?php echo site_url("welcome/index");?> >here</a></p>
 			</p>
 			</div>
