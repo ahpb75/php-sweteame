@@ -15,6 +15,7 @@ class Form_model extends CI_Model {
         $data=array(
             'username'=>$this->input->post('username'),
             // 'password'=>md5($this->input->post('password')));
+            'userID'=>$this->input->('3'));
             $this->db->insert('User',$data);
     }
 }
