@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
         $this->load->view('form_view');
     }
     public function thanks(){
-    	$this->load->view('thanks')
+    	$this->load->view('thanks');
     }
 
 }
