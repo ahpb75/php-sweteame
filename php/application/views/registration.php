@@ -12,6 +12,7 @@
 		<div id ="login">
 			<h1>Please Register</h1>
 				<?php
+				echo validation_errors('<p class = "error">');
 				echo form_open("welcome/registration");
 				?>
 				<label for="username">Username:</label>
