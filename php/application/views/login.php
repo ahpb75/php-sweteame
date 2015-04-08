@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
 </head>
 <body>
+	<?php echo $this->session->all_userdata(); ?>
 	<div align = "center">
 		<div id ="login">
 			<h1>Please login</h1>
