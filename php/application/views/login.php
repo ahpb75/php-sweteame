@@ -5,8 +5,8 @@
 <div align = "center">
 <title>Welcome to apply TA/PLA</title>
 </div>
-<link rel="stylesheet" type="text/css" href="../CSS/style.css" />
-</head>
+<!-- <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+ --></head>
 <body>
 	<div align = "center">
 		<div id ="login">
@@ -21,6 +21,7 @@
 			</form>
 			<p>Register <a href="registration">here</a></p>
 			</p>
+			<?php echo base_url()?>
 			</div>
 </div>
 </form>
