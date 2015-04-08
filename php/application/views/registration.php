@@ -18,7 +18,7 @@
 				<br>
 				<input type="submit" name="submit" value="submit">
 			</form>
-			<p>Back <a href=<?php echo site_url("welcome/login");?> >here</a></p>
+			<p>Back <a href=<?php echo site_url("welcome/index");?> >here</a></p>
 			</p>
 			</div>
 </div>
