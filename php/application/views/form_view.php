@@ -7,7 +7,7 @@
 
 <head>
     <title>TA/PLA Application Form</title>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
 </head>
 
 <body>

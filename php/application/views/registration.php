@@ -4,7 +4,7 @@
 <meta charset=UTF-8>
 <div align = "center">
 <title>Welcome to apply TA/PLA</title>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
 </div>
 </head>
 <body>

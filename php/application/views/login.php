@@ -5,8 +5,7 @@
 <div align = "center">
 <title>Welcome to apply TA/PLA</title>
 </div>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
 </head>
 <body>
 	<div align = "center">
