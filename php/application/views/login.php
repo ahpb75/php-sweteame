@@ -21,7 +21,7 @@
 			</form>
 			<p>Register <a href="registration">here</a></p>
 			</p>
-			<?php echo base_url()?>
+			<?php echo base_url();?>
 			</div>
 </div>
 </form>
