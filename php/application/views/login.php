@@ -21,6 +21,9 @@
 			</form>
 			<p>Register <a href=<?php echo site_url("welcome/registration");?>>here</a></p>
 			</p>
+			<?php
+				echo current_url();
+			?>
 			</div>
 </div>
 </form>
