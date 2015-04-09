@@ -81,14 +81,17 @@ class Welcome extends CI_Controller {
 			}
 		// }
 	}
-	// public function test()
-	// {
-	// 	$this->load->view('test');
-	// }
-    public function apply(){
+	public function test()
+	{
+		$data = $this->session->all_userdata();
+		$this->load->view('test',$data);
+	}
+    public function apply()
+    {
         $this->load->view('form_view');
     }
-    public function thanks(){
+    public function thanks()
+    {
     	$this->load->view('thanks');
     }
 
