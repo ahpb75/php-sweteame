@@ -108,6 +108,7 @@ class Welcome extends CI_Controller {
     {
         $this->load->view('header');
         $this->load->view('form_view');
+        $this->load->view('logout');
     }
     public function error()
     {

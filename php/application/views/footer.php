@@ -8,9 +8,9 @@
 </head>
 <body>
 	<div align = "center">
-		<?php
-		echo "<h1> Welcome ".$this->session->userdata('user_name');
-		?>
+		<?php echo form_open("welcome/logout"); ?>
+	<input type="submit" name="logout" value="logout" />
+		<?php echo form_close():?>
 	</div>
 </body>
 </html>
