@@ -137,7 +137,9 @@
             <input class="datepicker" type="text" name="SPEAKdate"  value="<?php echo set_value('SPEAKdate'); ?>"  />
             <?php echo form_error('SPEAKdate'); ?>
         </div>
-    </div><div class="control-group">
+    </div>
+
+    <div class="control-group">
         <label for="ONITA" class="control-label">ONITA requirement (international students)</label>
         <div class="controls">
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
@@ -150,17 +152,23 @@
                 Will Attend in Aug/Jan
             </label>
             <?php echo form_error('ONITA'); ?>
-            <label for="ONITA_date" class="control-label">*ONITA Assigned Date</label>
+        </div>
+    </div>
+        <div class="control-group">
+            <label for="ONITA_date" class="control-label">ONITA Assigned Date</label>
             <div class='controls'>
                 <input class="datepicker" type="text" name="ONITA_date"  value="<?php echo set_value('ONITA_date'); ?>"  />
                 <?php echo form_error('ONITA_date'); ?>
             </div>
         </div>
-    </div>
+
+
 
 
     <div class="control-group">
         <label></label>
+        <br/>
+        <hr/>
         <div class='controls'>
             <?php echo form_submit( 'submit', 'Submit'); ?>
         </div>
