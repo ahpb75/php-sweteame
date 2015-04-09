@@ -1,3 +1,3 @@
 <?php
-	echo $this->input->post('username');
+	echo $this->session->all_userdata();
 ?>
