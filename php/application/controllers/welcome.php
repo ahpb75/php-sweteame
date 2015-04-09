@@ -20,8 +20,8 @@ class Welcome extends CI_Controller {
 	public function __construct() 
 	{
 		parent::__construct();
-		$this->load->database();
-		$this->load->model('login_model');
+		// $this->load->database();
+		// $this->load->model('login_model');
 		$this->load->model('registration_model');
 	}
 	public function index()
