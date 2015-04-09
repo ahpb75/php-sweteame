@@ -84,6 +84,7 @@ class Welcome extends CI_Controller {
 	public function test()
 	{
 		$this->load->view('test');
+		$this->session->sess_destroy();
 	}
     public function apply()
     {
