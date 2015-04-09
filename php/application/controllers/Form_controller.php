@@ -1,3 +1,5 @@
+
+
 <?php
 class Form_controller extends CI_Controller {
     private $custom_errors = array();
@@ -8,7 +10,7 @@ class Form_controller extends CI_Controller {
         $this->load->database();
         $this->load->helper('form');
         $this->load->helper('url');
-        $this->load->model('Form_model');
+        $this->load->model('form_model');
     }
     public function index()
     {
@@ -58,17 +60,17 @@ class Form_controller extends CI_Controller {
                 'ONITA_date' => @$this->input->post('ONITA_date')
             );
 
-            // run insert model to write data to db
+         //run insert model to write data to db
 
-           // if ($this->Form_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
-            //{
-               // redirect('Form_controller/success');   // or whatever logic needs to occur
-            //}
-            //else
-            //{
-               // echo 'An error occurred saving your information. Please try again later';
+           if ($this->form_model->SaveForm($form_data) == TRUE) // the information has therefore been successfully saved in the db
+            {
+               redirect('Form_controller/success');   // or whatever logic needs to occur
+            }
+            else
+            {
+               echo 'An error occurred saving your information. Please try again later';
                 // Or whatever error handling is necessary
-            //}
+            }
         }
 	}
 
