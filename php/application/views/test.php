@@ -6,10 +6,9 @@
 	<h1>#<?php echo $this->session->userdata('user_name');?></h1>
 	<?php
 	$query = $this->session->all_userdata();
-	 foreach($query as $row)
+	 foreach($query as $key => $row)
             {
-                echo $row;
-                echo "^^^^^^^^^^^";
+                echo $key."=>".$row;
                 echo "<br>";
             }
 	?>
