@@ -20,8 +20,19 @@ class Welcome extends CI_Controller {
 	// public function index(){
 	// 	$this->load->view('welcome_message');
 	// }
-	public function index(){
+	public function index()
+	{
+		if($this->session->userdata('user_name') == "")
 		$this->load->view('login');
+		else
+		{
+			if ($this->session->userdata('user_type') == 2)//applicant
+				$this->load->view('form_view');
+			else if($this->session->userdata('user_type') == 1)//staff
+				$this->load->view('staff_view');
+			else
+				$this->load->view('admin_view');
+		}
 	}
 	public function registration()
 	{
@@ -52,18 +63,18 @@ class Welcome extends CI_Controller {
 
 			if($this->form_validation->run() == FALSE)
 			{
-				$this->load->view('login');
+				$this->error();
 			}
 			else
 			{
 				$result = $this->user_model->login();
 				if($result)
 				{
-					$this->load->view('form_view');
+					$this->index();
 				}
 				else
 				{
-					$this->load->view('thanks');
+					$this->error();
 				}
 			}
 		// }

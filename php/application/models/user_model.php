@@ -29,7 +29,8 @@ class User_model extends CI_Model {
                 // add all data to session
                 $newdata = array(
                     'user_name' => $row->username,
-                    'logged_in' => TRUE
+                    'logged_in' => TRUE,
+                    'user_type' => $row->permission
                     );
             }
 
