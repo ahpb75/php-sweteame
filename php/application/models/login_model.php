@@ -11,7 +11,7 @@ class Login_model extends CI_Model {
     // }
     function login()
     {
-        $query = $this->db->get_where('User',array('username' => $this->input->post('username'),'password' => $this->input->post('password')));
+        $query = $this->db->get_where('User',array('username' => $this->input->post('username'),'password' => md5($this->input->post('password'))));
 
         if($query->num_rows()>0)
         {
