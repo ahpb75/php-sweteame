@@ -53,6 +53,7 @@ class Welcome extends CI_Controller {
 			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
 			$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
 			$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
+			$this->form_validation->set_rules('permissions','User Type','required');
 			if($this->form_validation->run() == FALSE) 
 			{
 				$this->error();
@@ -103,6 +104,10 @@ class Welcome extends CI_Controller {
     public function apply()
     {
         $this->load->view('form_view');
+    }
+    public function error()
+    {
+    	$this->load->view('error');
     }
 
 }
