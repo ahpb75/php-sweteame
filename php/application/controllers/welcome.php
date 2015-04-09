@@ -67,32 +67,32 @@ class Welcome extends CI_Controller {
 			}
 		}
 	}
-	public function login()
-	{
-		$this->load->model('login_model');
-		// $this->test();
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username','Username','required');
-			$this->form_validation->set_rules('password','Password','required');
+	// public function login()
+	// {
+	// 	$this->load->model('login_model');
+	// 	// $this->test();
+	// 		$this->load->library('form_validation');
+	// 		$this->form_validation->set_rules('username','Username','required');
+	// 		$this->form_validation->set_rules('password','Password','required');
 
-			if($this->form_validation->run() == FALSE)
-			{
-				$this->error();
-			}
-			else
-			{
-				$result = $this->login_model->login();
-				if($result)
-				{
-					$this->index();
-				}
-				else
-				{
-					$this->error();
-				}
-			}
+	// 		if($this->form_validation->run() == FALSE)
+	// 		{
+	// 			$this->error();
+	// 		}
+	// 		else
+	// 		{
+	// 			$result = $this->login_model->login();
+	// 			if($result)
+	// 			{
+	// 				$this->index();
+	// 			}
+	// 			else
+	// 			{
+	// 				$this->error();
+	// 			}
+	// 		}
 		
-	}
+	// }
 	public function test()
 	{
 		$this->load->view('test');
