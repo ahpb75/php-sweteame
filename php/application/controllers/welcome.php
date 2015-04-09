@@ -20,6 +20,11 @@ class Welcome extends CI_Controller {
 	// public function index(){
 	// 	$this->load->view('welcome_message');
 	// }
+	public function __construct()
+	{
+		parent::__constract();
+		$this->load->model('user_model');
+	}
 	public function index()
 	{
 		if($this->session->userdata('user_name') != "")
@@ -42,7 +47,6 @@ class Welcome extends CI_Controller {
 	}
 	public function registration_logic()
 	{
-		$this->load->model('user_model');
 		if($this->session->userdata('user_name') != "")
 		{
 			$this->index;
@@ -67,7 +71,6 @@ class Welcome extends CI_Controller {
 	}
 	public function login()
 	{
-		$this->load->model('user_model');
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
