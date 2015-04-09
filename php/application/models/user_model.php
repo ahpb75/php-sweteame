@@ -26,15 +26,10 @@ class User_model extends CI_Model {
         {
             foreach($query->result() as $key => $row)
             {
-                // add all data to session
-                if ($key == 'username')
-                    $user_name = $row;
-                if ($key == 'permissions')
-                    $permissions = $row;
                 $newdata = array(
-                    'user_name' => $user_name,
+                    'user_name' => $row->username,
                     'logged_in' => TRUE,
-                    'user_type' => $permissions
+                    'user_type' => $row->permissions
                     );
             }
 
