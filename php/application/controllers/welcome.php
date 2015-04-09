@@ -42,31 +42,31 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('registration');
 	}
-	public function registration_logic()
-	{
-		$this->load->model('registration_model');
-		if($this->session->userdata('user_name') != "")
-		{
-			$this->index;
-		}
-		else
-		{
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
-			$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
-			$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
-			$this->form_validation->set_rules('permissions','User Type','required');
-			if($this->form_validation->run() == FALSE) 
-			{
-				$this->error();
-			}
-			else 
-			{
-				$this->registration_model->add_user();
-				$this->test();
-			}
-		}
-	}
+	// public function registration_logic()
+	// {
+	// 	$this->load->model('registration_model');
+	// 	if($this->session->userdata('user_name') != "")
+	// 	{
+	// 		$this->index;
+	// 	}
+	// 	else
+	// 	{
+	// 		$this->load->library('form_validation');
+	// 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
+	// 		$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
+	// 		$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
+	// 		$this->form_validation->set_rules('permissions','User Type','required');
+	// 		if($this->form_validation->run() == FALSE) 
+	// 		{
+	// 			$this->error();
+	// 		}
+	// 		else 
+	// 		{
+	// 			$this->registration_model->add_user();
+	// 			$this->test();
+	// 		}
+	// 	}
+	// }
 	public function login()
 	{
 		$this->load->model('user_model');
