@@ -27,7 +27,7 @@ class Welcome extends CI_Controller {
 		if($this->session->userdata('user_name') != "")
 		{
 			if ($this->session->userdata('user_type') == '2')//applicant
-				$this->load->view('form_view');
+				$this->apply();
 			else if($this->session->userdata('user_type') == '1')//staff
 				$this->load->view('staff_view');
 			else if($this->session->userdata('user_type') == '0')//admin
@@ -45,55 +45,55 @@ class Welcome extends CI_Controller {
 	public function registration_logic()
 	{
 		$this->load->model('registration_model');
-		$this->test();
-		// if($this->session->userdata('user_name') != "")
-		// {
-		// 	$this->index;
-		// }
-		// else
-		// {
-		// 	$this->load->library('form_validation');
-		// 	$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
-		// 	$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
-		// 	$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
-		// 	$this->form_validation->set_rules('permissions','User Type','required');
-		// 	if($this->form_validation->run() == FALSE) 
-		// 	{
-		// 		$this->error();
-		// 	}
-		// 	else 
-		// 	{
-		// 		$this->registration_model->add_user();
-		// 		$this->test();
-		// 	}
-		// }
+		// $this->test();
+		if($this->session->userdata('user_name') != "")
+		{
+			$this->index();
+		}
+		else
+		{
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
+			$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
+			$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
+			$this->form_validation->set_rules('permissions','User Type','required');
+			if($this->form_validation->run() == FALSE) 
+			{
+				$this->error();
+			}
+			else 
+			{
+				$this->registration_model->add_user();
+				$this->test();
+			}
+		}
 	}
-	// public function login()
-	// {
-	// 	$this->load->model('login_model');
-	// 	// $this->test();
-	// 		$this->load->library('form_validation');
-	// 		$this->form_validation->set_rules('username','Username','required');
-	// 		$this->form_validation->set_rules('password','Password','required');
+	public function login()
+	{
+		$this->load->model('login_model');
+		// $this->test();
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username','Username','required');
+			$this->form_validation->set_rules('password','Password','required');
 
-	// 		if($this->form_validation->run() == FALSE)
-	// 		{
-	// 			$this->error();
-	// 		}
-	// 		else
-	// 		{
-	// 			$result = $this->login_model->login();
-	// 			if($result)
-	// 			{
-	// 				$this->index();
-	// 			}
-	// 			else
-	// 			{
-	// 				$this->error();
-	// 			}
-	// 		}
+			if($this->form_validation->run() == FALSE)
+			{
+				$this->error();
+			}
+			else
+			{
+				$result = $this->login_model->login();
+				if($result)
+				{
+					$this->index();
+				}
+				else
+				{
+					$this->error();
+				}
+			}
 		
-	// }
+	}
 	public function test()
 	{
 		$this->load->view('test');
@@ -104,6 +104,7 @@ class Welcome extends CI_Controller {
 	}
     public function apply()
     {
+        $this->load->view('header');
         $this->load->view('form_view');
     }
     public function error()
