@@ -44,7 +44,7 @@ class Welcome extends CI_Controller {
 	public function login()
 	{
 		if($this->session->userdata('user_name') != "")
-			$this->load->view('login');
+			$this->load->view('registration');
 		else{
 			$this->load_library('form_validation');
 			$this->form_validation->set_rules('username','Username','required');
