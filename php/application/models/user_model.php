@@ -20,9 +20,7 @@ class Form_model extends CI_Model {
     }
     function login()
     {
-        $this->db->where("username",$this->input->post('username'));
-        $this->db->where("password",$this->input->post('pass'));
-        $query = $this->db->get("User");
+        $query = $this->db->get_where('webapp',array('username' => $this->input->post('username'),'password' => $this->input->post('password')));
 
         if($query->num_rows()>0)
         {
