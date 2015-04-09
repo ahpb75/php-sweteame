@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		// $this->load->database();
 		// $this->load->model('login_model');
-		$this->load->model('registration_model');
+		// $this->load->model('registration_model');
 	}
 	public function index()
 	{
