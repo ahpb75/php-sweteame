@@ -27,9 +27,9 @@ class Welcome extends CI_Controller {
 			if ($this->session->userdata('user_type') == 2)//applicant
 				$this->load->view('form_view');
 			else if($this->session->userdata('user_type') == 1)//staff
-				$this->load->view('staff_view');
+				$this->load->view('thanks');
 			else if($this->session->userdata('user_type') == 0)//admin
-				$this->load->view('admin_view');
+				$this->load->view('test');
 		}
 		else
 		{
