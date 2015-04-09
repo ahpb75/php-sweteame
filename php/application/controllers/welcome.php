@@ -69,7 +69,7 @@ class Welcome extends CI_Controller {
 	// }
 	public function login()
 	{
-		$this->load->model('User_model');
+		$this->load->model('registration_model');
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
