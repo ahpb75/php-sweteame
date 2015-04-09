@@ -46,16 +46,16 @@ class Welcome extends CI_Controller {
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
-			// $this->load->library('form_validation');
-			// $this->form_validation->set_rules('username','Username','required');
-			// $this->form_validation->set_rules('password','Password','required');
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username','Username','required');
+			$this->form_validation->set_rules('password','Password','required');
 
-			// if($this->form_validation->run() == FALSE)
-			// {
-			// 	$this->load->view('login');
-			// }
-			// else
-			// {
+			if($this->form_validation->run() == FALSE)
+			{
+				$this->load->view('login');
+			}
+			else
+			{
 				$result = $this->user_model->login();
 				if($result)
 				{
@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
 				{
 					$this->load->view('thanks');
 				}
-			// }
+			}
 		// }
 	}
 	// public function test()
