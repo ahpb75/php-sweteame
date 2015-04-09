@@ -17,14 +17,11 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	// public function index(){
-	// 	$this->load->view('welcome_message');
-	// }
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// 	$this->load->model('user_model');
-	// }
+	public function __construct() 
+	{
+		parent::__construct();
+		$this->load->model('user_model');
+	}
 	public function index()
 	{
 		if($this->session->userdata('user_name') != "")
@@ -71,7 +68,7 @@ class Welcome extends CI_Controller {
 	}
 	public function login()
 	{
-		$this->load->model('user_model');
+		// $this->load->model('user_model');
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
