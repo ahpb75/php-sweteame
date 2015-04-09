@@ -40,18 +40,20 @@ class Welcome extends CI_Controller {
 	}
 	public function registration()
 	{
-		$this->load->view('registration');
-	}
-	public function registration_logic()
-	{
-		$this->load->model('registration_model');
-		// $this->test();
 		if($this->session->userdata('user_name') != "")
 		{
 			$this->index();
 		}
 		else
 		{
+		$this->load->view('registration');
+		}
+	}
+	public function registration_logic()
+	{
+		$this->load->model('registration_model');
+		// $this->test();
+		
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
 			$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
@@ -66,7 +68,7 @@ class Welcome extends CI_Controller {
 				$this->registration_model->add_user();
 				$this->thanks();
 			}
-		}
+		
 	}
 	public function login()
 	{
