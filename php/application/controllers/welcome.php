@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 	public function registration_logic()
 	{
 		$this->load->model('registration_model');
-		$this->test();
+		// $this->test();
 		
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]|xss_clean');
@@ -66,7 +66,7 @@ class Welcome extends CI_Controller {
 			else 
 			{
 				$this->registration_model->add_user();
-				$this->thanks();
+				$this->load->view('thanks');
 			}
 		
 	}
