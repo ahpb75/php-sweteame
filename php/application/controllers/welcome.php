@@ -71,7 +71,7 @@ class Welcome extends CI_Controller {
 	}
 	public function login()
 	{
-		$this->load->model('login_model');
+		$this->load->model('user_model');
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
@@ -85,7 +85,7 @@ class Welcome extends CI_Controller {
 			}
 			else
 			{
-				$result = $this->login_model->login();
+				$result = $this->user_model->login();
 				if($result)
 				{
 					$this->index();
