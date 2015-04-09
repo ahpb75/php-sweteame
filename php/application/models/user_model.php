@@ -30,7 +30,7 @@ class User_model extends CI_Model {
                 $newdata = array(
                     'user_name' => $row->username,
                     'logged_in' => TRUE,
-                    'user_type' => $row->permission
+                    'user_type' => $row->permissions
                     );
             }
 
