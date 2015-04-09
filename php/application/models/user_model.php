@@ -5,7 +5,7 @@
  * Date: 4/5/15
  * Time: 3:26 PM
  */
-class Form_model extends CI_Model {
+class User_model extends CI_Model {
     function __construct()
     {
         parent::__construct();
