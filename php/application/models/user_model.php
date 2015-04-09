@@ -17,11 +17,7 @@ class User_model extends CI_Model {
         {
             foreach($query->result() as $key => $row)
             {
-                $newdata = array(
-                    'user_name' => $row->username,
-                    'logged_in' => TRUE,
-                    'user_type' => $row->permissions
-                    );
+                $newdata = array('user_name' => $row->username,'user_type' => $row->permissions);
             }
 
             $this->session->set_userdata($newdata);
