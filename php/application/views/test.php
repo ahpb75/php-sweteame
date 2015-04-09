@@ -9,6 +9,8 @@
 	 foreach($query as $row)
             {
                 echo $row;
+                echo "^^^^^^^^^^^";
+                echo "<br>";
             }
 	?>
 </body>
