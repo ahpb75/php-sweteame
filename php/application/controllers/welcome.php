@@ -64,7 +64,7 @@ class Welcome extends CI_Controller {
 			}
 			else 
 			{
-				// $this->user_model->add_user();
+				$this->user_model->add_user();
 				$this->test();
 			}
 		}
