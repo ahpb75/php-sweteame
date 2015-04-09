@@ -11,7 +11,7 @@
 	<div align = "center">
 		<div id ="login">
 			<h1>Please login</h1>
-				<?php echo form_open("welcome/test");?>
+				<?php echo form_open("welcome/login");?>
 				<label for="username">username:</label>
 				<input type="text" name="username" id="username" value = "<?php echo set_value('username');?>" />
 				<label for="password">password:</label>
