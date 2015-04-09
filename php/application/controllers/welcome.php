@@ -24,37 +24,44 @@ class Welcome extends CI_Controller {
 	public function index(){
 		$this->load->view('login');
 	}
-	public function registration(){
+	public function registration()
+	{
 		$this->load->view('registration');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]xss_clean');
 		$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
 		$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
-		if($this->form_validation->run() == FALSE) {
+		if($this->form_validation->run() == FALSE) 
+		{
 			$this->registration();
 		}
-		else {
+		else 
+		{
 			$this->user_model->add_user();
 			$this->thanks();
 		}
 	}
-	public function login(){
+	public function login()
+	{
 		if($this->session->userdata('user_name') != "")
-			$this->index();
+			$this->load->view('login');
 		else{
 			$this->load_library('form_validation');
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required');
 
 			if($this->form_validation->run() == FALSE){
-				$this->index();
+				$this->load->view('registration');
 			}
-			else{
+			else
+			{
 				$result = $this->user_model->login();
-				if($result){
-					$this->apply();
+				if($result)
+				{
+					$this->load->view('form_view');
 				}
-				else{
+				else
+				{
 					$this->load->view('thanks');
 				}
 			}
