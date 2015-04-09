@@ -10,17 +10,18 @@ class User_model extends CI_Model {
     {
         parent::__construct();
     }
-    // function add_user()
-    // {
-    //     $data=array(
-    //         'username'=>$this->input->post('username'),
-    //         // 'password'=>md5($this->input->post('password')));
-    //         'userID'=>$this->input->('3'));
-    //         $this->db->insert('User',$data);
-    // }
+    function add_user()
+    {
+        $data=array(
+            'username' => $this->input->post('username'),
+            'password' => md5($this->input->post('password')),
+            'permissions' => $this->input->post('permissions')
+            )
+            $this->db->insert('User',$data);
+    }
     function login()
     {
-        $query = $this->db->get_where('User',array('username' => $this->input->post('username'),'password' => $this->input->post('password')));
+        $query = $this->db->get_where('User',array('username' => $this->input->post('username'),'password' => md5($this->input->post('password')));
 
         if($query->num_rows()>0)
         {

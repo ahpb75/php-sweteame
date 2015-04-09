@@ -12,7 +12,6 @@
 		<div id ="login">
 			<h1>Please Register</h1>
 				<?php
-				echo validation_errors('<p class = "error">');
 				echo form_open("welcome/registration");
 				?>
 				<label for="username">Username:</label>
@@ -23,6 +22,10 @@
 				<br>
 				<label for="password">Confirm Password:</label>
 				<input type="password" name="cpassword" id="password" value="<?php echo set_value('cpassword')?>;">
+				<br>
+				<input type="radio" name="permissions" value="2" checked>Applicant
+				<br>
+				<input type="radio" name="permissions" value="1">Staff
 				<br>
 				<input type="submit" name="submit" value="submit">
 				<?php

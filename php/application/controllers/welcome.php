@@ -27,9 +27,9 @@ class Welcome extends CI_Controller {
 			if ($this->session->userdata('user_type') == '2')//applicant
 				$this->load->view('form_view');
 			else if($this->session->userdata('user_type') == '1')//staff
-				$this->load->view('thanks');
+				$this->load->view('staff_view');
 			else if($this->session->userdata('user_type') == '0')//admin
-				$this->load->view('test');
+				$this->load->view('admin_view');
 		}
 		else
 		{
@@ -38,19 +38,27 @@ class Welcome extends CI_Controller {
 	}
 	public function registration()
 	{
-		$this->load->view('registration');
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username','Username','trim|required|min_length[4]xss_clean');
-		$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
-		$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
-		if($this->form_validation->run() == FALSE) 
+		$this->load->model('user_model');
+		if($this->session->userdata('user_name') != "")
 		{
-			$this->registration();
+			$this->index
 		}
-		else 
+		else
 		{
-			$this->user_model->add_user();
-			$this->thanks();
+			$this->load->view('registration');
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username','Username','trim|required|min_length[4]xss_clean');
+			$this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[32]');
+			$this->form_validation->set_rules('cpassword','Confirm Password','trim|required|matches[password]');
+			if($this->form_validation->run() == FALSE) 
+			{
+				$this->error();
+			}
+			else 
+			{
+				$this->user_model->add_user();
+				$this->thanks();
+			}
 		}
 	}
 	public function login()
