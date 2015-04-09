@@ -46,7 +46,7 @@ class Welcome extends CI_Controller {
 	}
 	public function registration_logic()
 	{
-		// $this->load->model('registration_model');
+		$this->load->model('registration_model');
 		if($this->session->userdata('user_name') != "")
 		{
 			$this->index;
