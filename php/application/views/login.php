@@ -11,13 +11,13 @@
 	<div align = "center">
 		<div id ="login">
 			<h1>Please login</h1>
-				<?php echo form_open("welcome/login");?>
+				<?php echo form_open("welcome/index");?>
 				<label for="username">username:</label>
-				<input type="text" name="username" id="username">
+				<input type="text" name="username" id="username" value = "<?php echo set_value('username');?>" />
 				<label for="password">password:</label>
-				<input type="password" name="password" id="password">
+				<input type="password" name="password" id="password" value = "<?php echo set_value('password');?>" />
 				<br>
-				<input type="submit" name="submit" value="submit">
+				<input type="submit" name="submit" value="submit" />
 				<?php echo form_close();?>
 			<p>Register <a href=<?php echo site_url("welcome/registration");?>>here</a></p>
 			</p>
