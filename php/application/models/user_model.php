@@ -24,13 +24,17 @@ class User_model extends CI_Model {
 
         if($query->num_rows()>0)
         {
-            foreach($query->result() as $row)
+            foreach($query->result() as $key => $row)
             {
                 // add all data to session
+                if ($key == 'username')
+                    $user_name = $row;
+                if ($key == 'permissions')
+                    $permissions = $row;
                 $newdata = array(
-                    'user_name' => $row->username,
+                    'user_name' => $user_name,
                     'logged_in' => TRUE,
-                    'user_type' => $row->permissions
+                    'user_type' => $permissions
                     );
             }
 
