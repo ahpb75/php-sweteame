@@ -42,7 +42,7 @@ class Welcome extends CI_Controller {
 	}
 	public function registration_logic()
 	{
-		$this->load->model('user_model');
+		// $this->load->model('user_model');
 		if($this->session->userdata('user_name') != "")
 		{
 			$this->index;
@@ -60,8 +60,8 @@ class Welcome extends CI_Controller {
 			}
 			else 
 			{
-				$this->user_model->add_user();
-				$this->index();
+				// $this->user_model->add_user();
+				$this->test();
 			}
 		}
 	}
