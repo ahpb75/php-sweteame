@@ -44,15 +44,15 @@ class Welcome extends CI_Controller {
 	public function login()
 	{
 		$this->load->model('user_model');
-		if($this->session->userdata('user_name') != "")
-			$this->load->view('login');
-		else{
+		// if($this->session->userdata('user_name') != "")
+		// 	$this->load->view('login');
+		// else{
 			$this->load_library('form_validation');
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required');
 
 			if($this->form_validation->run() == FALSE){
-				$this->load->view('registration');
+				$this->load->view('login');
 			}
 			else
 			{
@@ -66,7 +66,7 @@ class Welcome extends CI_Controller {
 					$this->load->view('thanks');
 				}
 			}
-		}
+		// }
 	}
     public function apply(){
         $this->load->view('form_view');
