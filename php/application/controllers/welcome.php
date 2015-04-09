@@ -20,7 +20,6 @@ class Welcome extends CI_Controller {
 	// public function index(){
 	// 	$this->load->view('welcome_message');
 	// }
-
 	public function index(){
 		$this->load->view('login');
 	}
@@ -47,7 +46,7 @@ class Welcome extends CI_Controller {
 		// if($this->session->userdata('user_name') != "")
 		// 	$this->load->view('login');
 		// else{
-			$this->load_library('form_validation');
+			$this->load->library('form_validation');
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required');
 
