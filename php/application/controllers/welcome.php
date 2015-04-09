@@ -85,7 +85,7 @@ class Welcome extends CI_Controller {
 			}
 			else
 			{
-				$result = $this->user_model->login();
+				$result = $this->user_model;
 				if($result)
 				{
 					$this->index();
