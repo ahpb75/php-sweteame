@@ -38,9 +38,10 @@ class Welcome extends CI_Controller {
 	}
 	public function registration()
 	{
+		$this->load->model('user_model');
 		if($this->session->userdata('user_name') != "")
 		{
-			$this->index
+			$this->index;
 		}
 		else
 		{
