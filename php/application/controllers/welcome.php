@@ -83,8 +83,7 @@ class Welcome extends CI_Controller {
 	}
 	public function test()
 	{
-		$data = $this->session->all_userdata();
-		$this->load->view('test',$data);
+		$this->load->view('test');
 	}
     public function apply()
     {
