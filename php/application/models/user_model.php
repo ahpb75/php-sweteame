@@ -20,22 +20,22 @@ class User_model extends CI_Model {
     }
     function login()
     {
-        $query = $this->db->get_where('webapp',array('username' => $this->input->post('username'),'password' => $this->input->post('password')));
+        // $query = $this->db->get_where('webapp',array('username' => $this->input->post('username'),'password' => $this->input->post('password')));
 
-        if($query->num_rows()>0)
-        {
-            foreach($query->result() as $row)
-            {
-                // add all data to session
-                $newdata = array(
-                    'user_name' => $row->username,
-                    'logged_in' => TRUE
-                    );
-            }
+        // if($query->num_rows()>0)
+        // {
+        //     foreach($query->result() as $row)
+        //     {
+        //         // add all data to session
+        //         $newdata = array(
+        //             'user_name' => $row->username,
+        //             'logged_in' => TRUE
+        //             );
+        //     }
 
-            $this->session->set_userdata($newdata);
-            return TRUE;
-        }
+        //     $this->session->set_userdata($newdata);
+        //     return TRUE;
+        // }
         return FALSE;
     }
 ?>
