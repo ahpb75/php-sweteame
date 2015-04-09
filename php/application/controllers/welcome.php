@@ -50,7 +50,8 @@ class Welcome extends CI_Controller {
 			$this->form_validation->set_rules('username','Username','required');
 			$this->form_validation->set_rules('password','Password','required');
 
-			if($this->form_validation->run() == FALSE){
+			if($this->form_validation->run() == FALSE)
+			{
 				$this->load->view('login');
 			}
 			else
@@ -66,6 +67,10 @@ class Welcome extends CI_Controller {
 				}
 			}
 		// }
+	}
+	public function test()
+	{
+		$this->load->view('test');
 	}
     public function apply(){
         $this->load->view('form_view');
