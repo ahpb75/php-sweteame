@@ -209,7 +209,8 @@ section.codeigniter p {
 	<div align = "center">
 		<div id ="login">
 			<h1>Please login</h1>
-			<form action = "" method='post'>
+			<?php echo form_open('form');?>
+			<!--<form action = "" method='post'>-->
 				<label for="username">username:</label>
 				<input type="text" name="username" id="username">
 				<label for="password">password:</label>
