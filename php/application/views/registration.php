@@ -12,7 +12,7 @@
 		<div id ="registration">
 			<h1>Please Register</h1>
 				<?php
-				echo form_open("welcome/test");
+				echo form_open("welcome/registration_logic");
 				?>
 				<label for="username">Username:</label>
 				<input type="text" name="username" id="username" value="<?php echo set_value('username');?>" />
@@ -23,9 +23,9 @@
 				<label for="password">Confirm Password:</label>
 				<input type="password" name="cpassword" id="password" value="<?php echo set_value('cpassword');?>" />
 				<br>
-				<input type="radio" name="permissions" value="2" checked>Applicant />
+				<input type="radio" name="permissions" value="2" checked />Applicant 
 				<br>
-				<input type="radio" name="permissions" value="1">Staff />
+				<input type="radio" name="permissions" value="1" />Staff 
 				<br>
 				<input type="submit" name="submit" value="submit" />
 				<?php
