@@ -22,9 +22,7 @@ class Welcome extends CI_Controller {
 	// }
 	public function index()
 	{
-		if($this->session->userdata('user_name') == "")
-		$this->load->view('login');
-		else
+		if($this->session->userdata('user_name') != "")
 		{
 			if ($this->session->userdata('user_type') == 2)//applicant
 				$this->load->view('form_view');
@@ -32,6 +30,10 @@ class Welcome extends CI_Controller {
 				$this->load->view('staff_view');
 			else
 				$this->load->view('admin_view');
+		}
+		else
+		{
+			$this->load->view('login');
 		}
 	}
 	public function registration()
