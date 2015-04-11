@@ -12,7 +12,8 @@ class Instructor_controller extends CI_controller{
 		
 		if($this->input->post('view')){
 			$app=$this->input->post('applicant');
-			if($app!=FALSE){
+			if($app!=FALSE){/*checking to make sure the applicant exists*/
+				/*searches DB for the applicants application and returns an array of the whole row returned. Then passing that array of data to the form view for display*/
 				$data=$this->Instructor_model->get_applicant_data($app);
 				$this->load->view('Form_view',$data);
 			}
@@ -23,7 +24,9 @@ class Instructor_controller extends CI_controller{
 		if($this->input->post('add_note')){
 			$app=$this->input->post('applicant');
 			$note=$this->input->post('note');
+			/*checking to make sure the applicant and note fields aren't NULL*/
 			if($app!=FALSE && $note!=FALSE){
+				/*placing applicant/note into an array to be used in the query*/
 				$input=array($app,$note);
 				$this->db->add_note($input);
 			}
