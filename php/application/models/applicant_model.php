@@ -6,7 +6,7 @@ class applicant_model extends CI_model{
 	}
 	
 	public function get_form_data($username){
-		$sql="SELECT * FROM application WHERE user.username=? LIMIT 1";
+		$sql="SELECT * FROM application WHERE username=? LIMIT 1";
 		$form_data=$this->db->query($sql,$username);
 		return $form_data;
 	}

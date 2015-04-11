@@ -2,9 +2,9 @@
 class Applicant_controller extends CI_controller{
 	private $custom_errors=array();
 	public function __construct(){
-	parrent::__construct();
+	parent::__construct();
 	/*database preloaded from config files*/
-	$this->load->model('applicant_model')
+	$this->load->model('applicant_model');
 	}
 
 	public function index(){
