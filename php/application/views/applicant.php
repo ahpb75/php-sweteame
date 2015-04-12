@@ -68,7 +68,7 @@
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
             <p> This is where you can apply, view feedback, and know which courses you've been assigned to.</p>
-            <p><a class="btn btn-primary btn-large">Begin Here...</a>
+            <p><a class="btn btn-primary btn-large">Begin Here</a>
             </p>
         </header>
 
@@ -92,7 +92,7 @@
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Apply</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="Form_controller" class="btn btn-primary">Apply</a> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
