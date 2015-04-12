@@ -6,7 +6,7 @@ class Instructor_controller extends CI_controller{
 	}
 
 	public function index(){
-		//$this->load->view('header');
+		$this->load->view('header');
 		$this->load->view('instructor_home');
 		//$this->load->view('footer');
 		
