@@ -35,5 +35,13 @@ class Instructor_controller extends CI_controller{
 			}
 		}
 	}
+
+    public function show_app(){
+
+        //$this->load->model('instructor_model');
+       $data= $this->instructor_model->show_applicants();
+        $this->load->view
+
+    }
 }
 ?>
