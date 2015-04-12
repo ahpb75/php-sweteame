@@ -20,7 +20,7 @@
     }
 
 use this instead.
-    form open -- just have a submit button to call back to the controller to load the function/different view.
+    form open -- just have a submit button to call back to the controller to load the function/different view. Similar to log in the login view and register view
 </script> -->
 
 
