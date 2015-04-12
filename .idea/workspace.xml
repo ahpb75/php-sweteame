@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28693ba5-3469-4a62-a532-bddf621ac26f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/application/views/form_view.php" afterPath="$PROJECT_DIR$/php/application/views/form_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/application/views/applicant.html" afterPath="$PROJECT_DIR$/php/application/views/applicant.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="team_repository.iws" />
@@ -51,8 +51,8 @@
       <file leaf-file-name="form_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/application/views/form_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.375" vertical-offset="660" max-vertical-offset="2745">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state vertical-scroll-proportion="73.125" vertical-offset="1875" max-vertical-offset="2745">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -81,8 +81,8 @@
       <file leaf-file-name="applicant.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/application/views/applicant.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.6344337" vertical-offset="0" max-vertical-offset="2535">
-              <caret line="131" column="68" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.5306604" vertical-offset="750" max-vertical-offset="2535">
+              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -548,16 +548,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/application/views/form_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.375" vertical-offset="660" max-vertical-offset="2745">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state vertical-scroll-proportion="73.125" vertical-offset="1875" max-vertical-offset="2745">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/application/views/applicant.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.6344337" vertical-offset="0" max-vertical-offset="2535">
-          <caret line="131" column="68" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.5306604" vertical-offset="750" max-vertical-offset="2535">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding />
         </state>
       </provider>
