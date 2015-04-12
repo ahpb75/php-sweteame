@@ -35,12 +35,15 @@ class Instructor_controller extends CI_controller{
 			}
 		}
 	}
-
+//function to return the names of applicants so instructor can select who to comment on
     public function show_app(){
 
         //$this->load->model('instructor_model');
-       $data= $this->instructor_model->show_applicants();
-        $this->load->view
+       $data['applicants'] = $this->instructor_model->show_applicants();
+        $this->load->view('header');
+        $this->load->view('Instructor_view', $data);
+        $this->load->view('footer');
+
 
     }
 }
