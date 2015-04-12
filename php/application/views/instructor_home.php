@@ -18,6 +18,9 @@
     document.getElementById("applicant_button").onclick = function(){
         location.href = "Instructor_controller/show_app";
     }
+
+use this instead.
+    form open -- just have a submit button to call back to the controller to load the function/different view.
 </script> -->
 
 
