@@ -35,7 +35,7 @@ class Instructor_controller extends CI_controller{
 			}
 		}
 	}
-//function to return the names of applicants so instructor can select who to comment on
+//function to return the names of applicants so instructor can select who to comment on -chantal
     public function show_app(){
 
         //$this->load->model('instructor_model');
