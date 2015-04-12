@@ -108,7 +108,7 @@ class Welcome extends CI_Controller {
     public function apply()
     {
         $this->load->view('header');
-        $this->load->view('form_view');
+        $this->load->view('applicant');
         // $this->load->view('footer');
     }
     public function error()
