@@ -22,6 +22,9 @@
 <h2>Graduate Teaching Assistant Application<br/></h2>
 </center>
 
+<center>
+<form style="width: 45%">
+
 <fieldset><legend>Apply Here</legend>
     <?php
     $attributes = array('class' => 'form-horizontal', 'id' => '');
@@ -171,8 +174,10 @@
         <br/>
         <hr/>
 
-          <button class="btn btn-success"> <?php echo form_submit( 'submit', 'Submit'); ?> />
+          <?php echo form_submit( 'submit', 'Submit'); ?>
 
     </div>
     <?php echo form_close(); ?></fieldset>
+    </form>
+    </center>
 </body>
