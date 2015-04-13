@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css.css"/>
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
 </head>
 
 <style>
@@ -182,9 +182,8 @@
         <hr/>
 
           <center><?php echo form_submit( 'submit', 'Submit'); ?></center>
-
+        <?php echo form_close(); ?>
     </div>
-    <?php echo form_close(); ?>
     </form>
 </div>
 </div>
