@@ -22,8 +22,8 @@
 <h2>Graduate Teaching Assistant Application<br/></h2>
 </center>
 
-<center>
-<form style="width: 45%">
+
+<form style="width=45%; padding-left:55px;">
 
 <fieldset><legend>Apply Here</legend>
     <?php
@@ -179,5 +179,5 @@
     </div>
     <?php echo form_close(); ?></fieldset>
     </form>
-    </center>
+
 </body>
