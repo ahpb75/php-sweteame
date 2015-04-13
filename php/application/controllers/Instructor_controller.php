@@ -42,7 +42,7 @@ class Instructor_controller extends CI_controller{
        $data['applicants'] = $this->instructor_model->show_applicants();
         $this->load->view('header');
         $this->load->view('Instructor_view', $data);
-        $this->load->view('footer');
+        //$this->load->view('footer');
 
 
     }
