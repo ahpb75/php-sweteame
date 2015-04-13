@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
 		}
 		else
 		{
-			$this->load->view('login');
+			$this->load->view('home');
 		}
 	}
 	public function registration()
