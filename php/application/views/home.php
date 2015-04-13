@@ -54,10 +54,10 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="registration.php">Apply Now</a>
+                    <a href="index.php/welcome/registration">Apply Now</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="login.php">Log In</a>
+                    <a href="index.php/welcome/login">Log In</a>
                 </li>
             </ul>
         </div>
