@@ -57,7 +57,7 @@
                     <a href="index.php/welcome/registration">Apply Now</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="index.php/welcome/login">Log In</a>
+                    <a href="index.php/welcome/home">View Account</a>
                 </li>
             </ul>
         </div>
@@ -76,7 +76,8 @@
                     <span class="name">Welcome!</span>
                     <hr class="star-light">
                     <span class="skills">Apply Now!</span>
-                    <center><button type="button" class="btn btn-primary">Register</button></center>
+                    <center><button type="button" class="btn btn-primary"><a href="index.php/welcome/registration">Register</a>
+                        </button></center>
                 </div>
             </div>
         </div>
