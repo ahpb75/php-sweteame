@@ -14,7 +14,12 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css.css"/>
 </head>
 
+<style>
 
+    input {
+        max-width: 75%;
+    }
+</style>
 
 <body>
 <center>
@@ -22,7 +27,8 @@
 <h2>Graduate Teaching Assistant Application<br/></h2>
 </center>
 
-
+<div class="container">
+    <div class="span5">
 <form style="width=45%; padding-left:55px;">
 
 <fieldset><legend>Apply Here</legend>
@@ -54,7 +60,7 @@
             <input id="program_level" class="form-control" type="text" name="program_level" maxlength="15" value="<?php echo set_value('program_level'); ?>"  />
             <?php echo form_error('program_level'); ?>
     </div>
-    <div class="form-group">
+    <div class="form-inline">
         <label for="graduate_program" class="control-label">MS or PhD (if graduate)</label>
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
             <label for="graduate_program" class="radio">
@@ -105,7 +111,7 @@
             <input class="datepicker form-control" type="text" name="optWhen"  value="<?php echo set_value('optWhen'); ?>"  />
             <?php echo form_error('optWhen'); ?>
     </div>
-    <div class="form-group">
+    <div class="form-inline">
         <label for="GATO">Participated in GATO <span class="required">*</span></label>
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
             <label for="GATO" class="radio">
@@ -120,7 +126,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-inline">
         <label for="SPEAK">Taken SPEAK Test <span class="required">*</span></label>
 
             <label for="SPEAK" class="radio">
@@ -143,7 +149,7 @@
 
     </div>
 
-    <div class="form-group">
+    <div class="form-inline">
         <label for="ONITA" class="control-label">ONITA requirement (international students)</label>
 
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
@@ -171,13 +177,15 @@
 
     <div class="form-group">
         <label></label>
-        <br/>
         <hr/>
 
           <?php echo form_submit( 'submit', 'Submit'); ?>
 
     </div>
-    <?php echo form_close(); ?></fieldset>
+    <?php echo form_close(); ?>
+    </fieldset>
     </form>
+</div>
+</div>
 
 </body>
