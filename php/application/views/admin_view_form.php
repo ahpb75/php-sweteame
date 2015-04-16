@@ -3,7 +3,7 @@
 <body>
 	<FORM action = "" method = "">
 		<div>
-			<lable for ="appID"> appID: <input /><?php echo $appID;?> </label>
+			<lable for ="appID"> appID: <input ><?php echo $appID;?> </input> </label>
 		</div>
 		<div>
 			<lable for ="position"> position: <?php echo $position;?> </label>
