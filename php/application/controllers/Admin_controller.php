@@ -46,5 +46,10 @@ class Admin_controller extends CI_controller{
 
 
     }
+    public function view_form()
+    {
+    	$data = $this->admin_model->view_form();
+    	$this->load->view('admin_view_form',$data)
+    }
 }
 ?>
