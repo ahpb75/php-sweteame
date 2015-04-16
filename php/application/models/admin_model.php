@@ -18,10 +18,13 @@ class Admin_model extends CI_Model {
     {
         $query = $this->db->get_where('Application',array('username' => $this->input->post('username')));
         $application = array();
-        foreach ($query->result() as $value)
+        if ($query->num_rows()>0)
         {
-            array_push($application,$value);
-        }
+            foreach ($query->result() as $value)
+            {
+                array_push($application,$value);
+            }
+        }      
         return $application;
     }
     function view_comment()
