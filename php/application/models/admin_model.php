@@ -47,6 +47,7 @@ class Admin_model extends CI_Model {
                 'comment' => $value->comment
                 );
         }
+        return $comment;
     }
 
 }
