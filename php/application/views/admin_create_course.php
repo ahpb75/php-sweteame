@@ -12,7 +12,7 @@
 		<div id ="login">
 			<h1>Create Course</h1>
 				<?php 
-				echo form_open("admin_controller/create_course");
+				echo form_open("admin_controller/create_course_logic");
 				echo form_input('CourseId','');
 				echo form_input('Coursename','');
 				echo form_submit('submit','submit');
