@@ -90,7 +90,7 @@
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
                         <p>
-                            <?php echo form_open("admin_controller/view_form");?>
+                            <?php echo form_open("Admin_controller/view_form");?>
                             <input type="submit" name="view" value="view" />
                             <?php echo form_close();?>
                         </p>

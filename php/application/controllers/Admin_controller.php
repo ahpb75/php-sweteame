@@ -20,6 +20,7 @@ class Admin_controller extends CI_Controller {
 	public function __construct() 
 	{
 		parent::__construct();
+		$this->load->model('admin_model')
 	}
 
 // 	public function index(){
@@ -63,14 +64,14 @@ class Admin_controller extends CI_Controller {
 
 
 //     }
-    // public function view_form()
-    // {
-    // 	$data = $this->admin_model->view_form();
-    // 	$this->load->view('admin_view_form',$data);
-    // }
+    public function view_form()
+    {
+    	$data = $this->admin_model->view_form();
+    	$this->load->view('admin_view_form',$data);
+    }
     public function test()
     {
-    	$this->load->view("test");
+    	$this->load->view('test');
     }
 }
 ?>
