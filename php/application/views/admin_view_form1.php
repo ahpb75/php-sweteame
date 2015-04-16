@@ -1,14 +1,10 @@
 <html>
 <head></head>
 <body>
-	<div align = "center">
-		<ul>
+<ul>
 <?php foreach ($username as $item):?>
-
 <li><?php echo $item;?></li>
-
 <?php endforeach;?>
 </ul>
-	</div>
 </body>
 </html>
