@@ -14,10 +14,16 @@ class Admin_model extends CI_Model {
         }
         return $applicant;
     }
-    // function view_form2()
-    // {
-    //     $query = $this->db->get('Application');
-    // }
+    function view_form2()
+    {
+        $query = $this->db->get_where('Application',array('username' => $this->input->post('username')));
+        $application = array();
+        foreach ($query->result() as $value)
+        {
+            array_push($application,$value);
+        }
+        return $application;
+    }
     function view_comment()
     {
         $query = $this->db->get('Comment');

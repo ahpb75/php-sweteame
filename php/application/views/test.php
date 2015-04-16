@@ -12,5 +12,7 @@
                 echo "<br>";
             }
 	?>
+	<br>
+	<h1><?php echo $this->input->post('username');</h1>
 </body>
 </html>
