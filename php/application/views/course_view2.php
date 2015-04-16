@@ -9,8 +9,8 @@
 	{
 	foreach ($app_course as $item):
 	 	foreach($item as $key => $value):
-	 		if($key == "appID")
-	 			$user = $value;
+	 		// if($key == "appID")
+	 		// 	$user = $value;
 			echo "<li>".$key." => ".$value."</li>";
 	 	endforeach;
 	 	echo"---------------------";
