@@ -71,9 +71,9 @@ class Admin_controller extends CI_Controller {
     }
     public function view_form2()
     {
-    	// $data['application'] = $this->admin_model->view_form2();
-    	// $this->load->view('admin_view_form2',$data);
-    	$this->load->view('test');
+    	$data['application'] = $this->admin_model->view_form2();
+    	$this->load->view('admin_view_form2',$data);
+    	// $this->load->view('test');
     }
     public function test()
     {
