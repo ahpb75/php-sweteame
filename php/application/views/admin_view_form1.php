@@ -9,9 +9,11 @@
 	echo form_open('Admin_controller/view_form2');
 	echo form_input('username',$item);
 	echo form_submit('view','view this applicant');
-	echo form_close();?></li>
+	echo form_close();echo "</li>";
 	}
+	else{
 	echo "<strong>".$item."</strong>";
+	}
 	$counter = $counter + 1;
 	?>
 <?php endforeach;?>
