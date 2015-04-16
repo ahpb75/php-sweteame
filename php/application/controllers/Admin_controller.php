@@ -70,7 +70,7 @@ class Admin_controller extends CI_Controller {
     // }
     public function test()
     {
-    	$this->load->view('test');
+    	$this->load->view("test");
     }
 }
 ?>
