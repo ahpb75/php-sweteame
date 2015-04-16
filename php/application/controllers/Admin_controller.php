@@ -93,11 +93,11 @@ class Admin_controller extends CI_Controller {
     	$this->admin_model->create_course();
     	$this->load->view('home');
     }
-    // public function assign_ta()
-    // {
-    // 	$data['course'] = $this->admin_model->load_course();
-    // 	$this->load->view('course_view1',$data);
-    // }
+    public function assign_ta()
+    {
+    	$data['course'] = $this->admin_model->load_course();
+    	$this->load->view('course_view1',$data);
+    }
     // public function assign_ta_to_course()
     // {
     // 	$data['application'] = $this->admin_model->applicant_for_course();
@@ -107,6 +107,10 @@ class Admin_controller extends CI_Controller {
     // {
     // 	$this->admin_model->enter_score();
     // 	$this->load->view('home');
+    // }
+    // public function assign_ta()
+    // {
+    // 	$this->load->view('admin_assign_ta');
     // }
 }
 ?>
