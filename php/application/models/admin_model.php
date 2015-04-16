@@ -12,7 +12,7 @@ class Admin_model extends CI_Model {
     function view_form()
     {
         $query = $this->db->get('Application');
-        return $query;
+        return $query->result();
     }
 }
 ?>
