@@ -1,5 +1,7 @@
 <html>
-<head></head>
+<head>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
+</head>
 <body>
 <ul>
 <?php $counter = 0;foreach ($course as $item):?>
