@@ -110,7 +110,10 @@ class Welcome extends CI_Controller {
 				}
 				else
 				{
-					$this->error();
+					$data = array(
+						'login' => 'FALSE'
+						);
+					$this->load->view('login',$data);
 				}
 			}
 		
@@ -122,6 +125,7 @@ class Welcome extends CI_Controller {
 	public function logout()
 	{
 		$this->session->sess_destroy();
+		$this->index();
 	}
     public function apply()
     {
