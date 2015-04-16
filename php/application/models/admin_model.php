@@ -13,9 +13,8 @@ class Admin_model extends CI_Model {
     {
         $query = $this->db->get('Application');
         // return $query->result();
-        $form = array();
         foreach ($query->result as $key => $value) {
-            $form['GPA'] => $value->GPA;
+            $form = array('GPA' => $value->GPA);
         }
         return $form;
     }
