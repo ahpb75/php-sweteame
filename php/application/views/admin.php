@@ -97,15 +97,31 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Create Course</h3>
+                        <p>Create a course.</p>
+                        <p>
+                            <?php echo form_open("Admin_controller/create_course");?>
+                            <input type="submit" name="view" value="create" />
+                            <?php echo form_close();?>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Current Temporal Window</h3>
-                        <p>The current time window will be viewable here.</p>
+                        <h3>Assign TA/PLA or Enter Score</h3>
+                        <p>Assign them here</p>
                         <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
+                            <?php echo form_open("Admin_controller/assign_ta");?>
+                            <input type="submit" name="view" value="assign" />
+                            <?php echo form_close();?>                       
                         </p>
                     </div>
                 </div>

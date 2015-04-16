@@ -79,10 +79,19 @@ class Admin_controller extends CI_Controller {
     {
     	$this->load->view('test');
     }
-    public function view_comment()
+    // public function view_comment()
+    // {
+    // 	$data = $this->admin_model->view_comment();
+    // 	$this->load->view('admin_view_comment',$data);
+    // }
+    public function create_course()
     {
-    	$data = $this->admin_model->view_comment();
-    	$this->load->view('admin_view_comment',$data);
+    	$this->load->view('admin_create_course');
+    	$this->admin_model->create_course();
     }
+    // public function assign_ta()
+    // {
+    // 	$this->load->view('admin_assign_ta');
+    // }
 }
 ?>

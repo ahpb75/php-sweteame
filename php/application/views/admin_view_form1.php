@@ -12,7 +12,8 @@
 	echo form_close();echo "</li>";
 	}
 	else{
-	echo "<strong>".$item."</strong>";
+	echo "<strong> Comment: ".$item."</strong>";
+	echo "--------------";
 	}
 	$counter = $counter + 1;
 	?>
