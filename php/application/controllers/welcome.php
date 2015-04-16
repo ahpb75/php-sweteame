@@ -1,4 +1,4 @@
-xf<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				$this->load->view('staff_view');
 			else if($this->session->userdata('user_type') == '0')//admin
-				$this->load->view('admin_view');
+				$this->load->view('admin');
 		}
 		else
 		{
