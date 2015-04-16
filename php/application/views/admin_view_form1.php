@@ -15,6 +15,7 @@
 	echo "<strong>".$item."</strong>";
 	}
 	$counter = $counter + 1;
+	echo $counter;
 	?>
 <?php endforeach;?>
 </ul>
