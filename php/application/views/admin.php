@@ -102,23 +102,12 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Your Progress is Saved Here</h3>
-                        <p>This is where you can view your application progress</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
                         <h3>View Instructor Comments</h3>
                         <p>Feedback on your application will appear here.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
+                            <?php echo form_open("Admin_controller/view_feedback");?>
+                            <input type="submit" name="view" value="view" />
+                            <?php echo form_close();?>
                         </p>
                     </div>
                 </div>

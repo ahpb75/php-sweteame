@@ -37,6 +37,17 @@ class Admin_model extends CI_Model {
         }
         return $form;
     }
+    function view_comment()
+    {
+        $query = $this->db->get('Comment');
+        foreach ($query->result() as $value)
+        {
+            $comment = array(
+                'username' => $value->username,
+                'comment' => $value->comment
+                );
+        }
+    }
 
 }
 ?>

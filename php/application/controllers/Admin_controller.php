@@ -73,5 +73,10 @@ class Admin_controller extends CI_Controller {
     {
     	$this->load->view('test');
     }
+    public function view_comment()
+    {
+    	$data = $this->admin_model->view_comment();
+    	$this->load->view('admin_view_comment',$data);
+    }
 }
 ?>

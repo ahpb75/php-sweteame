@@ -1,11 +1,5 @@
 <html>
 <head>
-    <title>TA/PLA Application Form</title>
-
-    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
 </head>
 <body>
 	<div align = "center">
