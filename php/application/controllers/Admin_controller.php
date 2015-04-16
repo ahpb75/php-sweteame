@@ -66,7 +66,7 @@ class Admin_controller extends CI_Controller {
 //     }
     public function view_form1()
     {
-    	$data['username'] = array('1','2');
+    	$data['todo'] = array('1','2');
     	$this->load->view('admin_view_form1',$data);
     }
     public function test()

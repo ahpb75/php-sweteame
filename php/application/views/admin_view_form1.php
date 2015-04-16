@@ -3,7 +3,7 @@
 <body>
 	<div align = "center">
 		<ul>
-<?php foreach ($username as $item);?>
+<?php foreach ($todo as $item);?>
 
 <li><?php echo $item;?></li>
 

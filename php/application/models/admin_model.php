@@ -4,11 +4,6 @@ class Admin_model extends CI_Model {
     {
         parent::__construct();
     }
-    // function add_user()
-    // {
-    //     $data=array('username' => $this->input->post('username'),'password' => md5($this->input->post('password')),'permissions' => $this->input->post('permissions'));
-    //     $this->db->insert('User',$data);
-    // }
     function view_form1()
     {
         // $query = $this->db->get_where('User',array('permissions' => "2"));
