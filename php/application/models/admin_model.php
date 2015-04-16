@@ -54,6 +54,7 @@ class Admin_model extends CI_Model {
         foreach ($query->result() as $value)
         {
             array_push($course,$value->courseID);
+            array_push($course,$value->TA);
             array_push($course,$value->course_name);
         }
         return $course;
