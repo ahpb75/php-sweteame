@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
 </head>
 <body>
+	<div align = "center">
 	<FORM action = "" method = "">
 		<div>
-			<lable for ="appID"> appID: <input type = "text" value = <?php echo $appID;?>></label>
+			<lable for ="appID"> appID: <?php echo $appID;?></label>
 		</div>
 		<div>
 			<lable for ="position"> position: <?php echo $position;?> </label>
@@ -65,6 +66,7 @@
 		</div>
 
     </FORM>
+</div>
 </body>
 </html>
 
