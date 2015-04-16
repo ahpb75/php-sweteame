@@ -19,10 +19,10 @@ class Admin_model extends CI_Model {
         // }
         return $applicant;
     }
-    function view_form2()
-    {
-        $query = $this->db->get('Application');
-    }
+    // function view_form2()
+    // {
+    //     $query = $this->db->get('Application');
+    // }
     function view_comment()
     {
         $query = $this->db->get('Comment');
