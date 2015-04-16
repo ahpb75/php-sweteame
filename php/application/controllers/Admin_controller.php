@@ -66,8 +66,12 @@ class Admin_controller extends CI_Controller {
 //     }
     public function view_form1()
     {
-    	$data['todo'] = array('1','2');
-    	$this->load->view('admin_view_form1',$data);
+    	$data['todo_list'] = array('Clean House', 'Call Mom', 'Run Errands');
+
+		$data['title'] = "My Real Title";
+		$data['heading'] = "My Real Heading";
+
+		$this->load->view('admin_view_form1', $data);
     }
     public function test()
     {
