@@ -15,6 +15,7 @@ class Admin_model extends CI_Model {
         // return $query->result();
         $form = array()
         $form['GPA'] = $query->result()->GPA;
+        return $form;
     }
      // $form_data = array(
      //            'position' => @$this->input->post('position'),
