@@ -3,6 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link href="../../bootstrap/css/login.css" rel="stylesheet">
+    <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Please Log In</title>
