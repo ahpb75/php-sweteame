@@ -24,6 +24,11 @@
 	 	echo form_submit('submit','submit');
 	 	echo form_close();
 	 	echo "<br>";
+	 	echo form_open('Admin_controller/assign_ta_to_this_course');
+	 	echo "Assign this applicant be TA";
+	 	echo form_submit('submit','assign');
+	 	echo form_close();
+	 	echo "<br>";
 	 endforeach;
 	}
 ?>
