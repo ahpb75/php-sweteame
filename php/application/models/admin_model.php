@@ -13,7 +13,7 @@ class Admin_model extends CI_Model {
     {
         $query = $this->db->get('Application');
         // return $query->result();
-        $form = array()
+        $form = array();
         $form['GPA'] = $query->result()->GPA;
         return $form;
     }
