@@ -2,7 +2,7 @@
 <head></head>
 <body>
 <ul>
-<?php foreach ($username as $item):?>
+<?php foreach ($application as $item):?>
 <li><?php foreach($item as $key => $value):
 		echo $key." => ".$value;?></li>
 <?php endforeach;endforeach;?>
