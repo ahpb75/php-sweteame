@@ -103,9 +103,9 @@
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
                         <h3>View Instructor Comments</h3>
-                        <p>Feedback on your application will appear here.</p>
+                        <p>Feedback for the applicant will appear here.</p>
                         <p>
-                            <?php echo form_open("Admin_controller/view_feedback");?>
+                            <?php echo form_open("Admin_controller/view_comment");?>
                             <input type="submit" name="view" value="view" />
                             <?php echo form_close();?>
                         </p>
