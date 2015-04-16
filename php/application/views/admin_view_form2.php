@@ -2,10 +2,18 @@
 <head></head>
 <body>
 <ul>
-<?php foreach ($application as $item):?>
-<li><?php foreach($item as $key => $value):
-		echo $key." => ".$value;?></li>
-<?php endforeach;endforeach;?>
+<?php 
+	if ($application == "")
+	echo "There is no application for this applicant";
+	else
+	{
+	foreach ($application as $item):
+	 	foreach($item as $key => $value):
+			echo "<li>".$key." => ".$value."</li>";
+	 	endforeach;
+	 endforeach;
+	}
+?>
 </ul>
 </body>
 </html>
