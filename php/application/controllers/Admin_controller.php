@@ -101,7 +101,7 @@ class Admin_controller extends CI_Controller {
     public function assign_ta_to_course()
     {
     	$data['app_course'] = $this->admin_model->applicant_for_course();
-    	$this->load->view('course_view2',$data);
+    	$this->load->view('test',$data);
     }
     // public function enter_score()
     // {
