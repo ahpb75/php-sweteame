@@ -73,11 +73,11 @@ class Admin_model extends CI_Model {
         }      
         return $empty;
     }
-    function enter_score()
-    {
-        $data = array('Score' => $this->input->post('score'));
-        $this->db->where('appId',$this->input->post('user'));
-        $this->db->update('Application',$data);
-    }
+    // function enter_score()
+    // {
+    //     $data = array('Score' => $this->input->post('score'));
+    //     $this->db->where('appId',$this->input->post('user'));
+    //     $this->db->update('Application',$data);
+    // }
 }
 ?>
