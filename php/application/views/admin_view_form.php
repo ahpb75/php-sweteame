@@ -1,9 +1,16 @@
 <html>
-<head></head>
+<head>
+    <title>TA/PLA Application Form</title>
+
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
+</head>
 <body>
 	<FORM action = "" method = "">
 		<div>
-			<lable for ="appID"> appID: <input ><?php echo $appID;?> </input> </label>
+			<lable for ="appID"> appID: <textarea ><?php echo $appID;?> </textarea> </label>
 		</div>
 		<div>
 			<lable for ="position"> position: <?php echo $position;?> </label>
