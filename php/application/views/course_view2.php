@@ -8,7 +8,6 @@
 	else
 	{
 	foreach ($app_course as $item):
-		$user;
 	 	foreach($item as $key => $value):
 	 		if($key == "appID")
 	 			$user = $value;
