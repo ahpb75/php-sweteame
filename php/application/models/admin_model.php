@@ -8,10 +8,10 @@ class Admin_model extends CI_Model {
     {
         $query = $this->db->get_where('User',array('permissions' => "2"));
         // return $query->result();
-        $applicant = array();
-        foreach ($query->result() as $key => $value) {
-            array_push($applicant,$value->username);
-        }
+        $applicant = array('1','2');
+        // foreach ($query->result() as $key => $value) {
+        //     array_push($applicant,$value->username);
+        // }
         return $applicant;
     }
     // function view_form2()
