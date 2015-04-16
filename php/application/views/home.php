@@ -54,10 +54,10 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="page-scroll">
-                    <a href="index.php/welcome/registration">Apply Now</a>
+                    <a href=<?php echo site_url("welcome/registration");?>>Apply Now</a>
                 </li>
                 <li class="page-scroll">
-                    <a href="index.php/welcome/home">View Account</a>
+                    <a href=<?php echo site_url("welcome/home");?>>View Account</a>
                 </li>
             </ul>
         </div>

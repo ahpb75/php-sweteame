@@ -11,6 +11,8 @@
 	<div align = "center">
 		<div id ="login">
 			<h1>Please login</h1>
+				<?php if ($login == 'FALSE')
+						echo "<p> Your username or passowrd was incorrect.</p>"?>
 				<?php echo form_open("welcome/login");?>
 				<label for="username">username:</label>
 				<input type="text" name="username" id="username" value = "<?php echo set_value('username');?>" />

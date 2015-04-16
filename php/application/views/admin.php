@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="home.php">Home</a>
+                        <a href=<?php echo site_url("welcome/home");?>>Home</a>
                     </li>
                     <li>
-                        <a href="#">Logout</a>
+                        <a href=<?php echo site_url("welcome/logout");?>>Logout</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +90,23 @@
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
                         <p>
-                            <a href="Form_controller" class="btn btn-primary">Apply</a> <a href="#" class="btn btn-default">More Info</a>
+                            <?php echo form_open("Admin_controller/view_form1");?>
+                            <input type="submit" name="view" value="view" />
+                            <?php echo form_close();?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Create Course</h3>
+                        <p>Create a course.</p>
+                        <p>
+                            <?php echo form_open("Admin_controller/create_course");?>
+                            <input type="submit" name="view" value="create" />
+                            <?php echo form_close();?>
                         </p>
                     </div>
                 </div>
@@ -100,36 +116,12 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Your Progress is Saved Here</h3>
-                        <p>This is where you can view your application progress</p>
+                        <h3>Assign TA/PLA or Enter Score</h3>
+                        <p>Assign them here</p>
                         <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>View Instructor Comments</h3>
-                        <p>Feedback on your application will appear here.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Current Temporal Window</h3>
-                        <p>The current time window will be viewable here.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
+                            <?php echo form_open("Admin_controller/assign_ta");?>
+                            <input type="submit" name="view" value="assign" />
+                            <?php echo form_close();?>                       
                         </p>
                     </div>
                 </div>
