@@ -11,6 +11,8 @@
 	 	foreach($item as $key => $value):
 			echo "<li>".$key." => ".$value."</li>";
 	 	endforeach;
+	 	echo"---------------------";
+	 	echo "<br>";
 	 endforeach;
 	}
 ?>

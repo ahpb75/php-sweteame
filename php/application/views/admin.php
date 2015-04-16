@@ -102,21 +102,6 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>View Instructor Comments</h3>
-                        <p>Feedback for the applicant will appear here.</p>
-                        <p>
-                            <?php echo form_open("Admin_controller/view_comment");?>
-                            <input type="submit" name="view" value="view" />
-                            <?php echo form_close();?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
                         <h3>Current Temporal Window</h3>
                         <p>The current time window will be viewable here.</p>
                         <p>
