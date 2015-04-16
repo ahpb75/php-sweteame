@@ -88,6 +88,7 @@ class Admin_controller extends CI_Controller {
     {
     	$this->load->view('admin_create_course');
     	$this->admin_model->create_course();
+    	$this->load->view('index');
     }
     // public function assign_ta()
     // {

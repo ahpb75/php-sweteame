@@ -13,6 +13,7 @@
 	}
 	else{
 	echo "<strong> Comment: ".$item."</strong>";
+	echo "<br>";
 	echo "--------------";
 	}
 	$counter = $counter + 1;
