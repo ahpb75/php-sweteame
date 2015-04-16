@@ -93,6 +93,15 @@ class Admin_controller extends CI_Controller {
     	$this->admin_model->create_course();
     	$this->load->view('home');
     }
+    public function assign_ta()
+    {
+    	$data['course'] = $this->admin_model->load_course();
+    	$this->load->view('course_view1',$data);
+    }
+    public function assign_ta_to_course()
+    {
+    	
+    }
     // public function assign_ta()
     // {
     // 	$this->load->view('admin_assign_ta');

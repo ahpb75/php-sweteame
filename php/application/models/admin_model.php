@@ -47,5 +47,16 @@ class Admin_model extends CI_Model {
         $data=array('course_name' => $this->input->post('Coursename'),'courseID' => $this->input->post('CourseId'));
         $this->db->insert('Course',$data);
     }
+    function load_course()
+    {
+        $query = $this->db->get('Course');
+        $course = array();
+        foreach ($query->result() as $value)
+        {
+            array_push($course,$value->courseID);
+            array_push($course,$value->course_name);
+        }
+        return $course;
+    }
 }
 ?>
