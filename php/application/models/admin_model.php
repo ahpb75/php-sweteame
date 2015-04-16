@@ -61,7 +61,7 @@ class Admin_model extends CI_Model {
     }
     function applicant_for_course()
     {
-        $query = $this->db->get_where('Application',array('course_name' => $this->input->post('coursename'));
+        $query = $this->db->get_where('Application',array('course_name' => $this->input->post('coursename')));
             $application = array();
         $empty = "";
         if ($query->num_rows()>0)
