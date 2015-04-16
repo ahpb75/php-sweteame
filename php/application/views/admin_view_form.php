@@ -10,7 +10,7 @@
 <body>
 	<FORM action = "" method = "">
 		<div>
-			<lable for ="appID"> appID: <textarea ><?php echo $appID;?> </textarea> </label>
+			<lable for ="appID"> appID: <input type = "text" value = <?php echo $appID;?>></label>
 		</div>
 		<div>
 			<lable for ="position"> position: <?php echo $position;?> </label>
