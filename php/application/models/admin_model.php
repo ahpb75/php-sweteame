@@ -14,27 +14,29 @@ class Admin_model extends CI_Model {
         $query = $this->db->get('Application');
         // return $query->result();
         foreach ($query->result() as $key => $value) {
-            $form = array('GPA' => $value->GPA);
+            $form = array(
+                'appID' => $value->appID,
+                'position' => $value->position,
+                'GPA' => $value->GPA,
+                'program_level' => $value->program_level,
+                'graduate_program' => $value->graduate_program,
+                'advisor' => $value->advisor,
+                'phone' => $value->phone,
+                'email' => $value->email,
+                'gradDate' => $value->gradDate,
+                'optScore' => $value->optScore,
+                'optWhen' => $value->optWhen,
+                'GATO' => $value->GATO,
+                'SPEAK' => $value->SPEAK,
+                'SPEAKdate' => $value->SPEAKdate,
+                'ONITA' => $value->ONITA,
+                'ONITA_date' => $value->ONITA_date,
+                'note' => $value->note,
+                'assignment' => $value->assignment
+                );
         }
         return $form;
     }
-     // $form_data = array(
-     //            'position' => @$this->input->post('position'),
-     //            'GPA' => @$this->input->post('GPA'),
-     //            'program_level' => @$this->input->post('program_level'),
-     //            'graduate_program' => @$this->input->post('graduate_program'),
-     //            'advisor' => @$this->input->post('advisor'),
-     //            'phone' => @$this->input->post('phone'),
-     //            'email' => @$this->input->post('email'),
-     //            'gradDate' => @$this->input->post('gradDate'),
-     //            'optScore' => @$this->input->post('optScore'),
-     //            'optWhen' => @$this->input->post('optWhen'),
-     //            'GATO' => @$this->input->post('GATO'),
-     //            'SPEAK' => @$this->input->post('SPEAK'),
-     //            'SPEAKdate' => @$this->input->post('SPEAKdate'),
-     //            'ONITA' => @$this->input->post('ONITA'),
-     //            'ONITA_date' => @$this->input->post('ONITA_date')
-     //        );
 
 }
 ?>
