@@ -11,7 +11,7 @@ class Admin_model extends CI_Model {
     // }
     function view_form1()
     {
-        $query = $this->db->get_where('User','permissions' => "2");
+        $query = $this->db->get_where('User',array('permissions' => "2"));
         // return $query->result();
         $num = $query->num_rows();
         $applicant = array();
