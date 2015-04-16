@@ -64,10 +64,14 @@ class Admin_controller extends CI_Controller {
 
 
 //     }
-    public function view_form()
+    public function view_form1()
     {
-    	$data = $this->admin_model->view_form();
-    	$this->load->view('admin_view_form',$data);
+    	$data = $this->admin_model->view_form1();
+    	$this->load->view('admin_view_form1',$data);
+    }
+    public function view_form2()
+    {
+    	
     }
     public function test()
     {

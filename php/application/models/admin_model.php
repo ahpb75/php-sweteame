@@ -9,16 +9,18 @@ class Admin_model extends CI_Model {
     //     $data=array('username' => $this->input->post('username'),'password' => md5($this->input->post('password')),'permissions' => $this->input->post('permissions'));
     //     $this->db->insert('User',$data);
     // }
-    function view_form()
-    {
-        $query = $this->db->get('Application');
-        // return $query->result();
-        foreach ($query->result() as $key => $value) {
-            $form = $value;
-        }
-        return $form;
-    }
     function view_form1()
+    {
+        $query = $this->db->get_where('User','permissions' => "2");
+        // return $query->result();
+        $num = $query->num_rows();
+        $applicant = array();
+        foreach ($query->result() as $key => $value) {
+            array_push($applicant,$value->username);
+        }
+        return $applicant;
+    }
+    function view_form2()
     {
         $query = $this->db->get('Application');
     }
