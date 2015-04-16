@@ -59,21 +59,21 @@ class Admin_model extends CI_Model {
         }
         return $course;
     }
-    // function applicant_for_course()
-    // {
-    //     $query = $this->db->get_where('Application',array('course_name') => $this->input->post('coursename'));
-    //         $application = array();
-    //     $empty = "";
-    //     if ($query->num_rows()>0)
-    //     {
-    //         foreach ($query->result() as $value)
-    //         {
-    //             array_push($application,$value);
-    //         }
-    //     return $application;
-    //     }      
-    //     return $empty;
-    // }
+    function applicant_for_course()
+    {
+        $query = $this->db->get_where('Application',array('course_name' => $this->input->post('coursename'));
+            $application = array();
+        $empty = "";
+        if ($query->num_rows()>0)
+        {
+            foreach ($query->result() as $value)
+            {
+                array_push($application,$value);
+            }
+        return $application;
+        }      
+        return $empty;
+    }
     // function enter_score()
     // {
     //     $data = array('Score' => $this->input->post('score'));

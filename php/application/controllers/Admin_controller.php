@@ -98,11 +98,11 @@ class Admin_controller extends CI_Controller {
     	$data['course'] = $this->admin_model->load_course();
     	$this->load->view('course_view1',$data);
     }
-    // public function assign_ta_to_course()
-    // {
-    // 	$data['application'] = $this->admin_model->applicant_for_course();
-    // 	$this->load->view('course_view2',$data);
-    // }
+    public function assign_ta_to_course()
+    {
+    	$data['app_course'] = $this->admin_model->applicant_for_course();
+    	$this->load->view('course_view2',$data);
+    }
     // public function enter_score()
     // {
     // 	$this->admin_model->enter_score();

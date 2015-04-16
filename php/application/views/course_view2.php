@@ -3,11 +3,11 @@
 <body>
 <ul>
 <?php 
-	if ($application == "")
+	if ($app_course == "")
 	echo "There is no applicant for this course";
 	else
 	{
-	foreach ($application as $item):
+	foreach ($app_course as $item):
 		$user;
 	 	foreach($item as $key => $value):
 	 		if($key == "appID")
@@ -17,8 +17,10 @@
 	 	echo"---------------------";
 	 	echo form_open('Admin_controller/enter_score');
 	 	echo form_input('user',$user);
-	 	echo "Score";
+	 	echo "Enter Score for this applicant";
 	 	echo form_input('score','');
+	 	echo "Assign this applicant be TA"
+	 	echo form_input('assign','');
 	 	echo"<br>";
 	 	echo form_submit('submit','submit');
 	 	echo form_close();
