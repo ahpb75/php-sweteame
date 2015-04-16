@@ -46,7 +46,6 @@ class Admin_model extends CI_Model {
     {
         $data=array('course_name' => $this->input->post('Coursename'),'courseID' => $this->input->post('CourseId'));
         $this->db->insert('Course',$data);
-
     }
 }
 ?>

@@ -13,8 +13,12 @@
 			<h1>Create Course</h1>
 				<?php 
 				echo form_open("admin_controller/create_course_logic");
+				echo "CourseId";
 				echo form_input('CourseId','');
+				echo "<br>";
+				echo "Coursename";
 				echo form_input('Coursename','');
+				echo "<br>";
 				echo form_submit('submit','submit');
 				echo form_close();?>
 			</p>
