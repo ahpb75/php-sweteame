@@ -4,7 +4,7 @@
 <ul>
 <?php $counter = 0;foreach ($userinfo as $item):?>
 <li><?php 
-	if ($counter/2 == 0)
+	if ($counter%2 == 0)
 	{
 	echo form_open('Admin_controller/view_form2');
 	echo form_input('username',$item);
@@ -15,7 +15,6 @@
 	echo "<strong>".$item."</strong>";
 	}
 	$counter = $counter + 1;
-	echo $counter;
 	?>
 <?php endforeach;?>
 </ul>
