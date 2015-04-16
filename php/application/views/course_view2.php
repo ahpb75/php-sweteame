@@ -15,11 +15,11 @@
 	 	endforeach;
 	 	echo"---------------------";
 	 	echo form_open('Admin_controller/enter_score');
-	 	echo form_input('user',$user);
+	 	// echo form_input('user',$user);
 	 	echo "Enter Score for this applicant";
 	 	echo form_input('score','');
-	 	echo "Assign this applicant be TA"
-	 	echo form_input('assign','');
+	 	// echo "Assign this applicant be TA"
+	 	// echo form_input('assign','');
 	 	echo"<br>";
 	 	echo form_submit('submit','submit');
 	 	echo form_close();
