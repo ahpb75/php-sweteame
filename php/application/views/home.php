@@ -57,7 +57,7 @@
                     <a href=<?php echo site_url("welcome/registration");?>>Apply Now</a>
                 </li>
                 <li class="page-scroll">
-                    <a href=<?php echo site_url("welcome/home");?>>View Account</a>
+                    <a href=<?php echo site_url("welcome/home");?>>View Account/Log In</a>
                 </li>
             </ul>
         </div>
