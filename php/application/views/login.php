@@ -16,7 +16,7 @@
 
         <div class="col-md-4">
             <section class="login-form">
-                <form method="post" action="#" role="login">
+                <form role="login">
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
                     <center>
                         <?php if ($login == 'FALSE')
@@ -35,7 +35,7 @@
 
                 </form>
 
-                <div class="form-links">
+                <div class="form-links ">
                     <a href=<?php echo site_url("welcome/home");?>Home Page</a>
                 </div>
             </section>
