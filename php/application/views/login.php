@@ -15,27 +15,26 @@
 
         <div class="col-md-4">
             <section class="login-form">
-                <form method="post" role="login">
+
+                    <?php echo form_open("welcome/login");?>
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
                     <center>
                         <?php if ($login == 'FALSE')
                             echo "<p> Your username or password was incorrect.</p>"?>
-                        <?php echo form_open("welcome/login");?>
+
                     </center>
                     <input type="text" id="username" name="username" placeholder="Username" required class="form-control input-lg" value="<?php echo set_value('username');?>" />
 
                     <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password" required="" value = "<?php echo set_value('password');?>"/>
 
                     <input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
-
-                    <?php echo form_close();?>
-
-                    <div>
-                        <p>
+                <div>
+                    <p>
                         <a href=<?php echo site_url("welcome/registration");?>Create account</a>
-                        </p>
-                    </div>
-                </form>
+                    </p>
+                </div>
+
+                <?php echo form_close();?>
 
                 <div class="form-links">
                     <a href=<?php echo site_url("welcome/home");?>Home Page</a>
