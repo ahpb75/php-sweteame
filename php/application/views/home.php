@@ -76,7 +76,7 @@
                     <span class="name">Welcome!</span>
                     <hr class="star-light">
                     <span class="skills">Apply Now!</span>
-                    <center><button type="button" class="btn btn-primary"><a href="index.php/welcome/registration">Register</a>
+                    <center><button type="button" class="btn btn-primary"><a href=<?php echo site_url("welcome/registration");?>>Register</a>
                         </button></center>
                 </div>
             </div>
