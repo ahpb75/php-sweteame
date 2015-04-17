@@ -141,7 +141,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Contact Us</h3>
                     <p>573-882-2121</p>
-                    <p>Visit the <a href="http://http://missouri.edu/">University of Columbia-Missouri</a> homepage.</p>
+                    <p>Visit the <a href="http://missouri.edu/">University of Columbia-Missouri</a> homepage.</p>
                 </div>
             </div>
         </div>
