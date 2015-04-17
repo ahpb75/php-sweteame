@@ -14,10 +14,12 @@
         <div class="col-md-4"></div>
 
         <div class="col-md-4">
-            <section class="login-form">
+            <section class="login-form" role="login">
 
                     <?php echo form_open("welcome/login");?>
+                    <center>
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
+                    </center>
                     <center>
                         <?php if ($login == 'FALSE')
                             echo "<p> Your username or password was incorrect.</p>"?>
