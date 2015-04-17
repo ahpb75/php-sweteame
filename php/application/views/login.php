@@ -26,12 +26,13 @@
 
                     <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password" required="" value = "<?php echo set_value('password');?>"/>
 
-                    <button type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
-                    <?php echo form_close();?>
+                    <input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
+
+
                     <div>
                         <a href=<?php echo site_url("welcome/registration");?>Create account</a>
                     </div>
-
+                    <?php echo form_close();?>
                 </form>
 
                 <div class="form-links ">
