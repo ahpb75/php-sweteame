@@ -19,7 +19,7 @@
 
                     <?php echo form_open("welcome/login");?>
                     <center>
-                        <span class="name">Log In</span>
+                        <h3>Log In</h3>
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
                     </center>
                     <center>
