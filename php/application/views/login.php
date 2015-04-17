@@ -16,7 +16,7 @@
 
         <div class="col-md-4">
             <section class="login-form">
-                <form role="login">
+                <form method="post" role="login">
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
                     <center>
                         <?php if ($login == 'FALSE')
@@ -29,14 +29,16 @@
 
                     <input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
 
+                    <?php echo form_close();?>
 
                     <div>
+                        <p>
                         <a href=<?php echo site_url("welcome/registration");?>Create account</a>
+                        </p>
                     </div>
-                    <?php echo form_close();?>
                 </form>
 
-                <div class="form-links ">
+                <div class="form-links">
                     <a href=<?php echo site_url("welcome/home");?>Home Page</a>
                 </div>
             </section>
