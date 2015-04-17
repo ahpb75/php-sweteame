@@ -188,9 +188,3 @@
 
 </html>
 
-/**
- * Created by PhpStorm.
- * User: Vince
- * Date: 4/10/2015
- * Time: 6:25 PM
- */ 
