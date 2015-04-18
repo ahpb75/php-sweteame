@@ -6,33 +6,18 @@ class Instructor_controller extends CI_controller{
 	}
 
 	public function index(){
-		$this->load->view('header');
-		$this->load->view('instructor_home');
-		//$this->load->view('footer');
 		
-		if($this->input->post('view')){
-			$app=$this->input->post('applicant');
-			if($app!=FALSE){/*checking to make sure the applicant exists*/
-				/*searches DB for the applicants application and returns an array of the whole row returned. Then passing that array of data to the form view for display*/
-				$data=$this->Instructor_model->get_applicant_data($app);
-				$this->load->view('Form_view',$data);
-			}
-			else{
-				/*error message of some sort?*/
-			}
+	}
+
+	public function add_note(){
+		$app=$this->input->post('applicant');
+		$note=$this->input->post('note');
+		if($app==FALSE || $note==FALSE){
+			return NULL;
 		}
-		if($this->input->post('add_note')){
-			$app=$this->input->post('applicant');
-			$note=$this->input->post('note');
-			/*checking to make sure the applicant and note fields aren't NULL*/
-			if($app!=FALSE && $note!=FALSE){
-				/*placing applicant/note into an array to be used in the query*/
-				$input=array($app,$note);
-				$this->db->add_note($input);
-			}
-			else{
-				/*some sort or error message?*/
-			}
+		else{
+			$input=array($app,$note);
+			$this->Instructor_model->add_note($input);
 		}
 	}
 //function to return the names of applicants so instructor can select who to comment on -chantal
@@ -47,4 +32,15 @@ class Instructor_controller extends CI_controller{
 
     }
 }
+
+	public function get_app(){
+		$app=$this->input->post('applicant');//@chantal search box needs to be named applicant, or you can change it.
+		if($app==FALSE){
+			return NULL;
+		}
+		else{
+			$data=$this->Instructor_model->get_applicant_data($app);
+			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
+		}
+	}
 ?>

@@ -27,5 +27,11 @@ class instructor_model extends CI_model{
         }
 	return $query;
     }
+
+	public function get_names(){
+		$sql='SELECT lname,fname FROM application ORDER BY lname';
+		$data=$this->db->query($sql);
+		return $data;
+	}
 }
 ?>
