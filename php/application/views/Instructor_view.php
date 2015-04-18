@@ -9,6 +9,7 @@
 
 <head>
 
+<!--
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +18,10 @@
     <meta name="author" content="">
     <title> TA Selection </title>
 
-<!-- Bootstrap Core CSS -->
+<!-- Bootstrap Core CSS 
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
+-->
+    <!-- Custom CSS 
     <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
