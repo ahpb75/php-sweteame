@@ -140,7 +140,6 @@ class Welcome extends CI_Controller {
     	$this->load->view('error');
     }
 
-}
 
 	//getting list of names for all applicants for instructor_view drop down box. Needs to be in here since we're calling the view in this index.
 	public function get_names(){
@@ -149,5 +148,6 @@ class Welcome extends CI_Controller {
 		return $names;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
 	}
+}
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
