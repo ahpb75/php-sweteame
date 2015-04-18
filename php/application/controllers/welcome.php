@@ -48,9 +48,11 @@ class Welcome extends CI_Controller {
         {
             if ($this->session->userdata('user_type') == '2')//applicant
                 $this->apply();
-            else if($this->session->userdata('user_type') == '1')//staff
+            else if($this->session->userdata('user_type') == '1'){//staff
                 //$this->load->view('header'); //want to load standard header before instructor view-chantal
-                $this->load->view('staff_view');
+		$names=$this->get_names();
+                $this->load->view('instructor_home',$names);
+		}
             else if($this->session->userdata('user_type') == '0')//admin
                 $this->load->view('admin');
         }
