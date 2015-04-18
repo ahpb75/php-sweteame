@@ -147,7 +147,7 @@ class Welcome extends CI_Controller {
 	//getting list of names for all applicants for instructor_view drop down box. Needs to be in here since we're calling the view in this index.
 	public function get_names(){
 		$this->load->model('instructor_model');
-		$names=$this->Instructor_model->get_names();
+		$names=$this->instructor_model->get_names();
 		return $names;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
 	}
