@@ -57,7 +57,7 @@
                     <a href=<?php echo site_url("welcome/registration");?>>Apply Now</a>
                 </li>
                 <li class="page-scroll">
-                    <a href=<?php echo site_url("welcome/home");?>>View Account</a>
+                    <a href=<?php echo site_url("welcome/home");?>>View Account/Log In</a>
                 </li>
             </ul>
         </div>
@@ -76,7 +76,7 @@
                     <span class="name">Welcome!</span>
                     <hr class="star-light">
                     <span class="skills">Apply Now!</span>
-                    <center><button type="button" class="btn btn-primary"><a href="index.php/welcome/registration">Register</a>
+                    <center><button type="button" class="btn btn-primary"><a href=<?php echo site_url("welcome/registration");?>>Register</a>
                         </button></center>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Contact Us</h3>
                     <p>573-882-2121</p>
-                    <p>Visit the <a href="http://http://missouri.edu/">University of Columbia-Missouri</a> homepage.</p>
+                    <p>Visit the <a href="http://missouri.edu/">University of Columbia-Missouri</a> homepage.</p>
                 </div>
             </div>
         </div>
@@ -188,9 +188,3 @@
 
 </html>
 
-/**
- * Created by PhpStorm.
- * User: Vince
- * Date: 4/10/2015
- * Time: 6:25 PM
- */ 
