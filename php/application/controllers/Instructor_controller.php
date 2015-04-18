@@ -31,7 +31,6 @@ class Instructor_controller extends CI_controller{
 
 
     }
-}
 
 	public function get_app(){
 		$app=$this->input->post('applicant');//@chantal search box needs to be named applicant, or you can change it.
@@ -43,4 +42,5 @@ class Instructor_controller extends CI_controller{
 			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
 		}
 	}
+}
 ?>
