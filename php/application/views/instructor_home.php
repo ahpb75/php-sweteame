@@ -92,6 +92,7 @@
 
 echo "hi";
 foreach($names->result() as $user){
+    echo "start";
     echo $user;
 }
 
