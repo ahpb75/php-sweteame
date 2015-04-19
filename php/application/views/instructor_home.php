@@ -88,6 +88,14 @@
                 </div>
             </div>
 
+<span> Choose an Applicant to view their Application</span> 
+<select> 
+    <option value = "first applicant"> First Applicant </option>
+
+</select>
+
+
+
 <?php
 
 foreach ($courses as $row){
