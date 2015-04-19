@@ -31,16 +31,12 @@
                     <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password" required="" value = "<?php echo set_value('password');?>"/>
 
                     <input type="password" class="form-control input-lg" id="cpassword" name="cpassword" placeholder="Confirm Password" required="" value = "<?php echo set_value('cpassword');?>"/>
-					
-							<?php if(confirmpassword != password)
-								echo "<p> Your passwords do not match</p>";?>
-					
 					<br>
-					<input type="radio" name="permissions" value="2" checked />Applicant 
+					<input type="radio" name="permissions" value="2" checked /> Applicant 
 					<br>
-					<input type="radio" name="permissions" value="1" />Staff 
+					<input type="radio" name="permissions" value="1" /> Staff 
 					<br>
-					<input type="submit" name="submit" <!--onclick = "success()" -->value="submit" />
+					<input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
 					<?php echo form_close();?>
 
                 <div class="form-links">
