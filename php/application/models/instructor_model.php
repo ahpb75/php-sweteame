@@ -23,11 +23,17 @@ class instructor_model extends CI_model{
     	$application = array();
         $sql1 = "SELECT * FROM User ORDER BY username";
         $query= $this->db->query($sql1);
-        if($query->num_rows()>0){
+        for each ($query->result() as $item){
+        	array_push($application, $item);
+        	return $application;
+        }
+    }
+        /*if($query->num_rows()>0){
             return $query;
         }
 	return $query;
-    }
+    }*/
+    
 
 	public function get_names(){
 		$sql='SELECT lname,fname FROM Application ORDER BY lname';
