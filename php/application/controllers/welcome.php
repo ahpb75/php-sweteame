@@ -28,9 +28,14 @@ class Welcome extends CI_Controller {
 		{
 			if ($this->session->userdata('user_type') == '2')//applicant
 				$this->apply();
-			else if($this->session->userdata('user_type') == '1')//staff
+			else if($this->session->userdata('user_type') == '1'){//staff
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
-				$this->load->view('staff_view');
+				//needed names from the db before we called the view in order to populate the drop down box
+				$names=$this->get_names();
+				$this->load->view('header');
+				$this->load->view('instructor_home',$names);
+
+				}
 			else if($this->session->userdata('user_type') == '0')//admin
 				$this->load->view('admin');
 		}
@@ -45,9 +50,11 @@ class Welcome extends CI_Controller {
         {
             if ($this->session->userdata('user_type') == '2')//applicant
                 $this->apply();
-            else if($this->session->userdata('user_type') == '1')//staff
+            else if($this->session->userdata('user_type') == '1'){//staff
                 //$this->load->view('header'); //want to load standard header before instructor view-chantal
-                $this->load->view('staff_view');
+		$names=$this->get_names();
+                $this->load->view('instructor_home',$names);
+		}
             else if($this->session->userdata('user_type') == '0')//admin
                 $this->load->view('admin');
         }
@@ -137,7 +144,18 @@ class Welcome extends CI_Controller {
     	$this->load->view('error');
     }
 
-}
 
+	//getting list of names for all applicants for instructor_view drop down box. Needs to be in here since we're calling the view in this index.
+	public function get_names(){
+		$this->load->model('instructor_model');
+		$names=$this->instructor_model->get_names();
+		$data=array();
+		foreach($names->result() as $row){
+			array_push($data, $row);
+		}
+		return $data;
+		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
+	}
+}
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

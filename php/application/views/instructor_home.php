@@ -35,7 +35,7 @@
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
             <p> This is where you can view TA applicants, post comments on former TA's, and know which TA's have been assigned to your course.</p>
-            <p><a class="btn btn-primary btn-large" href= "Instructor_controller/show_app">View All Current Applicants</a>
+            <p><a class="btn btn-primary btn-large" href= "<?php echo site_url("Instructor_controller/show_app");?>">View All Current Applicants</a>
             </p>
         </header>
 
@@ -87,6 +87,20 @@
                     </div>
                 </div>
             </div>
+
+<?php
+$a = array();
+$b = 5;
+$c = 6;
+array_push($a, $b);
+array_push($a, $c);
+echo "hi";
+foreach($a as $person){
+    echo "start";
+    echo $person;
+}
+
+?>
 
 <!--
 <h1> Computer Science Department </h1>

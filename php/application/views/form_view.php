@@ -31,12 +31,28 @@
     <hr/>
     <h3>Fill out the form below:</h3>
     <div class="span5">
-<form style="width=45%; padding-left:55px;">
-
 
     <?php
     $attributes = array('class' => 'form-horizontal', 'id' => '');
     echo form_open('Form_controller', $attributes); ?>
+
+    <div class="form-group">
+        <label for="fname">First Name <span class="required">*</span></label>
+        <input id="fname" type="text" name="fname" class="form-control" placeholder="John" value="<?php echo set_value('fname'); ?>"  />
+        <?php echo form_error('fname'); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="lname">Last Name <span class="required">*</span></label>
+        <input id="lname" type="text" name="lname" class="form-control" placeholder="Doe" value="<?php echo set_value('lname'); ?>"  />
+        <?php echo form_error('lname'); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="studentID">Student ID <span class="required">*</span></label>
+        <input id="studentID" type="text" name="studentID" class="form-control" placeholder="12345678" value="<?php echo set_value('studentID'); ?>"  />
+        <?php echo form_error('studentID'); ?>
+    </div>
 
     <div class="form-inline">
         <label for="position">TA or PLA <span class="required">*</span></label>
@@ -182,9 +198,9 @@
         <hr/>
 
           <center><?php echo form_submit( 'submit', 'Submit'); ?></center>
-        <?php echo form_close(); ?>
+
     </div>
-    </form>
+    <?php echo form_close(); ?>
 </div>
 </div>
 

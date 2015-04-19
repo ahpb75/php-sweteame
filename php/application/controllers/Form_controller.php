@@ -15,6 +15,9 @@ class Form_controller extends CI_Controller {
     }
     public function index()
     {
+        $this->form_validation->set_rules('fname', 'First Name', 'required|xss_clean');
+        $this->form_validation->set_rules('lname', 'Last Name', 'required|xss_clean');
+        $this->form_validation->set_rules('studentID', 'Student ID', 'required|xss_clean');
         $this->form_validation->set_rules('position', 'TA or PLA', 'required|max_length[5]');
         $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean');
         $this->form_validation->set_rules('program_level', 'If undergraduate, indicate program and level (ex. CS BA jr.)', 'xss_clean|max_length[15]');
@@ -26,10 +29,7 @@ class Form_controller extends CI_Controller {
 		$this->form_validation->set_rules('optScore', 'SPEAK/OPT Score', 'xss_clean|max_length[2]');
 		$this->form_validation->set_rules('optWhen', 'Date of last OPT test', '');
 		$this->form_validation->set_rules('GATO', 'Participated in GATO', 'required');
-		$this->form_validation->set_rules('SPEAK', 'Taken SPEAK Test', 'required|max_length[1]');
-		$this->form_validation->set_rules('SPEAKdate', '*SPEAK Assigned Date', '');
-		$this->form_validation->set_rules('ONITA', 'ONITA requirement (international students)', 'max_length[1]');
-        $this->form_validation->set_rules('ONITA_date', '*ONITA Assigned Date', '');
+
 
 		$this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
 	
@@ -44,6 +44,9 @@ class Form_controller extends CI_Controller {
             // build array for the model
 
             $form_data = array(
+                'fname' => @$this->input->post('fname'),
+                'lname' => @$this->input->post('lname'),
+                'studentID' => @$this->input->post('studentID'),
                 'position' => @$this->input->post('position'),
                 'GPA' => @$this->input->post('GPA'),
                 'program_level' => @$this->input->post('program_level'),
