@@ -110,7 +110,8 @@ class Welcome extends CI_Controller {
 
 			if($this->form_validation->run() == FALSE)
 			{
-				$this->error();
+				//$this->error();
+				$this->load->view('registration');
 			}
 			else
 			{
