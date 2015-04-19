@@ -24,13 +24,13 @@ class Instructor_controller extends CI_controller{
     public function show_app(){
 
         $this->load->model('instructor_model');
-        $application = $this->instructor_model->show_applicants();
-	if(is_null($application)){
+        $data['applications'] = $this->instructor_model->show_applicants();
+	if(is_null($applications)){
 		$this->load->view('error');
 	}
 	else{
         	$this->load->view('header');
-        	$this->load->view('Instructor_view', $application);
+        	$this->load->view('Instructor_view', $applications);
 	}
         //$this->load->view('footer');
 
