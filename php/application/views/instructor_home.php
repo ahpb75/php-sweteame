@@ -89,11 +89,15 @@
             </div>
 
 <?php
-
+$a = array();
+$b = 5;
+$c = 6;
+array_push($a, $b);
+array_push($a, $c);
 echo "hi";
-foreach($names->result() as $user){
+foreach($a as $person){
     echo "start";
-    echo $user;
+    echo $person;
 }
 
 ?>
