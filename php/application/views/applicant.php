@@ -64,9 +64,14 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
+				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
+			<center>
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
+			</center>
+			
+				<!-- Ended of the centering of the name -->
             <p> This is where you can apply, view feedback, and know which courses you've been assigned to.</p>
             <p><a class="btn btn-primary btn-large">Begin Here</a>
             </p>
