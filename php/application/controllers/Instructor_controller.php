@@ -28,7 +28,7 @@ class Instructor_controller extends CI_controller{
 	if($application==NULL){
 		$this->load->view('error');
 	}
-	else(
+	else{
         	$this->load->view('header');
         	$this->load->view('Instructor_view', $application);
 	}
