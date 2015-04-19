@@ -11,6 +11,9 @@
 
 <?php
 echo "hi";
+foreach ($application as $row)
+	echo $row->lname;
+
  
 ?>
 
