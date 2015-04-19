@@ -12,12 +12,8 @@
 <?php
 	echo "hi \n";
 	foreach ($applications as $row){
-		echo "before \n";
-		echo $row->username;
-		echo " \n";
-		echo $row->GPA;
-		echo " \n";
-		echo "after\n";
+		echo $row->lname.", ".$row->fname."\r\n"
+		echo $row->GPA."\r\n";
 	}
 	echo "hi butthead"; 
 ?>
