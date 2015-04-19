@@ -12,8 +12,9 @@
 <?php
 	echo "hi \n";
 	foreach ($applications as $row){
-		echo $row->lname.", ".$row->fname.
-		$row->GPA;
+		$app=$row->lname.", ".$row->fname.
+		$row->GPA";
+		echo $app;
 	}
 	echo "hi butthead"; 
 ?>
