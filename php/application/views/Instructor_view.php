@@ -12,6 +12,7 @@
 <?php
 	echo "hi";
 	echo $application->username;
+	echo $application->GPA;
 	foreach ($application as $row){
 		echo "before foreach";
 		echo $row->username;
