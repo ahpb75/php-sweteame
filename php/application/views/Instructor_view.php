@@ -15,6 +15,8 @@
 		foreach($row as $key => $value){
 		echo "<li>".$key." => ".$value."</li>";
 		}
+		echo"---------------------";
+	 	echo "<br>";
 	}
 	echo "hi butthead"; 
 ?>
