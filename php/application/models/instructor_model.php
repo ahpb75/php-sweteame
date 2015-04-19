@@ -23,7 +23,7 @@ class instructor_model extends CI_model{
         $sql1 = "SELECT * FROM Application ORDER BY lname";
         $query= $this->db->query($sql1);
         if($query->num_rows()>0){
-            return $query;
+		return $query;
         }
 	return $query;
     }
