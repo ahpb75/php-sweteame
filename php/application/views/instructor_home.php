@@ -89,16 +89,16 @@
             </div>
 
 <?php
-$a = array();
-$b = 5;
-$c = 6;
-array_push($a, $b);
-array_push($a, $c);
-echo "hi";
-foreach($a as $person){
-    echo "start";
-    echo $person;
-}
+
+foreach ($courses as $row){
+        foreach($row as $key => $value){
+        echo "<li>".$key." => ".$value."</li>";
+        }
+        echo "=======================";
+        echo "<br>";
+        echo "<br>";
+    }
+    
 
 ?>
 
