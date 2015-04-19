@@ -85,7 +85,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/ta_app.png" alt="">
                     <div class="caption">
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/create_course.png" alt="">
                     <div class="caption">
                         <h3>Create Course <br><br></h3>
                         <p>Create a course. <br><br></p>
@@ -114,7 +114,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/assign_score.png" alt="">
                     <div class="caption">
                         <h3>Assign TA/PLA or Enter Score</h3>
                         <p>Assign them here <br><br></p>
