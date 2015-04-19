@@ -11,7 +11,7 @@
 
 <?php
 echo "hi";
-foreach ($application as $row)
+foreach ($application->result() as $row)
 	echo $row->program_level;
 
  
