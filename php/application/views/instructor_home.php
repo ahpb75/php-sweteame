@@ -88,6 +88,15 @@
                 </div>
             </div>
 
+<?php
+
+echo "hi";
+foreach($names->result() as $user){
+    echo $user;
+}
+
+?>
+
 <!--
 <h1> Computer Science Department </h1>
 <h2> TA Selection 2015 </h2>
