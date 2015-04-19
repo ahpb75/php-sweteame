@@ -29,7 +29,7 @@ class Instructor_controller extends CI_controller{
 		$this->load->view('error');
 	}
 	else{
-        	$this->load->view('header');
+
         	$this->load->view('Instructor_view', $data);
 	}
         //$this->load->view('footer');
