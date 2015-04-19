@@ -20,7 +20,7 @@
         <div class="col-md-4">
             <section class="login-forum" role="login">
 
-                    <?php echo form_open("welcome/registration");?>
+                    <?php echo form_open("welcome/registration_logic");?>
                     <center>
                         <h3>Registration</h3>
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
