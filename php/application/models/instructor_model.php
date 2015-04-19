@@ -5,11 +5,11 @@ class instructor_model extends CI_model{
 		/*db preloaded from config files*/
 	}	
 
-	public function get_applicant_data($app){
-		$sql='SELECT * FROM Application WHERE username=? LIMIT 1';
-		$data=$this->db->query($sql, $app);
+	public function get_course_applicants($course){
+		$sql='SELECT * FROM Application WHERE course_ID=? LIMIT 1';
+		$query=$this->db->query($sql, $app);
 		/*returns an array containing the whole row, should have all of the applicants application data in the order that the db is holding it.*/
-		return $data;
+		return $query->result();
 	}
 
 	public function add_note($input){
@@ -28,10 +28,10 @@ class instructor_model extends CI_model{
 	return NULL;
     }
 
-	public function get_names(){
-		$sql='SELECT lname,fname FROM Application ORDER BY lname';
+	public function get_courses(){
+		$sql='SELECT course_ID,course_name FROM Course ORDER BY course_ID';
 		$data=$this->db->query($sql);
-		return $data;
+		return $data->result();
 	}
 }
 ?>

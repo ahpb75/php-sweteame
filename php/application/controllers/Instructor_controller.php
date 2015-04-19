@@ -38,14 +38,15 @@ class Instructor_controller extends CI_controller{
     }
 
 	public function get_app(){
-		$app=$this->input->post('applicant');//@chantal search box needs to be named applicant, or you can change it.
-		if($app==FALSE){
-			return NULL;
+		$course=$this->input->post('course');//@chantal search box needs to be named applicant, or you can change it.
+		if($course==FALSE){
+			$data['applications']= NULL;
 		}
 		else{
-			$data=$this->Instructor_model->get_applicant_data($app);
+			$data['applications']=$this->Instructor_model->get_course_applicants($app);
 			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
 		}
+		$this->load->view('instructor_choose',$data);
 	}
 }
 ?>
