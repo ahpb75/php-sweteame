@@ -23,7 +23,7 @@ class instructor_model extends CI_model{
         $sql1 = "SELECT * FROM Application";
         $query= $this->db->query($sql1);
         if($query->num_rows()>0){
-		return $query;
+		return $query->result();
         }
 	return NULL;
     }

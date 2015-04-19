@@ -149,7 +149,11 @@ class Welcome extends CI_Controller {
 	public function get_names(){
 		$this->load->model('instructor_model');
 		$names=$this->instructor_model->get_names();
-		return $names;
+		$data=array();
+		foreach($names->result() as $row){
+			array_push($data, $row);
+		}
+		return $data;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
 	}
 }
