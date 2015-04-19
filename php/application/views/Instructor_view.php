@@ -10,15 +10,14 @@
 
 
 <?php
-	echo "hi";
-	echo $applictions;
-	echo $applications->username;
-	echo $applications->GPA;
+	echo "hi \n";
 	foreach ($applications as $row){
-		echo "before foreach";
+		echo "before \n";
 		echo $row->username;
-		echo $row;
-		echo "for each loop after";
+		echo " \n";
+		echo $row->GPA;
+		echo " \n";
+		echo "after\n";
 	}
 	echo "hi butthead"; 
 ?>
