@@ -55,8 +55,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+
                     <li>
-                        <a href="<?php echo site_url("welcome/logout");?>">Logout</a>
+                        <a href=<?php echo site_url("welcome/logout");?>>Logout</a>
 
                     </li>
                 </ul>
@@ -71,9 +72,11 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
+				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
+
             <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
             <p>Current Announcements: <?php echo "No current administrator announcements";?></p>
             <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
@@ -86,6 +89,7 @@
                 <div class="col-lg-12">
                     <h3>Applicant Dashboard</h3>
                 </div>
+
             </div>
             <!-- /.row -->
 
