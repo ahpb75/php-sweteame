@@ -126,26 +126,15 @@
 echo"<span> Choose an Applicant to view their Application</span> ";
 echo " <select name = 'courses'> ";
 foreach ($courses as $row){
-	$id="";
-	$name="";
 	foreach($row as $key => $value){
-		if($key=="courseID"){
-			$id=$value;
-		}
-		else{
-			$name=$value;
-		}
-		if($key=="coursename"){
-			echo "<option value=".$id.">".$id." ".$name."</option>";
-		}
-            //echo "<option value =".$value.">".$row['coursename']."</option>";
+            echo "<option value =".$value.">".$value."</option>";
 	}
         //echo "<li>".$key." => ".$value."</li>";
        // echo "=======================";
        // echo "<br>";
        // echo "<br>";
     }
-//echo "</select>"; 
+echo "</select>"; 
 ?>
 
 <!--
