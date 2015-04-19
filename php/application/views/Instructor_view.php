@@ -1,9 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-<head>
 
 <html>
 <head>
+
 
 
 </head>
@@ -23,7 +21,7 @@ foreach($data->row() as $row){
     //echo $data; 
 ?>
 
-    <br />;
+    <!--<br />;  -->
 
 
 
