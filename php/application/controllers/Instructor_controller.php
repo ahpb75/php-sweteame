@@ -25,7 +25,7 @@ class Instructor_controller extends CI_controller{
 
         $this->load->model('instructor_model');
         $data['applications'] = $this->instructor_model->show_applicants();
-	if(is_null($data['$applications'])){
+	if(is_null($data['applications'])){
 		$this->load->view('error');
 	}
 	else{
