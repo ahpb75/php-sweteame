@@ -31,9 +31,8 @@ class Welcome extends CI_Controller {
 			else if($this->session->userdata('user_type') == '1'){//staff
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				//needed names from the db before we called the view in order to populate the drop down box
-				$names=$this->get_names();
-				$this->load->view('header');
-				$this->load->view('instructor_home',$names);
+				$data=$this->get_courses();
+				$this->load->view('instructor_home',$data);
 
 				}
 			else if($this->session->userdata('user_type') == '0')//admin
@@ -88,11 +87,16 @@ class Welcome extends CI_Controller {
 			if($this->form_validation->run() == FALSE) 
 			{
 				$this->error();
+				//instead of loading a new page. how about adding a JQuery or JS popup box instead?
+				//alert("Failed to create an account!");
 			}
 			else 
 			{
 				$this->registration_model->add_user();
 				$this->load->view('thanks');
+				
+				//instead of loading a new page. how about adding a JQuery or JS popup box instead?
+				//alert("Successfully Created account!");
 			}
 		
 	}
@@ -106,7 +110,8 @@ class Welcome extends CI_Controller {
 
 			if($this->form_validation->run() == FALSE)
 			{
-				$this->error();
+				//$this->error();
+				$this->load->view('registration');
 			}
 			else
 			{
@@ -146,10 +151,10 @@ class Welcome extends CI_Controller {
 
 
 	//getting list of names for all applicants for instructor_view drop down box. Needs to be in here since we're calling the view in this index.
-	public function get_names(){
+	public function get_courses(){
 		$this->load->model('instructor_model');
-		$names=$this->instructor_model->get_names();
-		return $names;
+		$data['courses']=$this->instructor_model->get_courses();
+		return $data;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
 	}
 }
