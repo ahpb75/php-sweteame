@@ -32,9 +32,8 @@
 
                     <input type="cpassword" class="form-control input-lg" id="cpassword" name="cpassword" placeholder="Password" required="" value = "<?php echo set_value('cpassword');?>"/>
 					
-					<center> 
-						<?php if(confirmpassword != password)
-							echo "<p> Your passwords do not match";
+							<?php if(confirmpassword != password)
+							echo "<p> Your passwords do not match";?>
 					
 					<br>
 					<input type="radio" name="permissions" value="2" checked />Applicant 
