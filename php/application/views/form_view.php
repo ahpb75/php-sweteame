@@ -31,8 +31,6 @@
     <hr/>
     <h3>Fill out the form below:</h3>
     <div class="span5">
-<form style="width=45%; padding-left:55px;">
-
 
     <?php
     $attributes = array('class' => 'form-horizontal', 'id' => '');
@@ -200,9 +198,9 @@
         <hr/>
 
           <center><?php echo form_submit( 'submit', 'Submit'); ?></center>
-        <?php echo form_close(); ?>
+
     </div>
-    </form>
+    <?php echo form_close(); ?>
 </div>
 </div>
 
