@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset=UTF-8>
-<div align = "center">
-<title>Congratulations</title>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
-</div>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../../bootstrap/css/login.css" rel="stylesheet">
+    <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Registration Success</title>
 </head>
 <body>
-	<div align = "center">
-		<div id ="login">
-			<h1>Registration Success</h1>
-			<p>Back to login<a href=<?php echo site_url("welcome/index");?> > here</a></p>
-			</p>
-			</div>
-</div>
-</form>
+<div class="container">
+
+    <div class="row" id="pwd-container">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <section class="login-form" role="login">
+                <center>
+                    <h3>Successfully Registered</h3>
+                    <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
+                </center>
+
+                <a href="<?php echo site_url("welcome/login");?>"><input type="button" name="return" value="Login Now" class="btn btn-lg btn-primary btn-block" /></a>
+            </section>
+        </div>
+
+        <div class="col-md-4"></div>
+
+
+    </div>
+
 </body>
 </html>
