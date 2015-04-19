@@ -12,8 +12,8 @@
 <?php
 	echo "hi \n";
 	foreach ($applications as $row){
-		echo $row->lname.", ".$row->fname."\r\n";
-		echo $row->GPA."\r\n";
+		echo $row->lname.", ".$row->fname.
+		$row->GPA;
 	}
 	echo "hi butthead"; 
 ?>
