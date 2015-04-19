@@ -12,8 +12,9 @@
 <?php
 	echo "hi";
 	foreach ($application->result() as $row){
-		echo $row->program_level;
+		echo $row;
 	}
+	echo "hi butthead";
 
  
 ?>
