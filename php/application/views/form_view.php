@@ -38,6 +38,24 @@
     $attributes = array('class' => 'form-horizontal', 'id' => '');
     echo form_open('Form_controller', $attributes); ?>
 
+    <div class="form-group">
+        <label for="fname">First Name <span class="required">*</span></label>
+        <input id="fname" type="text" name="fname" class="form-control" placeholder="John" value="<?php echo set_value('fname'); ?>"  />
+        <?php echo form_error('fname'); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="lname">Last Name <span class="required">*</span></label>
+        <input id="lname" type="text" name="lname" class="form-control" placeholder="Doe" value="<?php echo set_value('lname'); ?>"  />
+        <?php echo form_error('lname'); ?>
+    </div>
+
+    <div class="form-group">
+        <label for="studentID">Student ID <span class="required">*</span></label>
+        <input id="studentID" type="text" name="studentID" class="form-control" placeholder="12345678" value="<?php echo set_value('studentID'); ?>"  />
+        <?php echo form_error('studentID'); ?>
+    </div>
+
     <div class="form-inline">
         <label for="position">TA or PLA <span class="required">*</span></label>
             <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
