@@ -12,11 +12,11 @@
 <?php
 	echo "hi";
 	foreach ($application->result() as $row){
+		echo "before foreach";
 		echo $row;
+		echo "for each loop after";
 	}
-	echo "hi butthead";
-
- 
+	echo "hi butthead"; 
 ?>
 
    
