@@ -11,6 +11,7 @@
 
 <?php
 	echo "hi";
+	echo $application->username;
 	foreach ($application as $row){
 		echo "before foreach";
 		echo $row->username;
