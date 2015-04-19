@@ -80,52 +80,51 @@
             <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
             <p>Current Announcements: <?php echo "No current administrator announcements";?></p>
             <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
-			</center>
-			
+
+            <br>
+            <hr>
+            <br>
+            <!-- Title -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Applicant Dashboard</h3>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+            <!-- Page Features -->
+            <div class="row text-center">
+
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/applicant-icon.png" alt="">
+                        <div class="caption">
+                            <h3>Apply for a TA/PLA postion</h3>
+                            <p>Submit an TA/PLA application for review.</p>
+                            <p>
+                                <a href="<?php echo site_url("Form_controller");?>"class="btn btn-primary">Apply</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/timer.png" alt="">
+                        <div class="caption">
+                            <h3>Time left to apply:</h3>
+                            <p>Time: </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </header>
 
-        <hr>
-
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Applicant Dashboard</h3>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="../../bootstrap/img/applicant-icon.png" alt="">
-                    <div class="caption">
-                        <h3>Apply for a TA/PLA postion</h3>
-                        <p>Submit an TA/PLA application for review.</p>
-                        <p>
-                            <a href="<?php echo site_url("Form_controller");?>"class="btn btn-primary">Apply</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="../../bootstrap/img/timer.png" alt="">
-                    <div class="caption">
-                        <h3>Time left to apply:</h3>
-                        <p>Time: </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
+      <hr>
 
         <!-- Footer -->
         <footer>
