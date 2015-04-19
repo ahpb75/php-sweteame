@@ -17,7 +17,7 @@ class Instructor_controller extends CI_controller{
 		}
 		else{
 			$input=array($app,$note);
-			$this->Instructor_model->add_note($input);
+			$this->instructor_model->add_note($input);
 		}
 	}
 //function to return the names of applicants so instructor can select who to comment on -chantal
