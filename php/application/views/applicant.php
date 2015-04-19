@@ -56,8 +56,15 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+<<<<<<< HEAD
+                        <a href=<?php echo site_url("welcome/home");?>>Home</a>
+                    </li>
+                    <li>
+                        <a href=<?php echo site_url("welcome/logout");?>>Logout</a>
+=======
                         <a href="<?php echo site_url("welcome/logout");?>">Logout</a>
 
+>>>>>>> 31f97be51f9cbef0ed598fb07f85713adc6ea8b7
                     </li>
                 </ul>
             </div>

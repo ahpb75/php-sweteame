@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TA Applicant Manager</title>
+    <title>Admin Homepage</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -91,7 +91,7 @@
                         <p>Submit a TA/PLA application for review.</p>
                         <p>
                             <?php echo form_open("Admin_controller/view_form1");?>
-                            <input type="submit" name="view" value="view" />
+                            <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
                             <?php echo form_close();?>
                         </p>
                     </div>
@@ -101,11 +101,11 @@
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
-                        <h3>Create Course</h3>
-                        <p>Create a course.</p>
+                        <h3>Create Course <br><br></h3>
+                        <p>Create a course. <br><br></p>
                         <p>
                             <?php echo form_open("Admin_controller/create_course");?>
-                            <input type="submit" name="view" value="create" />
+                            <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
                             <?php echo form_close();?>
                         </p>
                     </div>
@@ -117,10 +117,10 @@
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
                         <h3>Assign TA/PLA or Enter Score</h3>
-                        <p>Assign them here</p>
+                        <p>Assign them here <br><br></p>
                         <p>
                             <?php echo form_open("Admin_controller/assign_ta");?>
-                            <input type="submit" name="view" value="assign" />
+                            <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
                             <?php echo form_close();?>                       
                         </p>
                     </div>

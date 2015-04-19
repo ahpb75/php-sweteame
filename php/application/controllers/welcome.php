@@ -32,7 +32,6 @@ class Welcome extends CI_Controller {
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				//needed names from the db before we called the view in order to populate the drop down box
 				$data=$this->get_courses();
-				$this->load->view('header');
 				$this->load->view('instructor_home',$data);
 
 				}
