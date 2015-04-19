@@ -12,7 +12,7 @@
 <?php
 	echo "hi \n";
 	foreach ($applications as $row){
-		echo $row->lname.", ".$row->fname."\r\n"
+		echo $row->lname.", ".$row->fname."\r\n";
 		echo $row->GPA."\r\n";
 	}
 	echo "hi butthead"; 
