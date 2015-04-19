@@ -11,7 +11,7 @@
 
 <?php
 	echo "hi";
-	foreach ($application->next_row() as $row){
+	foreach ($application as $row){
 		echo "before foreach";
 		echo $row->username;
 		echo "for each loop after";
