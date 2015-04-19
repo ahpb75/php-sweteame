@@ -88,8 +88,8 @@
                 </div>
             </div>
 
-<span> Choose an Applicant to view their Application</span> 
-<select> 
+
+
     <option value = "first applicant"> First Applicant </option>
 
 </select>
@@ -97,14 +97,16 @@
 
 
 <?php
-
+echo"<span> Choose an Applicant to view their Application</span> ";
+echo " <select name = 'courses'> ";
 foreach ($courses as $row){
         foreach($row as $key => $value){
-        echo "<li>".$key." => ".$value."</li>";
+            echo"<option value = "'$key->coursename'"> </option>"
+        //echo "<li>".$key." => ".$value."</li>";
         }
-        echo "=======================";
-        echo "<br>";
-        echo "<br>";
+       // echo "=======================";
+       // echo "<br>";
+       // echo "<br>";
     }
     
 
