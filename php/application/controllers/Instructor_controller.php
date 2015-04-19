@@ -23,7 +23,7 @@ class Instructor_controller extends CI_controller{
 //function to return the names of applicants so instructor can select who to comment on -chantal
     public function show_app(){
 
-        //$this->load->model('instructor_model');
+        $this->load->model('instructor_model');
         $application = $this->instructor_model->show_applicants();
 	if($application==NULL){
 		$this->load->view('error');
