@@ -10,15 +10,16 @@
 
 
 <?php
-	echo "hi \n";
+	
 	foreach ($applications as $row){
 		foreach($row as $key => $value){
 		echo "<li>".$key." => ".$value."</li>";
 		}
-		echo"---------------------";
+		echo"-------------------------------------------------";
+	 	echo "<br>";
 	 	echo "<br>";
 	}
-	echo "hi butthead"; 
+	
 ?>
 
    
