@@ -29,7 +29,7 @@ class Instructor_controller extends CI_controller{
 		$this->load->view('error');
 	}
 	else{
-        	$this->load->view('header');
+
         	$this->load->view('Instructor_view', $data);
 	}
         //$this->load->view('footer');
@@ -43,7 +43,7 @@ class Instructor_controller extends CI_controller{
 			$data['applications']= NULL;
 		}
 		else{
-			$data['applications']=$this->Instructor_model->get_course_applicants($app);
+			$data['applications']=$this->instructor_model->get_course_applicants($app);
 			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
 		}
 		$this->load->view('instructor_choose',$data);
