@@ -12,9 +12,9 @@
 <?php
 	echo "hi \n";
 	foreach ($applications as $row){
-		$app=$row->lname.", ".$row->fname.
-		$row->GPA;
-		echo $app;
+		foreach($row as $key => $value){
+		echo "<li>".$key." => ".$value."</li>";
+		}
 	}
 	echo "hi butthead"; 
 ?>
