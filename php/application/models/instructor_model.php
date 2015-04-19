@@ -20,20 +20,13 @@ class instructor_model extends CI_model{
 
     /*creating a function to show instructor all applicants -chantal*/
     public function show_applicants(){
-    	$application = array();
-        $sql1 = "SELECT * FROM User ORDER BY username";
+        $sql1 = "SELECT * FROM Application ORDER BY lname";
         $query= $this->db->query($sql1);
-        for each ($query->result() as $item){
-        	array_push($application, $item);
-        	return $application;
-        }
-    }
-        /*if($query->num_rows()>0){
+        if($query->num_rows()>0){
             return $query;
         }
 	return $query;
-    }*/
-    
+    }
 
 	public function get_names(){
 		$sql='SELECT lname,fname FROM Application ORDER BY lname';
