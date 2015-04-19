@@ -29,7 +29,7 @@ class instructor_model extends CI_model{
     }
 
 	public function get_courses(){
-		$sql='SELECT course_ID,course_name FROM Course ORDER BY course_ID';
+		$sql='SELECT courseID,course_name FROM Course ORDER BY course_ID';
 		$data=$this->db->query($sql);
 		return $data->result();
 	}
