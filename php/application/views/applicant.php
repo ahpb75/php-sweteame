@@ -55,16 +55,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-<<<<<<< HEAD
-                        <a href=<?php echo site_url("welcome/home");?>>Home</a>
-                    </li>
+
                     <li>
                         <a href=<?php echo site_url("welcome/logout");?>>Logout</a>
-=======
-                        <a href="<?php echo site_url("welcome/logout");?>">Logout</a>
 
->>>>>>> 31f97be51f9cbef0ed598fb07f85713adc6ea8b7
+
                     </li>
                 </ul>
             </div>
@@ -79,7 +74,6 @@
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
 				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
-			<center>
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
