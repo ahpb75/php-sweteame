@@ -71,13 +71,17 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
+				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
+			<center>
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
+
             <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
             <p>Current Announcements: <?php echo "No current administrator announcements";?></p>
             <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
-
+			</center>
+			
         </header>
 
         <hr>
