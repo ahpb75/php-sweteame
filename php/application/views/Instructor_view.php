@@ -13,7 +13,7 @@
 	echo "hi \n";
 	foreach ($applications as $row){
 		$app=$row->lname.", ".$row->fname.
-		$row->GPA";
+		$row->GPA;
 		echo $app;
 	}
 	echo "hi butthead"; 
