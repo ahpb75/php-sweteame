@@ -11,11 +11,13 @@
 
 <?php
 	echo "hi";
-	echo $application->username;
-	echo $application->GPA;
-	foreach ($application as $row){
+	echo $applictions;
+	echo $applications->username;
+	echo $applications->GPA;
+	foreach ($applications as $row){
 		echo "before foreach";
 		echo $row->username;
+		echo $row;
 		echo "for each loop after";
 	}
 	echo "hi butthead"; 
