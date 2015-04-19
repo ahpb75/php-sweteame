@@ -25,6 +25,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body {
+            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 
 </head>
 
@@ -47,10 +56,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="home.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Logout</a>
+                        <a href="<?php echo site_url("welcome/logout");?>">Logout</a>
+
                     </li>
                 </ul>
             </div>
@@ -64,12 +71,17 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
+				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
+			<center>
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
-            <p> This is where you can apply, view feedback, and know which courses you've been assigned to.</p>
-            <p><a class="btn btn-primary btn-large">Begin Here</a>
-            </p>
+
+            <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
+            <p>Current Announcements: <?php echo "No current administrator announcements";?></p>
+            <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
+			</center>
+			
         </header>
 
         <hr>
@@ -77,7 +89,7 @@
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3>Dashboard</h3>
+                <h3>Applicant Dashboard</h3>
             </div>
         </div>
         <!-- /.row -->
@@ -87,52 +99,25 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/applicant-icon.png" alt="">
                     <div class="caption">
-                        <h3>View Application Form</h3>
-                        <p>Submit a TA/PLA application for review.</p>
+                        <h3>Apply for a TA/PLA postion</h3>
+                        <p>Submit an TA/PLA application for review.</p>
                         <p>
-                            <a href="Form_controller" class="btn btn-primary">Apply</a> <a href="#" class="btn btn-default">More Info</a>
+                            <a href="<?php echo site_url("Form_controller");?>"class="btn btn-primary">Apply</a>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Your Progress is Saved Here</h3>
-                        <p>This is where you can view your application progress</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/timer.png" alt="">
                     <div class="caption">
-                        <h3>View Instructor Comments</h3>
-                        <p>Feedback on your application will appear here.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Current Temporal Window</h3>
-                        <p>The current time window will be viewable here.</p>
-                        <p>
-                            <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                        </p>
+                        <h3>Time left to apply:</h3>
+                        <p>Time: </p>
                     </div>
                 </div>
             </div>

@@ -88,11 +88,16 @@ class Welcome extends CI_Controller {
 			if($this->form_validation->run() == FALSE) 
 			{
 				$this->error();
+				//instead of loading a new page. how about adding a JQuery or JS popup box instead?
+				//alert("Failed to create an account!");
 			}
 			else 
 			{
 				$this->registration_model->add_user();
 				$this->load->view('thanks');
+				
+				//instead of loading a new page. how about adding a JQuery or JS popup box instead?
+				//alert("Successfully Created account!");
 			}
 		
 	}
