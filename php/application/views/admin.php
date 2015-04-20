@@ -95,7 +95,7 @@
                     <h3>Dashboard</h3>
                 </div>
             </div>
-<<<<<<< HEAD
+
         </div>
         <!-- /.row -->
 
@@ -104,7 +104,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img class ="container" src="../../bootstrap/img/ta_app.png" alt="">
+                    <img src="../../bootstrap/img/ta_app.png" alt="">
                     <div class="caption">
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
@@ -118,7 +118,7 @@
             </div>
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img class ="container" src="../../bootstrap/img/create_course.png" alt="">
+                    <img src="../../bootstrap/img/create_course.png" alt="">
                     <div class="caption">
                         <h3>Create Course <br><br></h3>
                         <p>Create a course. <br><br></p>
@@ -162,14 +162,14 @@
                             <br>
                             <br>
                         </div>
->>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
+
                     </div>
                 </div>
 
-<<<<<<< HEAD
+
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img class ="container" src="../../bootstrap/img/assign_score.png" alt="">
+                    <img src="../../bootstrap/img/assign_score.png" alt="">
                     <div class="caption">
                         <h3>Assign TA/PLA or Enter Score</h3>
                         <p>Assign them here <br><br></p>
@@ -178,7 +178,7 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
                             <?php echo form_close();?>                       
                         </p>
-=======
+
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/assign_score.png" alt="">
@@ -197,7 +197,7 @@
                             <br>
                             <br>
                         </div>
->>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
+
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
