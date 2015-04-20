@@ -119,14 +119,13 @@
                             <?php echo form_close();?>
                         </p>
 
-            
+            </div>
 			<div>
                <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/assign_score.png" alt="">
                         <div class="caption">
-                            <h3>Assign TA/PLA or Enter Score</h3>
-                            <p>Assign them here <br><br></p>
+                            
                             <p>
                                 <?php echo form_open("Admin_controller/assign_ta");?>
                                 <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
