@@ -33,6 +33,11 @@
             -o-background-size: cover;
             background-size: cover;
         }
+        .box
+        {
+            background-color: white;
+
+        }
     </style>
 
 </head>
@@ -72,7 +77,7 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+        <header class="jumbotron hero-spacer box">
 				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
