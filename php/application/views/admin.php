@@ -118,7 +118,8 @@
 								<input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
 								<?php echo form_close();?>
 							</p>
-
+						</div>
+					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 hero-feature">
 					<div class="thumbnail">
