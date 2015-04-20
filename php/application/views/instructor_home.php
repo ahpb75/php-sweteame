@@ -92,6 +92,7 @@
                             <p>
                                 <a href="Instructor_controller/show_app" class="btn btn-primary">View Applicants</a> <a href="#" class="btn btn-default">More Info</a>
                             </p>
+                            <br>
                         </div>
                     </div>
                 </div>
