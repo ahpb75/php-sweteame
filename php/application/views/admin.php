@@ -23,7 +23,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style>
+        body {
+            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,6 +116,8 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
                             <?php echo form_close();?>
                         </p>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
@@ -123,6 +133,10 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
                             <?php echo form_close();?>                       
                         </p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                     </div>
                 </div>
             </div>
