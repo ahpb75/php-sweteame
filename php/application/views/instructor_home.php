@@ -125,9 +125,6 @@
 
 
 
-                <option value = "first applicant"> First Applicant </option>
-
-                </select>
 
 
 
