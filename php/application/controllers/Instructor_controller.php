@@ -43,7 +43,7 @@ class Instructor_controller extends CI_controller{
 			$data['applications']= NULL;
 		}
 		else{
-			$data['applications']=$this->instructor_model->get_course_applicants($app);
+			$data['applications']=$this->instructor_model->get_course_applicants($course);
 			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
 		}
 		$this->load->view('instructor_choose',$data);

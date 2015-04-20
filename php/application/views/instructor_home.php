@@ -124,7 +124,7 @@
 
 <?php
 echo"<span> Choose an Applicant to view their Application</span> ";
-echo " <select name = 'courses'> ";
+echo " <select name = 'course'> ";
 foreach ($courses as $row){
 	foreach($row as $key => $value){
             echo "<option value =".$value.">".$value."</option>";
