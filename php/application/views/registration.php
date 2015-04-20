@@ -40,7 +40,7 @@
 					<?php echo form_close();?>
 
                 <div class="form-links">
-                    <a href="<?php echo site_url("welcome/home");?>">Home Page</a>
+                    <a href="<?php echo site_url("welcome");?>">Home Page</a>
                 </div>
             </section>
         </div>

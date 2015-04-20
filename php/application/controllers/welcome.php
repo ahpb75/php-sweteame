@@ -141,7 +141,11 @@ class Welcome extends CI_Controller {
 	}
     public function apply()
     {
-        $this->load->view('applicant');
+    	// $today = getdate();
+     //    $data['time_month'] = 5 - $today[mon];
+     //    $data['time_day'] = 20 - $today[mday];
+
+        $this->load->view('applicant',$data);
         // $this->load->view('footer');
     }
     public function error()

@@ -24,6 +24,17 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <style>
+        body {
+            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -65,18 +76,17 @@
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
-            <p> This is where you can apply, view feedback, and know which courses you've been assigned to.</p>
-            <p><a class="btn btn-primary btn-large">Begin Here</a>
-            </p>
-        </header>
+            <br>
+            <br>
+            <hr>
 
-        <hr>
-
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Dashboard</h3>
+            <!-- Title -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Dashboard</h3>
+                </div>
             </div>
+
         </div>
         <!-- /.row -->
 
@@ -85,7 +95,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/ta_app.png" alt="">
                     <div class="caption">
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
@@ -99,7 +109,7 @@
             </div>
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="../../bootstrap/img/create_course.png" alt="">
                     <div class="caption">
                         <h3>Create Course <br><br></h3>
                         <p>Create a course. <br><br></p>
@@ -108,29 +118,42 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
                             <?php echo form_close();?>
                         </p>
-                    </div>
+
+            
+
+               <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/assign_score.png" alt="">
+                        <div class="caption">
+                            <h3>Assign TA/PLA or Enter Score</h3>
+                            <p>Assign them here <br><br></p>
+                            <p>
+                                <?php echo form_open("Admin_controller/assign_ta");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
+                                <?php echo form_close();?>
+                            </p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div> 
                 </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
-                    <div class="caption">
-                        <h3>Assign TA/PLA or Enter Score</h3>
-                        <p>Assign them here <br><br></p>
-                        <p>
-                            <?php echo form_open("Admin_controller/assign_ta");?>
-                            <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
-                            <?php echo form_close();?>                       
-                        </p>
-                    </div>
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
+                <iframe src="http://free.timeanddate.com/countdown/i4n12d6i/cf101/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcd8873c/tc66c/fs100/szw320/szh135/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2015-05-10T00:00:00" allowTransparency="true" frameborder="0" width="260" height="135"></iframe>
                 </div>
+
+
             </div>
+            <!-- /.row -->
 
-        </div>
-        <!-- /.row -->
+            <hr>
+        </header>
 
-        <hr>
+
 
         <!-- Footer -->
         <footer>

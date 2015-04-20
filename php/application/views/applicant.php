@@ -33,6 +33,15 @@
             -o-background-size: cover;
             background-size: cover;
         }
+<<<<<<< HEAD
+		
+=======
+        .box
+        {
+            background-color: white;
+
+        }
+>>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
     </style>
 
 </head>
@@ -72,7 +81,7 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+        <header class="jumbotron hero-spacer box">
 				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
@@ -97,7 +106,7 @@
             <!-- Page Features -->
             <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/applicant-icon.png" alt="">
                         <div class="caption">
@@ -112,14 +121,16 @@
 
 
 
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
+                    <div class="thumbnail" style = "width: 320 px;">
                         <img src="../../bootstrap/img/timer.png" alt="">
-                        <div class="caption">
+                        <div class="caption" >
                             <h3>Time left to apply:</h3>
-                            <p>Time: </p>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
+                <iframe src="http://free.timeanddate.com/countdown/i4n12d6i/cf101/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcd8873c/tc66c/fs100/szw320/szh135/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2015-05-10T00:00:00" allowTransparency="true" frameborder="0" width="320" height="135"></iframe>
                 </div>
 
             </div>

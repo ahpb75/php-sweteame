@@ -31,7 +31,7 @@
 
                     <input type="password" class="form-control input-lg" id="password" name="password" placeholder="Password" required="" value = "<?php echo set_value('password');?>"/>
 
-                    <input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
+                    <input type="submit" name="submit" value="Submit" class="btn btn-lg btn-primary btn-block" />
                 <div>
                     <p>
                         <a href=<?php echo site_url("welcome/registration");?>Create account</a>
@@ -41,7 +41,7 @@
                 <?php echo form_close();?>
 
                 <div class="form-links">
-                    <a href="<?php echo site_url("welcome/home");?>">Home Page</a>
+                    <a href="<?php echo site_url("welcome");?>">Home Page</a>
                 </div>
             </section>
         </div>
