@@ -102,7 +102,7 @@
             <!-- Page Features -->
             <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134">
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/applicant-icon.png" alt="">
                         <div class="caption">
@@ -117,7 +117,7 @@
 
 
 
-                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134">
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/timer.png" alt="">
                         <div class="caption">
