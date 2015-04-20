@@ -24,7 +24,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	
+	<style>
+		
+		/* resize images */
+		.container img {
+			width: 100%;
+			height: auto;
+		}
+	</style>
 </head>
 
 <body>
@@ -86,7 +93,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="../../bootstrap/img/ta_app.png" alt="">
+                    <img class ="container" src="../../bootstrap/img/ta_app.png" alt="">
                     <div class="caption">
                         <h3>View Application Form</h3>
                         <p>Submit a TA/PLA application for review.</p>
@@ -100,7 +107,7 @@
             </div>
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="../../bootstrap/img/create_course.png" alt="">
+                    <img class ="container" src="../../bootstrap/img/create_course.png" alt="">
                     <div class="caption">
                         <h3>Create Course <br><br></h3>
                         <p>Create a course. <br><br></p>
@@ -115,7 +122,7 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="../../bootstrap/img/assign_score.png" alt="">
+                    <img class ="container" src="../../bootstrap/img/assign_score.png" alt="">
                     <div class="caption">
                         <h3>Assign TA/PLA or Enter Score</h3>
                         <p>Assign them here <br><br></p>
