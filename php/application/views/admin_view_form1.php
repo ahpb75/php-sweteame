@@ -1,5 +1,6 @@
 <html>
-<head><link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
@@ -8,29 +9,42 @@
             -o-background-size: cover;
             background-size: cover;
         }
-    </style>
+        .box
+        {
+            background-color: white;
 
+        }
+    </style>
 </head>
 <body>
-<ul>
+<div class = "container box">
+<table class = "table table-bordered">
+	<tr>
+		<td>Username</td>
+		<td>View</td>
+		<td>Comment</td>
+	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
-<li><?php 
+<?php 
 	if ($counter%2 == 0)
 	{
+	echo "<tr>";
 	echo form_open('Admin_controller/view_form2');
-	echo form_input('username',$item);
-	echo form_submit('view','view this applicant');
-	echo form_close();echo "</li>";
+	echo "<td>".form_input('username',$item)."</td>";
+	echo "<td>".form_submit('view','view this applicant')."</td>";
+	echo form_close();
 	}
 	else{
-	echo "<strong> Comment: ".$item."</strong>";
-	echo "<br>";
-	echo "--------------";
+	echo "<td>".$item."</td>";
+	echo "</tr>";
 	}
 	$counter = $counter + 1;
 	?>
 <?php endforeach;?>
-</ul>
+</table>
+</div>
 </body>
 </html>
+
+
 

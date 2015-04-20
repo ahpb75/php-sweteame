@@ -8,24 +8,32 @@
             -o-background-size: cover;
             background-size: cover;
         }
+        .box
+        {
+            background-color: white;
+
+        }
     </style>
 </head>
 <body>
-<ul>
+<div class = "container box">
 <?php 
 	if ($application == "")
 	echo "There is no application for this applicant";
 	else
 	{
 	foreach ($application as $item):
+		echo "<table class = 'table table-bordered'>";
 	 	foreach($item as $key => $value):
-			echo "<li>".$key." => ".$value."</li>";
+	 		echo "<tr>";
+			echo "<td>".$key."</td>";
+			echo "<td>".$value."</td>";
+			echo "</tr>";
 	 	endforeach;
-	 	echo"---------------------";
-	 	echo "<br>";
+	 	echo "</table>";
 	 endforeach;
 	}
 ?>
-</ul>
+</div>
 </body>
 </html>
