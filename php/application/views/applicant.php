@@ -33,6 +33,7 @@
             -o-background-size: cover;
             background-size: cover;
         }
+		
     </style>
 
 </head>
