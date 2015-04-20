@@ -23,6 +23,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<<<<<<< HEAD
 
 	<style>
 		
@@ -32,6 +33,17 @@
 			height: auto;
 		}
 	</style>
+=======
+    <style>
+        body {
+            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+>>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
 </head>
 
 <body>
@@ -73,18 +85,17 @@
             <?php
 		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
             ?>
-            <p> This is where you can apply, view feedback, and know which courses you've been assigned to.</p>
-            <p><a class="btn btn-primary btn-large">Begin Here</a>
-            </p>
-        </header>
+            <br>
+            <br>
+            <hr>
 
-        <hr>
-
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Dashboard</h3>
+            <!-- Title -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Dashboard</h3>
+                </div>
             </div>
+<<<<<<< HEAD
         </div>
         <!-- /.row -->
 
@@ -116,10 +127,46 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
                             <?php echo form_close();?>
                         </p>
+=======
+            <!-- /.row -->
+
+            <!-- Page Features -->
+            <div class="row text-center">
+
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/ta_app.png" alt="">
+                        <div class="caption">
+                            <h3>View Application Form</h3>
+                            <p>Submit a TA/PLA application for review.</p>
+                            <p>
+                                <?php echo form_open("Admin_controller/view_form1");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
+                                <?php echo form_close();?>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/create_course.png" alt="">
+                        <div class="caption">
+                            <h3>Create Course <br><br></h3>
+                            <p>Create a course. <br><br></p>
+                            <p>
+                                <?php echo form_open("Admin_controller/create_course");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
+                                <?php echo form_close();?>
+                            </p>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+>>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
+                    </div>
+                </div>
 
+<<<<<<< HEAD
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
                     <img class ="container" src="../../bootstrap/img/assign_score.png" alt="">
@@ -131,14 +178,40 @@
                             <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
                             <?php echo form_close();?>                       
                         </p>
+=======
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/assign_score.png" alt="">
+                        <div class="caption">
+                            <h3>Assign TA/PLA or Enter Score</h3>
+                            <p>Assign them here <br><br></p>
+                            <p>
+                                <?php echo form_open("Admin_controller/assign_ta");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
+                                <?php echo form_close();?>
+                            </p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+>>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
                     </div>
                 </div>
+                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
+                <iframe src="http://free.timeanddate.com/countdown/i4n12d6i/cf101/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcd8873c/tc66c/fs100/szw320/szh135/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2015-05-10T00:00:00" allowTransparency="true" frameborder="0" width="260" height="135"></iframe>
+                </div>
+
+
             </div>
+            <!-- /.row -->
 
-        </div>
-        <!-- /.row -->
+            <hr>
+        </header>
 
-        <hr>
+
 
         <!-- Footer -->
         <footer>

@@ -15,6 +15,11 @@ class Form_controller extends CI_Controller {
     }
     public function index()
     {
+        $today = getdate();
+        if(($today[year] >=2015) && ($today[mon] >= 5) && ($today[mday] >= 10))
+            $this->load->view("pass");
+        else
+        {
         $this->form_validation->set_rules('fname', 'First Name', 'required|xss_clean');
         $this->form_validation->set_rules('lname', 'Last Name', 'required|xss_clean');
         $this->form_validation->set_rules('studentID', 'Student ID', 'required|xss_clean');
@@ -78,6 +83,7 @@ class Form_controller extends CI_Controller {
             }
 
         }
+    }
 	}
 
 

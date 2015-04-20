@@ -95,8 +95,13 @@ class Admin_controller extends CI_Controller {
     }
     public function assign_ta()
     {
+        $today = getdate();
+        if(($today[year] >=2015) && ($today[mon] >= 5) && ($today[mday] >= 10))
+            $this->load->view("pass");
+        else{
     	$data['course'] = $this->admin_model->load_course();
     	$this->load->view('course_view1',$data);
+        }
     }
     public function assign_ta_to_course()
     {
