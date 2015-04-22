@@ -19,6 +19,9 @@
     input {
         max-width: 75%;
     }
+    .required {
+        color: red;
+    }
 </style>
 
 <body>
@@ -35,6 +38,8 @@
     <?php
     $attributes = array('class' => 'form-horizontal', 'id' => '');
     echo form_open('Form_controller', $attributes); ?>
+
+
 
     <div class="form-group">
         <label for="fname">First Name <span class="required">*</span></label>
@@ -95,29 +100,62 @@
 
 
     <div class="form-group">
-        <label for="advisor" class="control-label">Advisors Name</label>
+        <label for="advisor" class="control-label">Advisors Name<span class="required">*</span></label>
             <input id="advisor" class="form-control" type="text" placeholder="Mr. Sir" name="advisor" maxlength="30" value="<?php echo set_value('advisor'); ?>"  />
             <?php echo form_error('advisor'); ?>
     </div>
 
     <div class="form-group">
-        <label for="phone" class="control-label">Phone Number (no spaces) <span class="required">*</span></label>
+        <label for="phone" class="control-label">Phone Number (no spaces)<span class="required">*</span></label>
             <input id="phone" class="form-control" type="text" placeholder="1234567890" name="phone" maxlength="11" value="<?php echo set_value('phone'); ?>"  />
             <?php echo form_error('phone'); ?>
     </div>
     <div class="form-group">
-        <label for="email" class="control-label">Email</label>
+        <label for="email" class="control-label">Email<span class="required">*</span></label>
 
             <input id="email" class="form-control" type="text" placeholder="myemail@mail.missouri.edu" name="email" maxlength="30" value="<?php echo set_value('email'); ?>"  />
             <?php echo form_error('email'); ?>
 
     </div>
     <div class="form-group">
-        <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD) <span class="required">*</span></label>
+        <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD)<span class="required">*</span></label>
             <input class="datepicker form-control"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
 
             <?php echo form_error('gradDate'); ?>
     </div>
+
+        <div class="form-group">
+                <label for="course_name" class="control-label">Course you would like to teach (must have taken previously):</label>
+            <?php
+            echo"<span> Choose an Applicant to view their Application</span> ";
+            echo " <select name = 'course_name'> ";
+            foreach ($courses as $row){
+                foreach($row as $key => $value){
+                    echo "<option value =".set_value($value).">".$value."</option>";
+                }
+                //echo "<li>".$key." => ".$value."</li>";
+                // echo "=======================";
+                // echo "<br>";
+                // echo "<br>";
+            }
+            echo "</select>";
+            ?>
+            <label for="grade" class="control-label">Grade Received:<span class="required">*</span></label>
+            <select name="grade">
+                <option value="<?php echo set_value('A'); ?>">A</option>
+                <option value="<?php echo set_value('A-'); ?>">A-</option>
+                <option value="<?php echo set_value('B+'); ?>">B+</option>
+                <option value="<?php echo set_value('B'); ?>">B</option>
+                <option value="<?php echo set_value('B-'); ?>">B-</option>
+                <option value="<?php echo set_value('C+'); ?>">C+</option>
+                <option value="<?php echo set_value('C'); ?>">C</option>
+                <option value="<?php echo set_value('C-'); ?>">C-</option>
+            </select>
+        </div>
+
+
+
+
     <div class="form-group">
         <label for="optScore" class="control-label">SPEAK/OPT Score</label>
             <input id="optScore" placeholder="5" class="form-control" type="text" name="optScore" maxlength="2" value="<?php echo set_value('optScore'); ?>"  />
@@ -127,7 +165,7 @@
     </div>
     <div class="form-group">
         <label for="optWhen" class="control-label">Date of last OPT test (YYYY-MM-DD)</label>
-            <input class="datepicker form-control" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
+            <input id="optWhen" class="datepicker form-control" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
             <?php echo form_error('optWhen'); ?>
     </div>
     <div class="form-inline">
@@ -160,9 +198,9 @@
     </div>
 
     <div class="form-group">
-        <label for="SPEAKdate" class="control-label">*SPEAK Assigned Date (YYYY-MM-DD)</label>
+        <label for="SPEAKdate" class="control-label">SPEAK Assigned Date (YYYY-MM-DD)</label>
 
-            <input class="datepicker form-control" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
+            <input id="SPEAKdate" class="datepicker form-control" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
             <?php echo form_error('SPEAKdate'); ?>
 
     </div>
@@ -185,12 +223,21 @@
         <div class="form-group">
             <label for="ONITA_date" class="control-label">ONITA Assigned Date</label>
 
-                <input class="datepicker form-control" type="text" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
+                <input class="datepicker form-control" type="text" id="ONITA_date" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
                 <?php echo form_error('ONITA_date'); ?>
 
         </div>
+    <div class="form-group">
+        <input id="user_name" type="hidden" name="user_name" class="form-control" value="<?php echo set_value($this->session->userdata('user_name')); ?>"  />
+    </div>
 
+<script>
+    $(function(){
+        $.datepicker.formatDate( "yy-mm-dd");
+        $( '.datepicker' ).datepicker();
+    });
 
+</script>
 
 
     <div class="form-group">
