@@ -41,7 +41,7 @@ class Form_controller extends CI_Controller {
 
             if ($this->form_validation->run() == FALSE) // validation hasn't been passed
             {
-                $data=$this->get_courses();
+                $data=$this->form_model->get_courses();
                 $this->load->view('form_view', $data);
 
             }
