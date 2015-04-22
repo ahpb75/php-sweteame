@@ -19,6 +19,13 @@ class Form_model extends CI_Model {
         }
         return FALSE;
     }
+
+    public function get_courses(){
+        $sql='SELECT courseID FROM Course ORDER BY courseID';
+        $data=$this->db->query($sql);
+        return $data->result();
+    }
+
 }
 ?>
 
