@@ -128,7 +128,6 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="course_name" class="control-label">Course you would like to teach (must have taken previously):</label>
     <?php
-    echo"<span> Choose an Applicant to view their Application</span> ";
     echo " <select name = 'course_name'> ";
     foreach ($courses as $row){
         foreach($row as $key => $value){
