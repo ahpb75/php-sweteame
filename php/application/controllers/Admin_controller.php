@@ -64,14 +64,31 @@ class Admin_controller extends CI_Controller {
 
 
 //     }
+    public function home_admin()
+    {
+        $this->load->view('header_admin');
+        $this->announcement_view();
+        $this->load->view('admin');
+    }
+    public function announcement_view()
+    {
+        $data['ss'] = $this->admin_model->get_announcement();
+        if($this->session->userdata('user_type') == '0')
+        {
+            $data['er'] = 1;
+        }
+        $this->load->view('announcement',$data);
+    }
     public function view_form1()
     {
     	$data['userinfo'] = $this->admin_model->view_form1();
+        $this->load->view('header_admin');        
     	$this->load->view('admin_view_form1',$data);
     }
     public function view_form2()
     {
     	$data['application'] = $this->admin_model->view_form2();
+        $this->load->view('header_admin');                
     	$this->load->view('admin_view_form2',$data);
     	// $this->load->view('test');
     }
@@ -86,12 +103,13 @@ class Admin_controller extends CI_Controller {
     // }
     public function create_course()
     {
+        $this->load->view('header_admin');                
     	$this->load->view('admin_create_course');
     }
     public function create_course_logic()
     {
     	$this->admin_model->create_course();
-    	$this->load->view('home');
+        $this->home_admin();                
     }
     public function assign_ta()
     {
@@ -100,22 +118,46 @@ class Admin_controller extends CI_Controller {
             $this->load->view("pass");
         else{
     	$data['course'] = $this->admin_model->load_course();
+        $this->load->view('header_admin');        
     	$this->load->view('course_view1',$data);
         }
     }
     public function assign_ta_to_course()
     {
     	$data['app_course'] = $this->admin_model->applicant_for_course();
+        $this->load->view('header_admin');        
     	$this->load->view('course_view2',$data);
     }
-    // public function enter_score()
-    // {
-    // 	$this->admin_model->enter_score();
-    // 	$this->load->view('home');
-    // }
+    public function enter_score()
+    {
+    	$this->admin_model->enter_score();
+    	$this->home_admin();
+    }
     // public function assign_ta()
     // {
     // 	$this->load->view('admin_assign_ta');
     // }
+    public function make_comment()
+    {
+        // $this->load->view('test');
+        $data['comment'] = $this->admin_model->view_comment();
+        $this->load->view('header_admin');
+        $this->load->view('admin_view_comment',$data);
+    }
+    public function assign_ta_to_this_course()
+    {
+        $this->admin_model->assign_ta_to_this_course();
+        $this->home_admin();
+    }
+    public function announcement()
+    {
+        $this->admin_model->post_announcement();
+        $this->home_admin();
+    }
+    public function erase_announcement()
+    {
+        $this->admin_model->erase_announcement();
+        $this->home_admin();
+    }
 }
 ?>

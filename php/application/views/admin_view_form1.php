@@ -8,20 +8,33 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            padding-top: 70px;
         }
         .box
         {
             background-color: white;
+            margin-top: 50px;
 
+        }
+        .table
+        {
+        	position: relative;
+        	top: 20px;
+        }
+        tbody
+        {
+        	position: relative;
+        	bottom: 20px;
         }
     </style>
 </head>
 <body>
 <div class = "container box">
 <table class = "table table-bordered">
-	<tr>
+	<tr class = "warning">
 		<td>Username</td>
 		<td>View</td>
+		<td>Make Comment</td>
 		<td>Comment</td>
 	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
@@ -30,8 +43,21 @@
 	{
 	echo "<tr>";
 	echo form_open('Admin_controller/view_form2');
-	echo "<td>".form_input('username',$item)."</td>";
-	echo "<td>".form_submit('view','view this applicant')."</td>";
+	echo "<td>".$item."</td>";
+	echo form_hidden('username',$item);
+	$data = array(
+		'name' => 'submit',
+		'value' => 'View this Applicant',
+		'class' => 'btn btn-primary',);
+	echo "<td>".form_submit($data)."</td>";
+	echo form_close();
+	echo form_open('Admin_controller/make_comment');
+	echo form_hidden('username',$item);
+	$data = array(
+		'name' => 'submit',
+		'value' => 'View and Make Comment',
+		'class' => 'btn btn-info',);
+	echo "<td>".form_submit($data)."</td>";
 	echo form_close();
 	}
 	else{

@@ -74,11 +74,54 @@ class Admin_model extends CI_Model {
         }      
         return $empty;
     }
-    // function enter_score()
-    // {
-    //     $data = array('Score' => $this->input->post('score'));
-    //     $this->db->where('appId',$this->input->post('user'));
-    //     $this->db->update('Application',$data);
-    // }
+    function enter_score()
+    {
+        $data = array('Score' => $this->input->post('score'));
+        $this->db->where('appId',$this->input->post('appID'));
+        $this->db->update('Application',$data);
+    }
+    function view_comment()
+    {
+        $query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
+        $comment = array();
+        $empty = "";
+        if($query->num_rows()>0)
+        {
+            foreach($query->result() as $value)
+            {
+                array_push($comment,$value->Inst_name);
+                array_push($comment,$value->Inst_comment);
+            }
+            return $comment;
+        }
+        return $empty;
+    }
+    function assign_ta_to_this_course()
+    {
+        $data = array('TA' => $this->input->post('username'));
+        $this->db->where('course_name',$this->input->post('coursename'));
+        $this->db->update('Course',$data);
+    }
+    function post_announcement()
+    {
+        $data = array('Anoun' => $this->input->post('announcement'));
+        $this->db->insert('Announcement',$data);
+    }
+    function get_announcement()
+    {
+        $query = $this->db->get('Announcement');
+        $course = array();
+        foreach ($query->result() as $value)
+        {
+            array_push($course,$value->Announ_ID);
+            array_push($course,$value->Anoun);
+        }
+        return $course;
+    }
+    function erase_announcement()
+    {
+        $this->db->delete('Announcement',array('Announ_ID' => $this->input->post('ID')));
+    }
+
 }
 ?>

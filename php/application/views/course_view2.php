@@ -7,11 +7,24 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            padding-top: 70px;
         }
         .box
         {
             background-color: white;
+            margin-top: 50px;
 
+        }
+        .table
+        {
+        	position: relative;
+        	top: 20px;
+        	bottom: 20px;
+        }
+        .big
+        {
+        	font-size: 18px;
+        	color:#33CC00;
         }
     </style>
 </head>
@@ -29,21 +42,39 @@
 	 		// 	$user = $value;
 			// echo "<li>".$key." => ".$value."</li>";
 			echo "<tr>";
-			echo "<td>".$key."</td>";
+			echo "<td class = 'big'>".$key."</td>";
 			echo "<td>".$value."</td>";
 			echo "</tr>";
+			if($key == 'appID')
+				$hidden_appID = $value;
+			if($key == 'username')
+				$hidden_username = $value;
+			if($key == 'course_name')
+				$hidden_coursename = $value;
 	 	endforeach;
 	 	echo form_open('Admin_controller/enter_score');
 	 	// echo form_input('user',$user);
-	 	echo "<tr><td><strong>Enter Score</strong> ";
+	 	echo "<tr class = 'success'><td><strong>Enter Score</strong> ";
 	 	echo form_input('score','')."</td>";
 	 	// echo "Assign this applicant be TA"
 	 	// echo form_input('assign','');
-	 	echo "<td>".form_submit('submit','submit')."</td></tr>";
+	 	echo form_hidden('appID','$hidden_appID');
+	 	$data = array(
+	 		'name' => 'submit',
+	 		'value' => 'submit',
+	 		'class' => 'btn btn-primary',);
+	 	echo "<td>".form_submit($data)."</td></tr>";
 	 	echo form_close();
 	 	echo form_open('Admin_controller/assign_ta_to_this_course');
-	 	echo "<tr><td><strong>Assign this applicant be TA </strong></td>";
-	 	echo "<td>".form_submit('submit','assign')."</td></tr>";
+	 	echo "<tr class = 'success'><td><strong>Assign this applicant be TA </strong></td>";
+	 	echo form_hidden('username',$hidden_username);
+	 	echo form_hidden('coursename',$hidden_coursename);
+	 	$data = array(
+	 		'name' => 'submit',
+	 		'value' => 'assign',
+	 		'class' => 'btn btn-primary',
+	 		);
+	 	echo "<td>".form_submit($data)."</td></tr>";
 	 	echo form_close();
 	 	echo "</table>";
 	 endforeach;

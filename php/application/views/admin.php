@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <link rel="shortcut icon" href="../../favicon.ico" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
     <style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
@@ -33,40 +31,19 @@
             -o-background-size: cover;
             background-size: cover;
         }
-    </style>
+        .anno
+        {
+            width:450px;
+            height: 34px;
 
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Team E | Applicant Manager</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href=<?php echo site_url("welcome/home");?>>Home</a>
-                    </li>
-                    <li>
-                        <a href=<?php echo site_url("welcome/logout");?>>Logout</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
 
     <!-- Page Content -->
     <div class="container">
@@ -74,77 +51,98 @@
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
             <?php
-		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
+		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name');
             ?>
+            <iframe src="http://free.timeanddate.com/countdown/i4n12d6i/cf101/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcd8873c/tc66c/fs100/szw320/szh135/tatTime%20left%20to%20Assign%20TA/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2015-05-10T00:00:00" allowTransparency="true" frameborder="0" width="260" height="135"></iframe>
+            </h1>
+            <div class = "container-fluid">
+            <?php
+            echo form_open('Admin_controller/announcement');
+            $data = array(
+                'name' => 'announcement',
+                'class' => 'form_control anno',
+                'placeholder' => 'Make an announcement here',
+                );
+            echo form_input($data);
+            $data2 = array(
+                'name' => 'Post',
+                'value' => 'Post',
+                'class' => 'btn btn-primary',
+                );
+            echo form_submit($data2);
+            echo form_close();
+            ?>
+        </div>
             <br>
             <br>
             <hr>
 
             <!-- Title -->
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-16">
                     <h3>Dashboard</h3>
                 </div>
             </div>
+            <!-- /.row -->
 
+            <!-- Page Features -->
+            <div class="row text-center">
 
-			<!-- /.row -->
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/ta_app.png" alt="">
+                        <div class="caption">
+                            <h3>View Application Form</h3>
+                            <p>Submit a TA/PLA application for review.</p>
+                            <p>
+                                <?php echo form_open("Admin_controller/view_form1");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
+                                <?php echo form_close();?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/create_course.png" height = "400" width = "310" alt="">
+                        <div class="caption">
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Create Course <br><br></h3>
+                            <p>Create a course. <br><br></p>
+                            <p>
+                                <?php echo form_open("Admin_controller/create_course");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
+                                <?php echo form_close();?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-			<!-- Page Features -->
-			<div class="row text-center">
-
-				<div class="col-md-3 col-sm-6 hero-feature">
-					<div class="thumbnail">
-						<img src="../../bootstrap/img/ta_app.png" alt="">
-						<div class="caption">
-							<h3>View Application Form</h3>
-							<p>Submit a TA/PLA application for review.</p>
-							<p>
-								<?php echo form_open("Admin_controller/view_form1");?>
-								<input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
-								<?php echo form_close();?>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 hero-feature">
-					<div class="thumbnail">
-						<img src="../../bootstrap/img/create_course.png" alt="">
-						<div class="caption">
-							<h3>Create Course <br><br></h3>
-							<p>Create a course. <br><br></p>
-							<p>
-								<?php echo form_open("Admin_controller/create_course");?>
-								<input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
-								<?php echo form_close();?>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 hero-feature">
-					<div class="thumbnail">
-						<img src="../../bootstrap/img/assign_score.png" alt="">
-						<div class="caption">
-							<h3>Assign TA/PLA or Enter Score</h3>
-							<p>Assign them here <br><br></p>
-							<p>
-								<?php echo form_open("Admin_controller/assign_ta");?>
-								<input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
-								<?php echo form_close();?>
-							</p>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br> 
-						</div>     
-					</div>			
-				</div>
-				<!-- /.row -->
-
-				<!-- Page Features -->
-        
+                <div class="col-md-4 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <img src="../../bootstrap/img/assign_score.png" height = "400" width = "310" alt="">
+                        <div class="caption">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Assign TA/PLA or Enter Score</h3>
+                            <p>Assign them here <br><br></p>
+                            <p>
+                                <?php echo form_open("Admin_controller/assign_ta");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
+                                <?php echo form_close();?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
 
             <hr>
         </header>

@@ -8,11 +8,19 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            padding-top: 70px;
         }
         .box
         {
             background-color: white;
+            margin-top: 50px;
 
+        }
+        .table
+        {
+        	position: relative;
+        	top: 20px;
+        	bottom: 20px;
         }
     </style>
 
@@ -20,7 +28,7 @@
 <body>
 	<div class = "container box">
 <table class = "table table-bordered">
-	<tr>
+	<tr class = "warning">
 		<td>CourseID</td>
 		<td>TA</td>
 		<td>CourseName</td>
@@ -39,11 +47,16 @@
 	}
 	else{
 		echo"<td>";
+		echo $item."</td>";
 	echo form_open('Admin_controller/assign_ta_to_course');
-	echo form_input('coursename',$item);
-		echo"</td>";
+	echo form_hidden('coursename',$item);
 		echo"<td>";
-	echo form_submit('view','view this course applicant');
+		$data = array(
+			'name' => 'submit',
+			'value' => 'View this Course Applicant',
+			'class' => 'btn btn-primary',
+			);
+	echo form_submit($data);
 		echo"</td>";
 	echo form_close();
 		echo"</tr>";

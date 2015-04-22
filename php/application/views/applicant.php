@@ -33,15 +33,11 @@
             -o-background-size: cover;
             background-size: cover;
         }
-<<<<<<< HEAD
-		
-=======
         .box
         {
             background-color: white;
 
         }
->>>>>>> fa99e23b0b4644f07fccec32237ea58130a7ee82
     </style>
 
 </head>
@@ -88,7 +84,21 @@
             ?>
 
             <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
-            <p>Current Announcements: <?php echo "No current administrator announcements";?></p>
+            <p>Current Announcements: 
+                <?php 
+            // if($Announcement = "")
+            // echo "No current administrator announcements";
+            // else
+            // {
+            //     echo "<ul>";
+            //     foreach ($Announcement as $key => $value) {
+            //         echo "<li>".$value."</li>";
+            //     }
+            //     echo "</ul>";
+            // }
+            // 
+                ?>
+        </p>
             <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
 
             <br>

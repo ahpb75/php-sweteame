@@ -35,8 +35,12 @@ class Welcome extends CI_Controller {
 				$this->load->view('instructor_home',$data);
 
 				}
-			else if($this->session->userdata('user_type') == '0')//admin
+			else if($this->session->userdata('user_type') == '0')
+			{//admin
+				$this->load->view('header_admin');
+				$this->announcement();
 				$this->load->view('admin');
+			}
 		}
 		else
 		{
@@ -55,7 +59,11 @@ class Welcome extends CI_Controller {
                 $this->load->view('instructor_home',$names);
 		}
             else if($this->session->userdata('user_type') == '0')//admin
+                {
+                $this->load->view('header_admin');
+                $this->announcement();
                 $this->load->view('admin');
+            	}
         }
         else
         {
@@ -139,13 +147,20 @@ class Welcome extends CI_Controller {
 		$this->session->sess_destroy();
 		$this->index();
 	}
+	public function announcement()
+	{
+		$this->load->model('admin_model');
+    	$data['ss'] = $this->admin_model->get_announcement();
+   		if($this->session->userdata('user_type') == '0')
+   		{
+   			$data['er'] = 1;
+   		}
+    	$this->load->view('announcement',$data);
+	}
     public function apply()
     {
-    	// $today = getdate();
-     //    $data['time_month'] = 5 - $today[mon];
-     //    $data['time_day'] = 20 - $today[mday];
-
-        $this->load->view('applicant',$data);
+    	$this->announcement();
+        $this->load->view('applicant');
         // $this->load->view('footer');
     }
     public function error()
