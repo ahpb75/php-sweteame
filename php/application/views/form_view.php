@@ -133,12 +133,13 @@ echo form_open('Form_controller', $attributes); ?>
         foreach($row as $key => $value){
             $option[$value] = $value;
         }
-        echo form_dropdown('course_name',$option);
         //echo "<li>".$key." => ".$value."</li>";
         // echo "=======================";
         // echo "<br>";
         // echo "<br>";
     }
+            echo form_dropdown('course_name',$option);
+
     ?>
     <label for="grade" class="control-label">Grade Received:<span class="required">*</span></label>
     <?php
