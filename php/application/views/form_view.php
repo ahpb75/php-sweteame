@@ -128,20 +128,32 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="course_name" class="control-label">Course you would like to teach (must have taken previously):</label>
     <?php
-    echo " <select name = 'course_name'> ";
+    $option = array();
     foreach ($courses as $row){
         foreach($row as $key => $value){
-            echo "<option value =".set_value($value).">".$value."</option>";
+            $option[$value] = $value;
         }
+        echo form_dropdown('course_name',$option);
         //echo "<li>".$key." => ".$value."</li>";
         // echo "=======================";
         // echo "<br>";
         // echo "<br>";
     }
-    echo "</select>";
     ?>
     <label for="grade" class="control-label">Grade Received:<span class="required">*</span></label>
-    <select name="grade">
+    <?php
+    $option = array(
+        'A' => 'A',
+        'A-' => 'A-',
+        'B+' => 'B+',
+        'B' => 'B',
+        'B-' => 'B-',
+        'C+' => 'C+',
+        'C' => 'C',
+        );
+    echo form_dropdown('grade',$option);
+    ?>
+   <!--  <select name="grade">
         <option value="<?php echo set_value('A'); ?>">A</option>
         <option value="<?php echo set_value('A-'); ?>">A-</option>
         <option value="<?php echo set_value('B+'); ?>">B+</option>
@@ -150,7 +162,7 @@ echo form_open('Form_controller', $attributes); ?>
         <option value="<?php echo set_value('C+'); ?>">C+</option>
         <option value="<?php echo set_value('C'); ?>">C</option>
         <option value="<?php echo set_value('C-'); ?>">C-</option>
-    </select>
+    </select> -->
 </div>
 
 
@@ -230,9 +242,12 @@ echo form_open('Form_controller', $attributes); ?>
 
 
 <script>
-    $(function(){
-        $.datepicker.formatDate( "yy-mm-dd");
-        $( '.datepicker' ).datepicker();
+    // $(function(){
+    //     $.datepicker.formatDate( "yy-mm-dd");
+    //     $( '.datepicker' ).datepicker();
+    // });
+    $('.datapicker').each(function(){
+        $(this).datapicker().formatDate("yy-mm-dd");
     });
 
 </script>
