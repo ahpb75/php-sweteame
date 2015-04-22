@@ -1,5 +1,7 @@
 <html>
 <head><link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
+	    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+
     <style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
@@ -24,12 +26,14 @@
         .big
         {
         	font-size: 18px;
-        	color:#33CC00;
+        	color:blue;
         }
     </style>
 </head>
 <body>
-<div class = "container box">
+<div class = "container ">
+	        <header class="jumbotron hero-spacer">
+
 <?php 
 	if ($app_course == "")
 	echo "There is no applicant for this course";
@@ -49,7 +53,7 @@
 				$hidden_appID = $value;
 			if($key == 'username')
 				$hidden_username = $value;
-			if($key == 'course_name')
+			if($key == 'courseID')
 				$hidden_coursename = $value;
 	 	endforeach;
 	 	echo form_open('Admin_controller/enter_score');

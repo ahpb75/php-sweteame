@@ -1,6 +1,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
+    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+
     <style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
@@ -27,11 +29,17 @@
         	position: relative;
         	top: 20px;
         }
+        .anno
+        {
+            width:100%;
+        }
     </style>
 
 </head>
 <body>
-<div class = "container box">
+<div class = "container ">
+            <header class="jumbotron hero-spacer">
+
 	<table class = "table table-bordered">
 		<tr class = "warning">
 			<td>Instructor Name</td>
@@ -51,6 +59,25 @@
 			$counter = $counter + 1;
 		}
 		?>
+    <?php
+    echo form_open('Admin_controller/make_a_comment');
+    $data = array(
+                'name' => 'admin_comment',
+                'class' => 'form_control anno',
+                'placeholder' => 'Make a comment here',
+                );
+    echo "<tr><td>".form_input($data)."</td>";
+    echo form_hidden('username',$username);
+    $data2 = array(
+                'name' => 'Post',
+                'value' => 'Post',
+                'class' => 'btn btn-primary',
+                );
+        echo "<td>".form_submit($data2)."</td></tr>";
+        echo form_close();
+    ?>
+</table>
+</header>
 </div>
 </body>
 </html>

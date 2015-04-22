@@ -1,5 +1,7 @@
 <html>
 <head><link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />
+        <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+
     <style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
@@ -24,12 +26,14 @@
         .fix
         {
         	font-size: 18px;
-        	color:#33CC00;
+        	color:blue;
         }
     </style>
 </head>
 <body>
-<div class = "container box">
+<div class = "container ">
+            <header class="jumbotron hero-spacer">
+
 <?php 
 	if ($application == "")
 	echo "There is no application for this applicant";
@@ -40,16 +44,22 @@
 		echo "<h3> This is form ".$counter."</h3>";
 		echo "<table class = 'table table-bordered'>";
 	 	foreach($item as $key => $value):
+            if(($key == "appID") || ($key == "position") || ($key == "username"))
+            {}
+            else
+            {
 	 		echo "<tr>";
 			echo "<td class ='fix'>".$key."</td>";
 			echo "<td>".$value."</td>";
 			echo "</tr>";
+            }
 	 	endforeach;
 	 	$counter = $counter + 1;
 	 	echo "</table>";
 	 endforeach;
 	}
 ?>
+</header>
 </div>
 </body>
 </html>

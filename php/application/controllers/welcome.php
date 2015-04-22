@@ -159,6 +159,7 @@ class Welcome extends CI_Controller {
 	}
     public function apply()
     {
+    	$this->load->view('applicant_header');
     	$this->announcement();
         $this->load->view('applicant');
         // $this->load->view('footer');

@@ -6,8 +6,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link href="../../bootstrap/css/countdown.css" rel="stylesheet">
+    <script type="text/javascript" src="../../bootstrap/js/jquery.js"></script>
+    <script type="text/javascript" src="../../bootstrap/js/countdown.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        
+            $("#countdown").countdown({
+                date: "10 may 2015 0:00:00", // add the countdown's end date (i.e. 3 november 2012 12:00:00)
+                format: "on" // on (03:07:52) | off (3:7:52) - two_digits set to ON maintains layout consistency
+            },
+            
+            function() { 
+                
+                // the code here will run when the countdown ends
+                alert("done!") 
+ 
+            });
+        });
+    </script>
 
     <title>Admin Homepage</title>
 
@@ -50,12 +67,27 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <?php
-		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name');
-            ?>
-            <iframe src="http://free.timeanddate.com/countdown/i4n12d6i/cf101/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcd8873c/tc66c/fs100/szw320/szh135/tatTime%20left%20to%20Assign%20TA/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2015-05-10T00:00:00" allowTransparency="true" frameborder="0" width="260" height="135"></iframe>
-            </h1>
-            <div class = "container-fluid">
+            <div class = "container-fluid pull-left">
+            <ul id="countdown">
+        <li>
+            <span class="days">00</span>
+            <p class="timeRefDays">days</p>
+        </li>
+        <li>
+            <span class="hours">00</span>
+            <p class="timeRefHours">hours</p>
+        </li>
+        <li>
+            <span class="minutes">00</span>
+            <p class="timeRefMinutes">minutes</p>
+        </li>
+        <li>
+            <span class="seconds">00</span>
+            <p class="timeRefSeconds">seconds</p>
+        </li>
+    </ul>
+</div>
+            <div class = "container-fluid pull-right">
             <?php
             echo form_open('Admin_controller/announcement');
             $data = array(
@@ -104,13 +136,12 @@
                 </div>
                 <div class="col-md-4 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="../../bootstrap/img/create_course.png" height = "400" width = "310" alt="">
+                        <img src="../../bootstrap/img/create_course.png"  alt="">
                         <div class="caption">
                             <br>
                             <br>
-                            <br>
-                            <h3>Create Course <br><br></h3>
-                            <p>Create a course. <br><br></p>
+                            <h3>Create Course </h3>
+                            <p>Create a course. </p>
                             <p>
                                 <?php echo form_open("Admin_controller/create_course");?>
                                 <input class="btn btn-primary btn-large" type="submit" name="view" value="Create" />
@@ -122,17 +153,12 @@
 
                 <div class="col-md-4 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="../../bootstrap/img/assign_score.png" height = "400" width = "310" alt="">
+                        <img src="../../bootstrap/img/assign_score.png"  alt="">
                         <div class="caption">
                             <br>
                             <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
                             <h3>Assign TA/PLA or Enter Score</h3>
-                            <p>Assign them here <br><br></p>
+                            <p>Assign them here </p>
                             <p>
                                 <?php echo form_open("Admin_controller/assign_ta");?>
                                 <input class="btn btn-primary btn-large" type="submit" name="view" value="Assign" />
@@ -153,19 +179,13 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Team E | TA Web Application 2015</p>
+                    <p style ="color:white">Copyright &copy; Team E | TA Web Application 2015</p>
                 </div>
             </div>
         </footer>
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="../../bootstrap/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 

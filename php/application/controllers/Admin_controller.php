@@ -141,6 +141,7 @@ class Admin_controller extends CI_Controller {
     {
         // $this->load->view('test');
         $data['comment'] = $this->admin_model->view_comment();
+        $data['username'] = $this->input->post('username');
         $this->load->view('header_admin');
         $this->load->view('admin_view_comment',$data);
     }
@@ -157,6 +158,11 @@ class Admin_controller extends CI_Controller {
     public function erase_announcement()
     {
         $this->admin_model->erase_announcement();
+        $this->home_admin();
+    }
+    public function make_a_comment()
+    {
+        $this->admin_model->admin_make_comment();
         $this->home_admin();
     }
 }

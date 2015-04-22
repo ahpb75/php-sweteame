@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <style>
         body {
@@ -30,13 +32,15 @@
     </style>
 </head>
 <body>
-<div class = "container box">
+<div class = "container ">
+	        <header class="jumbotron hero-spacer">
+
 <table class = "table table-bordered">
 	<tr class = "warning">
 		<td>Username</td>
 		<td>View</td>
 		<td>Make Comment</td>
-		<td>Comment</td>
+		<td>Your Comment</td>
 	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
 <?php 
@@ -69,6 +73,7 @@
 	?>
 <?php endforeach;?>
 </table>
+</header>
 </div>
 </body>
 </html>
