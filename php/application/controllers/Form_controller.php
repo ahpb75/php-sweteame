@@ -70,7 +70,7 @@ class Form_controller extends CI_Controller {
                     'SPEAKdate' => @$this->input->post('SPEAKdate'),
                     'ONITA' => @$this->input->post('ONITA'),
                     'ONITA_date' => @$this->input->post('ONITA_date'),
-                    'username' => @$this->input->post('username')
+                    'username' => @$this->session->userdata('user_name')
                 );
 
                 //run insert model to write data to db

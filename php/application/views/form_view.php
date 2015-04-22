@@ -227,9 +227,7 @@ echo form_open('Form_controller', $attributes); ?>
     <?php echo form_error('ONITA_date'); ?>
 
 </div>
-<div class="form-group">
-    <input id="user_name" type="hidden" name="user_name" class="form-control" value="<?php echo set_value($this->session->userdata('user_name')); ?>"  />
-</div>
+
 
 <script>
     $(function(){
