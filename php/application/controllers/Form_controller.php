@@ -20,12 +20,11 @@ class Form_controller extends CI_Controller {
             $this->load->view("pass");
         else
         {
-
         $this->form_validation->set_rules('fname', 'First Name', 'required|xss_clean');
         $this->form_validation->set_rules('lname', 'Last Name', 'required|xss_clean');
         $this->form_validation->set_rules('studentID', 'Student ID', 'required|xss_clean');
         $this->form_validation->set_rules('position', 'TA or PLA', 'required|max_length[5]');
-        $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean|less_than[4.1]');
+        $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean');
         $this->form_validation->set_rules('program_level', 'If undergraduate, indicate program and level (ex. CS BA jr.)', 'xss_clean|max_length[15]');
         $this->form_validation->set_rules('graduate_program', 'MS or PhD (if graduate)', 'max_length[1]');
         $this->form_validation->set_rules('advisor', 'Advisors Name', 'xss_clean|max_length[30]');
@@ -41,8 +40,8 @@ class Form_controller extends CI_Controller {
 	
 		if ($this->form_validation->run() == FALSE) // validation hasn't been passed
 		{
-            $data=$this->get_courses();
-            $this->load->view('form_view', $data);
+
+            $this->load->view('form_view');
 
         }
 		else // passed validation proceed to post success logic
@@ -61,16 +60,13 @@ class Form_controller extends CI_Controller {
                 'phone' => @$this->input->post('phone'),
                 'email' => @$this->input->post('email'),
                 'gradDate' => @$this->input->post('gradDate'),
-                'course_name' => @$this->input->post('course_name'),
-                'grade' => @$this->input->post('grade'),
                 'optScore' => @$this->input->post('optScore'),
                 'optWhen' => @$this->input->post('optWhen'),
                 'GATO' => @$this->input->post('GATO'),
                 'SPEAK' => @$this->input->post('SPEAK'),
                 'SPEAKdate' => @$this->input->post('SPEAKdate'),
                 'ONITA' => @$this->input->post('ONITA'),
-                'ONITA_date' => @$this->input->post('ONITA_date'),
-                'username' => @this->input->post('username')
+                'ONITA_date' => @$this->input->post('ONITA_date')
             );
 
          //run insert model to write data to db
