@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> TA Selection </title>
+    <title> Instructor Home </title>
 
 <!-- Bootstrap Core CSS -->
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,12 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+        }
+		.anno
+        {
+            width:450px;
+            height: 34px;
+
         }
     </style>
 </head>
@@ -85,10 +91,10 @@
 
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
+                        <img src="../../bootstrap/img/ta_app.png" alt="">
                         <div class="caption">
                             <h3>View Applicants </h3>
-                            <p>Submit a TA/PLA application for review.</p>
+                            <p>View submitted applications</p>
                             <p>
                                 <a href="Instructor_controller/show_app" class="btn btn-primary">View Applicants</a> <a href="#" class="btn btn-default">More Info</a>
                             </p>
@@ -99,9 +105,9 @@
 
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
+                        <img src="../../bootstrap/img/search.png" alt="">
                         <div class="caption">
-                            <h3>Specific Applicants</h3>
+                            <h3>Search Applicants</h3>
                             <p>This is where you can search for an applicant</p>
                             <p>
                                 <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
@@ -112,7 +118,7 @@
 
                 <div class="col-md-3 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
+                        <img src="../../bootstrap/img/assign_score.png" alt="">
                         <div class="caption">
                             <h3>View TA Assignments</h3>
                             <p>This is where you can view TA's assigned to your course</p>
