@@ -3,8 +3,8 @@
 <head>
 	    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <style>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />    
+<style>
         body {
             background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
