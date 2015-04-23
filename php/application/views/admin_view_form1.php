@@ -19,16 +19,6 @@
             margin-top: 50px;
 
         }
-        .table
-        {
-        	position: relative;
-        	top: 20px;
-        }
-        tbody
-        {
-        	position: relative;
-        	bottom: 20px;
-        }
     </style>
 </head>
 <body>
