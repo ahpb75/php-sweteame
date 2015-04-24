@@ -33,13 +33,6 @@ $(document).ready(
 </head>
 
 <style>
-        body {
-            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
 
     input {
         max-width: 75%;
@@ -52,7 +45,6 @@ $(document).ready(
 
 <body>
 
-<header class="jumbotron hero-spacer">
 <center>
     <h1>Computer Science Department<br/></h1>
     <h2>Graduate Teaching Assistant Application<br/></h2>
@@ -299,6 +291,6 @@ echo form_open('Form_controller', $attributes); ?>
 <?php echo form_close(); ?>
 </div>
 </div>
-</header>
+
 
 </body>
