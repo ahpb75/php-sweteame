@@ -28,9 +28,9 @@ class Form_controller extends CI_Controller {
             $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean|less_than[4.0001]');
             $this->form_validation->set_rules('program_level', 'If undergraduate, indicate program and level (ex. CS BA jr.)', 'xss_clean|max_length[15]');
             $this->form_validation->set_rules('graduate_program', 'MS or PhD (if graduate)', 'max_length[5]');
-            $this->form_validation->set_rules('advisor', 'Advisors Name', 'xss_clean|max_length[30]');
+            $this->form_validation->set_rules('advisor', 'Advisors Name', 'required|xss_clean|max_length[30]');
             $this->form_validation->set_rules('phone', 'Phone Number (no spaces)', 'required|xss_clean|max_length[16]');
-            $this->form_validation->set_rules('email', 'Email', 'xss_clean|valid_email|max_length[30]');
+            $this->form_validation->set_rules('email', 'Email', 'required|xss_clean|valid_email|max_length[30]');
             $this->form_validation->set_rules('gradDate', 'Graduation Date', 'required');
             $this->form_validation->set_rules('optScore', 'SPEAK/OPT Score', 'xss_clean|max_length[2]');
             $this->form_validation->set_rules('optWhen', 'Date of last OPT test', '');
@@ -61,7 +61,7 @@ class Form_controller extends CI_Controller {
                     'phone' => @$this->input->post('phone'),
                     'email' => @$this->input->post('email'),
                     'gradDate' => @$this->input->post('gradDate'),
-                    'course_name' => @$this->input->post('course_name'),
+                    'courseID' => @$this->input->post('courseID'),
                     'grade' => @$this->input->post('grade'),
                     'optScore' => @$this->input->post('optScore'),
                     'optWhen' => @$this->input->post('optWhen'),

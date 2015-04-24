@@ -31,6 +31,16 @@ $(document).ready(
 </head>
 
 <style>
+        body {
+            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .box
+        {
+            background-color: white;
 
     input {
         max-width: 75%;
@@ -42,6 +52,8 @@ $(document).ready(
 </style>
 
 <body>
+
+<header class="jumbotron hero-spacer box">
 <center>
     <h1>Computer Science Department<br/></h1>
     <h2>Graduate Teaching Assistant Application<br/></h2>
@@ -152,7 +164,7 @@ echo form_open('Form_controller', $attributes); ?>
 </div>
 
 <div class="form-group">
-    <label for="course_name" class="control-label">Course you would like to teach (must have taken previously):</label>
+    <label for="courseID" class="control-label">Course you would like to teach (must have taken previously):</label>
     <?php
     $option = array();
     foreach ($courses as $row){
@@ -164,7 +176,7 @@ echo form_open('Form_controller', $attributes); ?>
         // echo "<br>";
         // echo "<br>";
     }
-            echo form_dropdown('course_name',$option);
+            echo form_dropdown('courseID',$option);
 
     ?>
     <label for="grade" class="control-label">Grade Received:<span class="required">*</span></label>
@@ -288,5 +300,6 @@ echo form_open('Form_controller', $attributes); ?>
 <?php echo form_close(); ?>
 </div>
 </div>
+</header>
 
 </body>
