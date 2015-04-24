@@ -247,8 +247,8 @@ echo form_open('Form_controller', $attributes); ?>
     //     $.datepicker.formatDate( "yy-mm-dd");
     //     $( '.datepicker' ).datepicker();
     // });
-    $('.datapicker').each(function(){
-        $(this).datapicker().formatDate("yy-mm-dd");
+    $('.datepicker').datepicker({ dateFormat: "yyyy-mm-dd" });
+        
     });
 
 </script>
