@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
+     <!-- Custom CSS -->
+    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -38,9 +40,6 @@ $(document).ready(
             -o-background-size: cover;
             background-size: cover;
         }
-        .box
-        {
-            background-color: white;
 
     input {
         max-width: 75%;
@@ -53,7 +52,7 @@ $(document).ready(
 
 <body>
 
-<header class="jumbotron hero-spacer box">
+<header class="jumbotron hero-spacer">
 <center>
     <h1>Computer Science Department<br/></h1>
     <h2>Graduate Teaching Assistant Application<br/></h2>
