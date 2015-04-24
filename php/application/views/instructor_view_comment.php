@@ -60,7 +60,7 @@
 		}
 		?>
     <?php
-    echo form_open('Admin_controller/make_a_comment');
+    echo form_open('Instructor_controller/make_a_comment');
     $data = array(
                 'name' => 'admin_comment',
                 'class' => 'form_control anno',

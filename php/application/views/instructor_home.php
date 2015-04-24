@@ -9,13 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> TA Selection </title>
+    <title> Instructor Home </title>
 
 <!-- Bootstrap Core CSS -->
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+        <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+    <link href="../../bootstrap/css/freelancer.css" rel="stylesheet">
+
+
+    <link href="../../bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,50 +32,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        body {
-            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
+		.anno
+        {
+            width:450px;
+            height: 34px;
+
         }
     </style>
 </head>
 
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Team E | Instructor Manager</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="<?php echo site_url("welcome/logout");?>">Logout</a>
 
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
+<section class="success" style="color:black;">
 	<div class="container">
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <?php
-		        echo '<h1>' . "Welcome, " . $this->session->userdata('user_name') . '</h1>';
-            ?>
             <p> This is where you can view TA applicants, post comments on former TA's, and know which TA's have been assigned to your course.</p>
             <p><a class="btn btn-primary btn-large" href= "<?php echo site_url("Instructor_controller/show_app");?>">View All Current Applicants</a>
             </p>
@@ -83,41 +63,29 @@
 
             <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="col-md-6 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
+                        <img src="../../bootstrap/img/ta_app.png" alt="">
                         <div class="caption">
                             <h3>View Applicants </h3>
-                            <p>Submit a TA/PLA application for review.</p>
+                            <p>View submitted applications</p>
                             <p>
-                                <a href="Instructor_controller/show_app" class="btn btn-primary">View Applicants</a> <a href="#" class="btn btn-default">More Info</a>
+                                <?php echo form_open("Instructor_controller/view_form1");?>
+                                <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
+                                <?php echo form_close();?>
                             </p>
-                            <br>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="col-md-6 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
+                        <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
-                            <h3>Specific Applicants</h3>
+                            <h3>Search Applicants</h3>
                             <p>This is where you can search for an applicant</p>
                             <p>
-                                <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="http://placehold.it/800x500" alt="">
-                        <div class="caption">
-                            <h3>View TA Assignments</h3>
-                            <p>This is where you can view TA's assigned to your course</p>
-                            <p>
-                                <a href="#" class="btn btn-primary">View</a> <a href="#" class="btn btn-default">More Info</a>
+                                <a href="#" class="btn btn-primary">View</a>
                             </p>
                         </div>
                     </div>
@@ -142,6 +110,7 @@
                 }
                 echo "</select>";
                 ?>
+            </div>
 
 <?php
 echo"<span> Choose an Applicant to view their Application</span> ";
@@ -180,6 +149,16 @@ echo "</select>";
 
                 <hr />
         </header>
+    </section>
+
+            <footer class ="text-center">
+            <div class="footer-above row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Team E | TA Web Application 2015</p>
+                </div>
+            </div>
+        </footer>
+</div>
 
 
 

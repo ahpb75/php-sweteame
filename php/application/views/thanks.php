@@ -21,7 +21,7 @@
                     <img src="../../bootstrap/img/mu_logo.png" class="img-responsive" alt="" />
                 </center>
 
-                <a href="<?php echo site_url("welcome/login");?>"><input type="button" name="return" value="Login Now" class="btn btn-lg btn-primary btn-block" /></a>
+                <a href="<?php echo site_url("welcome/home");?>"><input type="button" name="return" value="Login Now" class="btn btn-lg btn-primary btn-block" /></a>
             </section>
         </div>
 

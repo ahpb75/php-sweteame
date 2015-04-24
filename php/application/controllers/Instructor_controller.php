@@ -48,5 +48,44 @@ class Instructor_controller extends CI_controller{
 		}
 		$this->load->view('instructor_choose',$data);
 	}
+	public function view_form1()
+	{
+		$data['userinfo'] = $this->instructor_model->view_form1();
+        $this->load->view('header_instructor');        
+    	$this->load->view('instructor_view_form1',$data);
+
+	}
+	public function make_comment()
+	{
+		$data['comment'] = $this->instructor_model->view_comment();
+        $data['username'] = $this->input->post('username');
+        $this->load->view('header_instructor');
+        $this->load->view('instructor_view_comment',$data);
+
+	}
+	public function make_a_comment()
+	{
+        $this->instructor_model->instructor_make_comment();
+				$this->load->view('header_instructor');
+				$data=$this->get_courses();
+				$this->announcement();
+				$this->load->view('instructor_home',$data);
+	}
+	public function announcement()
+	{
+		$this->load->model('admin_model');
+    	$data['ss'] = $this->admin_model->get_announcement();
+   		if($this->session->userdata('user_type') == '0')
+   		{
+   			$data['er'] = 1;
+   		}
+    	$this->load->view('announcement',$data);
+	}
+		public function get_courses(){
+		$this->load->model('instructor_model');
+		$data['courses']=$this->instructor_model->get_courses();
+		return $data;
+		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
+	}
 }
 ?>

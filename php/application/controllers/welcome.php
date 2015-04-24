@@ -31,12 +31,18 @@ class Welcome extends CI_Controller {
 			else if($this->session->userdata('user_type') == '1'){//staff
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				//needed names from the db before we called the view in order to populate the drop down box
+				$this->load->view('header_instructor');
 				$data=$this->get_courses();
+				$this->announcement();
 				$this->load->view('instructor_home',$data);
 
 				}
-			else if($this->session->userdata('user_type') == '0')//admin
+			else if($this->session->userdata('user_type') == '0')
+			{//admin
+				$this->load->view('header_admin');
+				$this->announcement();
 				$this->load->view('admin');
+			}
 		}
 		else
 		{
@@ -51,11 +57,20 @@ class Welcome extends CI_Controller {
                 $this->apply();
             else if($this->session->userdata('user_type') == '1'){//staff
                 //$this->load->view('header'); //want to load standard header before instructor view-chantal
-		$names=$this->get_names();
-                $this->load->view('instructor_home',$names);
+			// $names=$this->get_names();
+                // $this->load->view('instructor_home',$names);
+                				$this->load->view('header_instructor');
+				$data=$this->get_courses();
+				$this->announcement();
+				$this->load->view('instructor_home',$data);
+
 		}
             else if($this->session->userdata('user_type') == '0')//admin
+                {
+                $this->load->view('header_admin');
+                $this->announcement();
                 $this->load->view('admin');
+            	}
         }
         else
         {
@@ -139,13 +154,21 @@ class Welcome extends CI_Controller {
 		$this->session->sess_destroy();
 		$this->index();
 	}
+	public function announcement()
+	{
+		$this->load->model('admin_model');
+    	$data['ss'] = $this->admin_model->get_announcement();
+   		if($this->session->userdata('user_type') == '0')
+   		{
+   			$data['er'] = 1;
+   		}
+    	$this->load->view('announcement',$data);
+	}
     public function apply()
     {
-    	// $today = getdate();
-     //    $data['time_month'] = 5 - $today[mon];
-     //    $data['time_day'] = 20 - $today[mday];
-
-        $this->load->view('applicant',$data);
+    	$this->load->view('applicant_header');
+    	$this->announcement();
+        $this->load->view('applicant');
         // $this->load->view('footer');
     }
     public function error()

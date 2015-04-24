@@ -31,7 +31,6 @@
 		<td>Username</td>
 		<td>View</td>
 		<td>Make Comment</td>
-		<td>Your Comment</td>
 	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
 <?php 
@@ -47,7 +46,7 @@
 		'class' => 'btn btn-primary',);
 	echo "<td>".form_submit($data)."</td>";
 	echo form_close();
-	echo form_open('Admin_controller/make_comment');
+	echo form_open('Instructor_controller/make_comment');
 	echo form_hidden('username',$item);
 	$data = array(
 		'name' => 'submit',
