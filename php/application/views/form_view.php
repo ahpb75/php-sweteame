@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <style>
