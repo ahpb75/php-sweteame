@@ -47,13 +47,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        body {
-            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
         .box
         {
             background-color: white;
@@ -143,8 +136,6 @@
             </div>
         </header>
     </section>
-
-      <hr>
 
         <!-- Footer -->
         <footer class="text-center">

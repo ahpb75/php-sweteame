@@ -50,8 +50,8 @@ class Form_controller extends CI_Controller {
                 // build array for the model
 
                 $form_data = array(
-                    'fname' => @$this->input->post('fname'),
-                    'lname' => @$this->input->post('lname'),
+                    'fname' => @$this->input->post('First_Name'),
+                    'lname' => @$this->input->post('Last_Name'),
                     'studentID' => @$this->input->post('studentID'),
                     'position' => @$this->input->post('position'),
                     'GPA' => @$this->input->post('GPA'),
