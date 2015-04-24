@@ -70,7 +70,7 @@
                             <h3>View Applicants </h3>
                             <p>View submitted applications</p>
                             <p>
-                                <?php echo form_open("Admin_controller/view_form1");?>
+                                <?php echo form_open("Instructor_controller/show_app");?>
                                 <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
                                 <?php echo form_close();?>
                             </p>
