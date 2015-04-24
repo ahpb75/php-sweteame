@@ -32,7 +32,7 @@
 </head>
 <body>
 <div class = "container ">
-            <header class="jumbotron hero-spacer">
+<header class="jumbotron hero-spacer">
 
 <?php 
 	if ($application == "")
@@ -41,7 +41,10 @@
 	{
 		$counter = 1;
 	foreach ($application as $item):
-		echo "<h3> This is form ".$counter."</h3>";
+        foreach ($item as $key => $value) {
+            if($key == "courseID")
+		echo "<h3> This is application form for courseID:  ".$value."</h3>";
+        }
 		echo "<table class = 'table table-bordered'>";
 	 	foreach($item as $key => $value):
             if(($key == "appID") || ($key == "position") || ($key == "username"))
