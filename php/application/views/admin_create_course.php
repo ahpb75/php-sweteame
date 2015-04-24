@@ -7,7 +7,7 @@
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
 
-    <title>Please Log In</title>
+    <title>Please Create Course</title>
 </head>
 <body>
 <div class="container">
@@ -27,7 +27,14 @@
 
                     <input type="text" class="form-control input-lg" id="password" name="Coursename" placeholder="Coursename" required="" />
 
-                    <input type="submit" name="Create" value="Submit" class="btn btn-lg btn-primary btn-block" />
+                    <input type="submit" name="Create" value="Submit" class="btn btn-lg btn-primary btn-block" onclick="feedback()" />
+
+                    <script>
+                    function feedback()
+                    {
+                        alert("Success create course");
+                    }
+                    </script>
 
                 <?php echo form_close();?>
             </section>

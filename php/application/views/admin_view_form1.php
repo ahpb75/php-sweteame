@@ -3,6 +3,7 @@
 <head>
 	    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
 
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>bootstrap/css/bootstrap.css" />    
 <style>
         body {

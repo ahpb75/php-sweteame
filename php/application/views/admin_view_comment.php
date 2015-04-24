@@ -72,10 +72,17 @@
                 'name' => 'Post',
                 'value' => 'Post',
                 'class' => 'btn btn-primary',
+                'onclick' => 'feedback()',
                 );
         echo "<td>".form_submit($data2)."</td></tr>";
         echo form_close();
     ?>
+    <script>
+    function feedback()
+    {
+        alert("Your comment has been created!");
+    }
+    </script>
 </table>
 </header>
 </div>

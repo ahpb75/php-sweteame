@@ -66,7 +66,8 @@
 	 	$data = array(
 	 		'name' => 'submit',
 	 		'value' => 'submit',
-	 		'class' => 'btn btn-primary',);
+	 		'class' => 'btn btn-primary',
+	 		'onclick' => 'feedback1()',);
 	 	echo "<td>".form_submit($data)."</td></tr>";
 	 	echo form_close();
 	 	echo form_open('Admin_controller/assign_ta_to_this_course');
@@ -77,6 +78,7 @@
 	 		'name' => 'submit',
 	 		'value' => 'assign',
 	 		'class' => 'btn btn-primary',
+	 		'onclick' => 'feedback2()',
 	 		);
 	 	echo "<td>".form_submit($data)."</td></tr>";
 	 	echo form_close();
@@ -84,6 +86,16 @@
 	 endforeach;
 	}
 ?>
+	                    <script>
+                    function feedback1()
+                    {
+                        alert("The score has been submitted!");
+                    }
+                     function feedback2()
+                    {
+                        alert("You have assigned this person to be TA");
+                    }
+                    </script>
 </div>
 </body>
 </html>
