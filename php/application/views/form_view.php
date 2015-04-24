@@ -245,13 +245,15 @@ echo form_open('Form_controller', $attributes); ?>
 
 
 <script>
-    // $(function(){
-    //     $.datepicker.formatDate( "yy-mm-dd");
-    //     $( '.datepicker' ).datepicker();
-    // });
-    $('.datepicker').datepicker({ dateFormat: "yyyy-mm-dd" });
-        
-    });
+ /*  jQuery ready function. Specify a function to execute when the DOM is fully loaded.  */
+$(document).ready(
+  
+  /* This is the function that will get executed after the DOM is fully loaded */
+  function () {
+    $( ".datepicker" ).datepicker({ dateFormat: "yyyy-mm-dd" });
+  }
+
+);
 
 </script>
 
