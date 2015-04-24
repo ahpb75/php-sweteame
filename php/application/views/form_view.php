@@ -52,7 +52,6 @@ $(document).ready(
 
 <div class="container">
 <hr/>
-<h3>Fill out the form below:</h3>
 <div class="span5">
 
 <?php
