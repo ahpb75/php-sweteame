@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 <script>
  /*  jQuery ready function. Specify a function to execute when the DOM is fully loaded.  */
@@ -35,6 +37,7 @@ $(document).ready(
     }
     .required {
         color: red;
+        font-weight: bold;
     }
 </style>
 
@@ -56,24 +59,28 @@ echo form_open('Form_controller', $attributes); ?>
 
 
 <div class="form-group">
+    <span class="required"><?php echo form_error('fname'); ?></span>
     <label for="fname">First Name <span class="required">*</span></label>
     <input id="fname" type="text" name="fname" class="form-control" placeholder="John" value="<?php echo set_value('fname'); ?>"  />
-    <?php echo form_error('fname'); ?>
+    
 </div>
 
 <div class="form-group">
+     <span class="required"><?php echo form_error('lname'); ?></span>
     <label for="lname">Last Name <span class="required">*</span></label>
     <input id="lname" type="text" name="lname" class="form-control" placeholder="Doe" value="<?php echo set_value('lname'); ?>"  />
-    <?php echo form_error('lname'); ?>
+    
 </div>
 
 <div class="form-group">
+    <span class="required"><?php echo form_error('studentID'); ?></span>
     <label for="studentID">Student ID <span class="required">*</span></label>
     <input id="studentID" type="text" name="studentID" class="form-control" placeholder="12345678" value="<?php echo set_value('studentID'); ?>"  />
-    <?php echo form_error('studentID'); ?>
+    
 </div>
 
 <div class="form-inline">
+     <span class="required"><?php echo form_error('position'); ?></span>
     <label for="position">TA or PLA <span class="required">*</span></label>
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
     <label for="position" class="radio">
@@ -84,21 +91,24 @@ echo form_open('Form_controller', $attributes); ?>
         <input id="position" name="position" type="radio" class="form-control" value="PLA" <?php echo $this->form_validation->set_radio('position', 'PLA'); ?> />
         PLA
     </label>
-    <?php echo form_error('position'); ?>
+   
 </div>
 
 
 <div class="form-group">
+     <span class="required"><?php echo form_error('GPA'); ?></span>
     <label for="GPA">GPA <span class="required">*</span></label>
     <input id="GPA" type="text" name="GPA" class="form-control" placeholder="4.0" value="<?php echo set_value('GPA'); ?>"  />
-    <?php echo form_error('GPA'); ?>
+    
 </div>
 <div class="form-group">
+    <span class="required"><?php echo form_error('program_level'); ?></span>
     <label for="program_level">If undergraduate, indicate program and level (ex. CS BA jr.)</label>
     <input id="program_level" class="form-control" type="text" placeholder="CS BS sr." name="program_level" maxlength="15" value="<?php echo set_value('program_level'); ?>"  />
-    <?php echo form_error('program_level'); ?>
+    
 </div>
 <div class="form-inline">
+      <span class="required"><?php echo form_error('graduate_program'); ?></span>
     <label for="graduate_program" class="control-label">MS or PhD (if graduate)</label>
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
     <label for="graduate_program" class="radio">
@@ -109,33 +119,36 @@ echo form_open('Form_controller', $attributes); ?>
         <input id="graduate_program" class="form-control" name="graduate_program" type="radio" value="PhD" <?php echo $this->form_validation->set_radio('graduate_program', 'PhD'); ?> />
         PhD
     </label>
-    <?php echo form_error('graduate_program'); ?>
+   
 </div>
 
 
 <div class="form-group">
+     <span class="required"><?php echo form_error('advisor'); ?></span>
     <label for="advisor" class="control-label">Advisors Name<span class="required">*</span></label>
     <input id="advisor" class="form-control" type="text" name="advisor" maxlength="30" value="<?php echo set_value('advisor'); ?>"  />
-    <?php echo form_error('advisor'); ?>
+   
 </div>
 
 <div class="form-group">
+     <span class="required"><?php echo form_error('phone'); ?></span>
     <label for="phone" class="control-label">Phone Number (no spaces)<span class="required">*</span></label>
     <input id="phone" class="form-control" type="text" placeholder="1234567890" name="phone" maxlength="11" value="<?php echo set_value('phone'); ?>"  />
-    <?php echo form_error('phone'); ?>
 </div>
 <div class="form-group">
+    <span class="required"><?php echo form_error('email'); ?></span>
     <label for="email" class="control-label">Email<span class="required">*</span></label>
 
     <input id="email" class="form-control" type="text" placeholder="email@mail.missouri.edu" name="email" maxlength="30" value="<?php echo set_value('email'); ?>"  />
-    <?php echo form_error('email'); ?>
+    
 
 </div>
 <div class="form-group">
+     <span class="required"><?php echo form_error('gradDate'); ?></span>
     <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD)<span class="required">*</span></label>
-    <input class="datepicker"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
+    <input class="datepicker form-control"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
 
-    <?php echo form_error('gradDate'); ?>
+   
 </div>
 
 <div class="form-group">
@@ -183,18 +196,21 @@ echo form_open('Form_controller', $attributes); ?>
 
 
 <div class="form-group">
+    <span class="required"><?php echo form_error('optScore'); ?></span>
     <label for="optScore" class="control-label">SPEAK/OPT Score</label>
     <input id="optScore" placeholder="5" class="form-control" type="text" name="optScore" maxlength="2" value="<?php echo set_value('optScore'); ?>"  />
 
-    <?php echo form_error('optScore'); ?>
+    
 
 </div>
 <div class="form-group">
+    <span class="required"><?php echo form_error('optWhen'); ?></span>
     <label for="optWhen" class="control-label">Date of last OPT test (YYYY-MM-DD)</label>
     <input id="optWhen" class="datepicker form-control" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
-    <?php echo form_error('optWhen'); ?>
+    
 </div>
 <div class="form-inline">
+    <span class="required"><?php echo form_error('GATO'); ?></span>
     <label for="GATO">Participated in GATO<span class="required">*</span> &nbsp;</label>
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
     <label for="GATO" class="radio">
@@ -205,10 +221,11 @@ echo form_open('Form_controller', $attributes); ?>
         <input id="GATO" name="GATO" type="radio" class="form-control" value="0" <?php echo $this->form_validation->set_radio('GATO', '0'); ?> />
         Will Attend in Aug/Jan
     </label>
-    <?php echo form_error('GATO'); ?>
+    
 </div>
 
 <div class="form-inline">
+    <span class="required"><?php echo form_error('SPEAK'); ?></span>
     <label for="SPEAK">Taken SPEAK Test <span class="required">*</span>&nbsp;</label>
 
     <label for="SPEAK" class="radio">
@@ -219,19 +236,21 @@ echo form_open('Form_controller', $attributes); ?>
         <input id="SPEAK" name="SPEAK" type="radio" class="form-control" value="0" <?php echo $this->form_validation->set_radio('SPEAK', '0'); ?> />
         Not Met (Enter Date Below)
     </label>
-    <?php echo form_error('SPEAK'); ?>
+    
 
 </div>
 
 <div class="form-group">
+    <span class="required"><?php echo form_error('SPEAKdate'); ?></span>
     <label for="SPEAKdate" class="control-label">SPEAK Assigned Date (YYYY-MM-DD)</label>
 
     <input id="SPEAKdate" class="datepicker form-control" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
-    <?php echo form_error('SPEAKdate'); ?>
+    
 
 </div>
 
 <div class="form-inline">
+    <span class="required"><?php echo form_error('ONITA'); ?></span>
     <label for="ONITA" class="control-label">ONITA requirement (international students)</label>
 
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
@@ -243,14 +262,15 @@ echo form_open('Form_controller', $attributes); ?>
         <input id="ONITA" name="ONITA" type="radio" class="form-control" value="0" <?php echo $this->form_validation->set_radio('ONITA', '0'); ?> />
         Will Attend in Aug/Jan
     </label>
-    <?php echo form_error('ONITA'); ?>
+    
 
 </div>
 <div class="form-group">
+      <span class="required"><?php echo form_error('ONITA_date'); ?></span>
     <label for="ONITA_date" class="control-label">ONITA Assigned Date</label>
 
     <input id="ONITA_date" class="datepicker form-control" type="text" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
-    <?php echo form_error('ONITA_date'); ?>
+  
 
 </div>
 
