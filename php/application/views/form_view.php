@@ -15,6 +15,17 @@
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap-theme.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+ /*  jQuery ready function. Specify a function to execute when the DOM is fully loaded.  */
+$(document).ready(
+  /* This is the function that will get executed after the DOM is fully loaded */
+  function () {
+    $( ".datepicker" ).datepicker({ dateFormat: "yyyy-mm-dd" });
+  }
+);
+</script>
+
 </head>
 
 <style>
@@ -66,11 +77,11 @@ echo form_open('Form_controller', $attributes); ?>
     <label for="position">TA or PLA <span class="required">*</span></label>
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
     <label for="position" class="radio">
-        <input id="position" name="position" type="radio" class="form-control" value="1" <?php echo $this->form_validation->set_radio('position', '1'); ?> />
+        <input id="position" name="position" type="radio" class="form-control" value="TA" <?php echo $this->form_validation->set_radio('position', 'TA'); ?> />
         TA
     </label>
     <label for="position" class="radio">
-        <input id="position" name="position" type="radio" class="form-control" value="0" <?php echo $this->form_validation->set_radio('position', '0'); ?> />
+        <input id="position" name="position" type="radio" class="form-control" value="PLA" <?php echo $this->form_validation->set_radio('position', 'PLA'); ?> />
         PLA
     </label>
     <?php echo form_error('position'); ?>
@@ -91,11 +102,11 @@ echo form_open('Form_controller', $attributes); ?>
     <label for="graduate_program" class="control-label">MS or PhD (if graduate)</label>
     <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
     <label for="graduate_program" class="radio">
-        <input id="graduate_program" class="form-control" name="graduate_program" type="radio" value="1" <?php echo $this->form_validation->set_radio('graduate_program', '1'); ?> />
+        <input id="graduate_program" class="form-control" name="graduate_program" type="radio" value="MS" <?php echo $this->form_validation->set_radio('graduate_program', 'MS'); ?> />
         MS
     </label>
     <label for="graduate_program" class="radio">
-        <input id="graduate_program" class="form-control" name="graduate_program" type="radio" value="0" <?php echo $this->form_validation->set_radio('graduate_program', '0'); ?> />
+        <input id="graduate_program" class="form-control" name="graduate_program" type="radio" value="PhD" <?php echo $this->form_validation->set_radio('graduate_program', 'PhD'); ?> />
         PhD
     </label>
     <?php echo form_error('graduate_program'); ?>
@@ -104,7 +115,7 @@ echo form_open('Form_controller', $attributes); ?>
 
 <div class="form-group">
     <label for="advisor" class="control-label">Advisors Name<span class="required">*</span></label>
-    <input id="advisor" class="form-control" type="text" placeholder="Mr. Sir" name="advisor" maxlength="30" value="<?php echo set_value('advisor'); ?>"  />
+    <input id="advisor" class="form-control" type="text" name="advisor" maxlength="30" value="<?php echo set_value('advisor'); ?>"  />
     <?php echo form_error('advisor'); ?>
 </div>
 
@@ -116,7 +127,7 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="email" class="control-label">Email<span class="required">*</span></label>
 
-    <input id="email" class="form-control" type="text" placeholder="myemail@mail.missouri.edu" name="email" maxlength="30" value="<?php echo set_value('email'); ?>"  />
+    <input id="email" class="form-control" type="text" placeholder="email@mail.missouri.edu" name="email" maxlength="30" value="<?php echo set_value('email'); ?>"  />
     <?php echo form_error('email'); ?>
 
 </div>
@@ -180,7 +191,7 @@ echo form_open('Form_controller', $attributes); ?>
 </div>
 <div class="form-group">
     <label for="optWhen" class="control-label">Date of last OPT test (YYYY-MM-DD)</label>
-    <input id="optWhen" class="datepicker" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
+    <input id="optWhen" class="datepicker form-control" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
     <?php echo form_error('optWhen'); ?>
 </div>
 <div class="form-inline">
@@ -215,7 +226,7 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="SPEAKdate" class="control-label">SPEAK Assigned Date (YYYY-MM-DD)</label>
 
-    <input id="SPEAKdate" class="datepicker" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
+    <input id="SPEAKdate" class="datepicker form-control" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
     <?php echo form_error('SPEAKdate'); ?>
 
 </div>
@@ -238,24 +249,13 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="ONITA_date" class="control-label">ONITA Assigned Date</label>
 
-    <input class="datepicker" type="text" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
+    <input id="ONITA_date" class="datepicker form-control" type="text" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
     <?php echo form_error('ONITA_date'); ?>
 
 </div>
 
 
-<script>
- /*  jQuery ready function. Specify a function to execute when the DOM is fully loaded.  */
-$(document).ready(
-  
-  /* This is the function that will get executed after the DOM is fully loaded */
-  function () {
-    $( ".datepicker" ).datepicker({ dateFormat: "yyyy-mm-dd" });
-  }
 
-);
-
-</script>
 
 
 <div class="form-group">
