@@ -146,7 +146,7 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
      <span class="required"><?php echo form_error('gradDate'); ?></span>
     <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD)<span class="required">*</span></label>
-    <input class="datepicker form-control"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
+    <input class="datepicker form-control"  type="text" placeholder="YEAR-MONTH-DAY" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
 
    
 </div>
