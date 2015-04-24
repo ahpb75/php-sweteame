@@ -43,7 +43,7 @@
 	foreach ($application as $item):
         foreach ($item as $key => $value) {
             if($key == "courseID")
-		echo "<h3> This is application form for courseID:  ".$value."</h3>";
+		echo "<h3> This is application form for courseID:  </h3><h3 style='color=blue;'>".$value."</h3>";
         }
 		echo "<table class = 'table table-bordered'>";
 	 	foreach($item as $key => $value):

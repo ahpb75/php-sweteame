@@ -45,10 +45,14 @@
 	 		// if($key == "appID")
 	 		// 	$user = $value;
 			// echo "<li>".$key." => ".$value."</li>";
+			if(($key == "appID") || ($key == "postition") || ($key == "username"))
+			{}
+			else{
 			echo "<tr>";
 			echo "<td class = 'big'>".$key."</td>";
 			echo "<td>".$value."</td>";
 			echo "</tr>";
+			}
 			if($key == 'appID')
 				$hidden_appID = $value;
 			if($key == 'username')

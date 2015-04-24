@@ -61,7 +61,7 @@
 
     <!-- Navigation -->
 
-<section class="success style='color:black;'">
+<section class="success" style="color:black;">
     <!-- Page Content -->
     <div class="container">
 
