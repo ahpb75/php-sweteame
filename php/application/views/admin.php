@@ -8,6 +8,7 @@
     <link href="../../bootstrap/css/countdown.css" rel="stylesheet">
     <script type="text/javascript" src="../../bootstrap/js/jquery.js"></script>
     <script type="text/javascript" src="../../bootstrap/js/countdown.js"></script>
+    <script src="../../bootstrap/js/freelancer.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
         
@@ -32,6 +33,13 @@
 
     <!-- Custom CSS -->
     <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
+    <link href="../../bootstrap/css/freelancer.css" rel="stylesheet">
+
+
+    <link href="../../bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,13 +48,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        body {
-            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
         .anno
         {
             width:450px;
@@ -60,12 +61,12 @@
 
     <!-- Navigation -->
 
-
+<section class="success">
     <!-- Page Content -->
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
+        <header class="jumbotron">
             <div class = "row">
                 <div class="col-sm-6">
             <ul id="countdown">
@@ -143,6 +144,7 @@
                         <div class="caption">
                             <br>
                             <br>
+                            <br>
                             <h3>Create Course </h3>
                             <p>Create a course. </p>
                             <p>
@@ -160,6 +162,7 @@
                         <div class="caption">
                             <br>
                             <br>
+                            <br>
                             <h3>Assign TA/PLA or Enter Score</h3>
                             <p>Assign them here </p>
                             <p>
@@ -175,14 +178,15 @@
 
             <hr>
         </header>
+    </section>
 
 
 
         <!-- Footer -->
-        <footer>
-            <div class="row">
+        <footer class ="text-center">
+            <div class="footer-above row">
                 <div class="col-lg-12">
-                    <p style ="color:white">Copyright &copy; Team E | TA Web Application 2015</p>
+                    <p>Copyright &copy; Team E | TA Web Application 2015</p>
                 </div>
             </div>
         </footer>

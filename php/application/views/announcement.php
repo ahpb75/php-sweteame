@@ -1,33 +1,23 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link href="../../bootstrap/css/heroic-features.css" rel="stylesheet">
-    <style>
-        body {
-            background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            padding-top: 70px;
-        }
-        .table
-        {
-        	position: relative;
-        	top: 20px;
-        }
-        tbody
-        {
-        	position: relative;
-        	bottom: 20px;
-        }
-    </style>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../bootstrap/css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+	<header>
 	<div class = "container">
-	        <header class="jumbotron hero-spacer">
-	<h3>Announcement</h3>
-	<ul>
+	<h2>Announcement</h2>
+	<div class="row">
 	<?php
 	$counter = 0;
 	$num;
@@ -35,11 +25,11 @@
 		switch($counter%6)
 		{
 			case 0 :
-				echo "<li> ";
+				echo "<div class='col-sm-12'>";
 				$num = $value;
 				break;
 			case 1 :
-				echo " ".$value." Post on:";
+				echo "".$value." <br>Post on:";
 				break;
 			case 2 :
 				echo $value."/";
@@ -51,7 +41,7 @@
 				echo $value.":";
 				break;
 			case 5 :
-				echo $value."</li>";
+				echo $value;
 				if($er == 1)
 				{
 					echo form_open('Admin_controller/erase_announcement');
@@ -63,13 +53,14 @@
 					echo form_submit($data);
 					echo form_close();
 				}
+				echo "</div>";
 				break;
 
 		}
 		$counter = $counter + 1;
 	}
 	?>
-	</ul>
+	</div>
 </div>
 </header>
 </body>
