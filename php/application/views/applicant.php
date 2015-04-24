@@ -69,6 +69,7 @@
    
 
     <!-- Page Content -->
+    <section class="success">
     <div class="container">
 
         <!-- Jumbotron Header -->
@@ -141,12 +142,13 @@
 
             </div>
         </header>
+    </section>
 
       <hr>
 
         <!-- Footer -->
-        <footer>
-            <div class="row">
+        <footer class="text-center">
+            <div class="footer-above row">
                 <div class="col-lg-12">
                     <p style = "color:white">Copyright &copy; Team E | TA Web Application 2015</p>
                 </div>
