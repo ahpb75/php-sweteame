@@ -63,41 +63,27 @@
 
             <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="col-md-6 col-sm-6 hero-feature">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/ta_app.png" alt="">
                         <div class="caption">
                             <h3>View Applicants </h3>
                             <p>View submitted applications</p>
                             <p>
-                                <?php echo form_open("Instructor_controller/show_app");?>
+                                <?php echo form_open("Instructor_controller/view_form1");?>
                                 <input class="btn btn-primary btn-large" type="submit" name="view" value="View" />
                                 <?php echo form_close();?>
                             </p>
-                            <br>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="col-md-6 col-sm-6 hero-feature">
                     <div class="thumbnail">
-                        <img src="../../bootstrap/img/search.png" alt="">
+                        <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
                             <h3>Search Applicants</h3>
                             <p>This is where you can search for an applicant</p>
-                            <p>
-                                <a href="#" class="btn btn-primary">View</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="../../bootstrap/img/assign_score.png" alt="">
-                        <div class="caption">
-                            <h3>View TA Assignments</h3>
-                            <p>This is where you can view TA's assigned to your course</p>
                             <p>
                                 <a href="#" class="btn btn-primary">View</a>
                             </p>
