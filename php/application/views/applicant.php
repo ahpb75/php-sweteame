@@ -62,7 +62,7 @@
    
 
     <!-- Page Content -->
-    <section class="success">
+    <section class="success" style="color:black;">
     <div class="container">
 
         <!-- Jumbotron Header -->
