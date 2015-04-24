@@ -122,7 +122,7 @@ echo form_open('Form_controller', $attributes); ?>
 </div>
 <div class="form-group">
     <label for="gradDate" class="control-label">Graduation Date (YYYY-MM-DD)<span class="required">*</span></label>
-    <input class="datepicker form-control"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
+    <input class="datepicker"  type="text" placeholder="2016-12-16" name="gradDate"  value="<?php echo set_value('gradDate'); ?>"  />
 
     <?php echo form_error('gradDate'); ?>
 </div>
@@ -180,7 +180,7 @@ echo form_open('Form_controller', $attributes); ?>
 </div>
 <div class="form-group">
     <label for="optWhen" class="control-label">Date of last OPT test (YYYY-MM-DD)</label>
-    <input id="optWhen" class="datepicker form-control" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
+    <input id="optWhen" class="datepicker" type="text" name="optWhen"  placeholder="YEAR-MONTH-DAY" value="<?php echo set_value('optWhen'); ?>"  />
     <?php echo form_error('optWhen'); ?>
 </div>
 <div class="form-inline">
@@ -215,7 +215,7 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="SPEAKdate" class="control-label">SPEAK Assigned Date (YYYY-MM-DD)</label>
 
-    <input id="SPEAKdate" class="datepicker form-control" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
+    <input id="SPEAKdate" class="datepicker" type="text" name="SPEAKdate" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('SPEAKdate'); ?>"  />
     <?php echo form_error('SPEAKdate'); ?>
 
 </div>
@@ -238,7 +238,7 @@ echo form_open('Form_controller', $attributes); ?>
 <div class="form-group">
     <label for="ONITA_date" class="control-label">ONITA Assigned Date</label>
 
-    <input class="datepicker form-control" type="text" id="ONITA_date" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
+    <input class="datepicker" type="text" name="ONITA_date" placeholder="YEAR-MONTH-DAY"  value="<?php echo set_value('ONITA_date'); ?>"  />
     <?php echo form_error('ONITA_date'); ?>
 
 </div>
