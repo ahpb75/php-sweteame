@@ -73,7 +73,8 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer box">
-                        <div class = "container-fluid">
+        <div class = "row">
+            <div class="col-sm-6">
             <ul id="countdown">
         <li>
             <span class="days">00</span>
@@ -93,8 +94,16 @@
         </li>
     </ul>
 </div>
+    <div class="col-sm-6">
+    <h2>   Time left to apply</h2>
+</div>
+</div>
 				<!-- Centered the name maybe for a cleaner look? Just an opinion. -->
-           <div>
+                <div class="row">
+                    <hr>
+                </div>
+           <div class="row">
+            <hr>
             <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
             <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
         </div>
@@ -113,7 +122,7 @@
             <!-- Page Features -->
             <div class="row text-center">
 
-                <div class="col-md-3 col-sm-6 hero-feature" style="min-height: 400px; min-width: 134px">
+                <div class="col-sm-12 hero-feature">
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/applicant-icon.png" alt="">
                         <div class="caption">

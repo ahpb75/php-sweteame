@@ -66,7 +66,8 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <div class = "container-fluid pull-left">
+            <div class = "row">
+                <div class="col-sm-6">
             <ul id="countdown">
         <li>
             <span class="days">00</span>
@@ -85,8 +86,14 @@
             <p class="timeRefSeconds">seconds</p>
         </li>
     </ul>
+        </div>
+        <div class="col-sm-6">
+            <h2>     Time left to assign TA</h2>
+        </div>
 </div>
-            <div class = "container-fluid pull-right">
+<hr>
+<hr>
+            <div class = "row">
             <?php
             echo form_open('Admin_controller/announcement');
             $data = array(
@@ -104,16 +111,13 @@
             echo form_close();
             ?>
         </div>
-            <br>
-            <br>
             <hr>
 
             <!-- Title -->
             <div class="row">
-                <div class="col-lg-16">
                     <h3>Dashboard</h3>
-                </div>
             </div>
+            <hr>
             <!-- /.row -->
 
             <!-- Page Features -->
