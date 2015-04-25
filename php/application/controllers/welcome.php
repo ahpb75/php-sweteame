@@ -36,7 +36,7 @@ class Welcome extends CI_Controller {
 				//$data=$this->get_courses();
 				//$this->announcement();
 				//$this->load->view('instructor_home',$data);
-				$this->Instructor_controller->index();
+				$this->Instructor_controller->loadpage();
 				}
 			else if($this->session->userdata('user_type') == '0')
 			{//admin
