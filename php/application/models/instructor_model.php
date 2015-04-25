@@ -63,7 +63,7 @@ class instructor_model extends CI_model{
     }
     function instructor_make_comment()
     {
-        $query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
+        $query = $this->db->get_where('Comment',array('username' => $this->input->post('username'), 'Inst_name' => $this->session->userdata['user_name']));
         if($query->num_rows()>0)
         {
     	$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name']);
