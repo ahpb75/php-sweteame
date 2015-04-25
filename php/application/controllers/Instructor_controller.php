@@ -18,7 +18,7 @@ class Instructor_controller extends CI_controller{
                         }
                 }
                 $this->load->view('header_instructor');
-                $this->load->view('instructor_home',$options);
+                $this->load->view('instructor_choose',$options);
 	}
 
 	/*public function add_note(){

@@ -95,7 +95,7 @@
 
 
 
-
+<!--Make a button to call loadpage(), loadpage will then call the instructor_choose view and also pass it the array for your drop down box-->
                 <?php
                 echo"<span> Choose an Applicant to view their Application</span> ";
                 echo " <select name = 'course'> ";
