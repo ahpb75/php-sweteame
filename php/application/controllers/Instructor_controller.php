@@ -30,7 +30,7 @@ class Instructor_controller extends CI_controller{
 	}
 	else{
 
-        	$this->load->view('Instructor_view', $data);
+        	$this->load->view('Instructor_view_form1', $data);
 	}
         //$this->load->view('footer');
 
