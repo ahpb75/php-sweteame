@@ -24,8 +24,8 @@ class Instructor_controller extends CI_controller{
     public function show_app(){
 
         $this->load->model('instructor_model');
-        $data['applications'] = $this->instructor_model->show_applicants();
-	if(is_null($data['applications'])){
+        $data['userinfo'] = $this->instructor_model->show_applicants();
+	if(is_null($data['userinfo'])){
 		$this->load->view('error');
 	}
 	else{
@@ -38,13 +38,12 @@ class Instructor_controller extends CI_controller{
     }
 
 	public function get_app(){
-		$course=$this->input->post('course');//@chantal search box needs to be named applicant, or you can change it.
+		$course=$this->input->post('course');
 		if($course==FALSE){
 			$this->load->view('error');
 		}
 		else{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($course);
-			//@chantal - load some view and pass $app, should contain an entire row from the application db that matches w/e name they chose
 		}
 		$this->load->view('instructor_view_form1',$data);
 	}
