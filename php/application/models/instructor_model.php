@@ -45,6 +45,7 @@ class instructor_model extends CI_model{
         }
         return $applicant;
     }
+
     function view_comment()
     {
         $query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
@@ -52,7 +53,7 @@ class instructor_model extends CI_model{
         $empty = "";
         if($query->num_rows()>0)
         {
-            foreach($query->result() as $value)
+            foreach($query->result() as $key => $value)
             {
                 array_push($comment,$value->Inst_name);
                 array_push($comment,$value->Inst_comment);
@@ -61,19 +62,20 @@ class instructor_model extends CI_model{
         }
         return $empty;
     }
+
     function instructor_make_comment()
     {
-        $query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
-        if($query->num_rows()>0)
-        {
-    	$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name']);
-        $this->db->where('username', $this->input->post('username'));
-        $this->db->update('Comment',$data);
-    	}
-    	else{
-    	$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name'], 'username' => $this->input->post('username'));
-    	$this->db->insert('Comment',$data);
-    	}
+        //$query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
+        //if($query->num_rows()>0)
+        //{
+	//    	$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name']);
+       	//	$this->db->where('username', $this->input->post('username'));
+        //	$this->db->update('Comment',$data);
+    	//}
+    	//else{
+    		$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name'], 'username' => $this->input->post('username'));
+    		$this->db->insert('Comment',$data);
+    	//}
     }
 }
 ?>

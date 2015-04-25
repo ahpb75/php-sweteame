@@ -9,7 +9,7 @@ class Instructor_controller extends CI_controller{
 		
 	}
 
-	public function add_note(){
+	/*public function add_note(){
 		$app=$this->input->post('applicant');
 		$note=$this->input->post('note');
 		if($app==FALSE || $note==FALSE){
@@ -19,7 +19,7 @@ class Instructor_controller extends CI_controller{
 			$input=array($app,$note);
 			$this->instructor_model->add_note($input);
 		}
-	}
+	}*/
 //function to return the names of applicants so instructor can select who to comment on -chantal
     public function show_app(){
 
@@ -48,39 +48,43 @@ class Instructor_controller extends CI_controller{
 		}
 		$this->load->view('instructor_choose',$data);
 	}
+
 	public function view_form1()
 	{
 		$data['userinfo'] = $this->instructor_model->view_form1();
-        $this->load->view('header_instructor');        
-    	$this->load->view('instructor_view_form1',$data);
+        	$this->load->view('header_instructor');        
+    		$this->load->view('instructor_view_form1',$data);
 
 	}
+
 	public function make_comment()
 	{
 		$data['comment'] = $this->instructor_model->view_comment();
-        $data['username'] = $this->input->post('username');
-        $this->load->view('header_instructor');
-        $this->load->view('instructor_view_comment',$data);
-
+        	$data['username'] = $this->input->post('username');
+        	$this->load->view('header_instructor');
+        	$this->load->view('instructor_view_comment',$data);
 	}
+
 	public function make_a_comment()
 	{
-        $this->instructor_model->instructor_make_comment();
-				$this->load->view('header_instructor');
-				$data=$this->get_courses();
-				$this->announcement();
-				$this->load->view('instructor_home',$data);
+        	$this->instructor_model->instructor_make_comment();
+		$this->load->view('header_instructor');
+		$data=$this->get_courses();
+		$this->announcement();
+		$this->load->view('instructor_home',$data);
 	}
+
 	public function announcement()
 	{
 		$this->load->model('admin_model');
-    	$data['ss'] = $this->admin_model->get_announcement();
+    		$data['ss'] = $this->admin_model->get_announcement();
    		if($this->session->userdata('user_type') == '0')
    		{
    			$data['er'] = 1;
    		}
     	$this->load->view('announcement',$data);
 	}
+
 		public function get_courses(){
 		$this->load->model('instructor_model');
 		$data['courses']=$this->instructor_model->get_courses();
