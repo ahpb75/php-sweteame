@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->load->model('user_model');
+		//$this->load->library('../controllers/Instructor_controller');
 	}
 	public function index()
 	{
@@ -28,14 +29,15 @@ class Welcome extends CI_Controller {
 		{
 			if ($this->session->userdata('user_type') == '2')//applicant
 				$this->apply();
-			else if($this->session->userdata('user_type') == '1'){//staff
+			else if($this->session->userdata('user_type') == '1'){
+				//staff
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				//needed names from the db before we called the view in order to populate the drop down box
 				$this->load->view('header_instructor');
 				$data=$this->get_courses();
 				$this->announcement();
 				$this->load->view('instructor_home',$data);
-
+				//$this->Instructor_controller->loadpage();
 				}
 			else if($this->session->userdata('user_type') == '0')
 			{//admin

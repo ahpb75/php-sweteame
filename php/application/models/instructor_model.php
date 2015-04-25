@@ -6,7 +6,7 @@ class instructor_model extends CI_model{
 	}	
 
 	public function get_course_applicants($course){
-		$sql='SELECT * FROM Application WHERE course_ID=? LIMIT 1';
+		$sql='SELECT * FROM Application WHERE courseID=? LIMIT 1';
 		$query=$this->db->query($sql, $app);
 		/*returns an array containing the whole row, should have all of the applicants application data in the order that the db is holding it.*/
 		return $query->result();
@@ -45,6 +45,7 @@ class instructor_model extends CI_model{
         }
         return $applicant;
     }
+
     function view_comment()
     {
         $query = $this->db->get_where('Comment',array('username' => $this->input->post('username')));
@@ -52,7 +53,7 @@ class instructor_model extends CI_model{
         $empty = "";
         if($query->num_rows()>0)
         {
-            foreach($query->result() as $value)
+            foreach($query->result() as $key => $value)
             {
                 array_push($comment,$value->Inst_name);
                 array_push($comment,$value->Inst_comment);
@@ -61,6 +62,7 @@ class instructor_model extends CI_model{
         }
         return $empty;
     }
+
     function instructor_make_comment()
     {
         $query = $this->db->get_where('Comment',array('username' => $this->input->post('username'), 'Inst_name' => $this->session->userdata['user_name']));
@@ -74,6 +76,7 @@ class instructor_model extends CI_model{
     	$data = array('Inst_comment' => $this->input->post('admin_comment'), 'Inst_name' => $this->session->userdata['user_name'], 'username' => $this->input->post('username'));
     	$this->db->insert('Comment',$data);
     	}
+
     }
 }
 ?>

@@ -1,3 +1,4 @@
+<!--@Chantal - this page will have a $options array holding all the course names so you can display the drop down box, that's basically all this page needs to do. When they press the button to search please call the get_app() method and it should bring up a list of applicants associated to the right course. -->
 <html>
 <head>
 

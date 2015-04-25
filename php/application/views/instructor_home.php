@@ -49,7 +49,7 @@
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
             <p> This is where you can view TA applicants, post comments on former TA's, and know which TA's have been assigned to your course.</p>
-            <p><a class="btn btn-primary btn-large" href= "<?php echo site_url("Instructor_controller/show_app");?>">View All Current Applicants</a>
+            <p><a class="btn btn-primary btn-large" href= "<?php echo site_url("Instructor_controller/view_form1");?>">View All Current Applicants</a>
             </p>
             <br>
             <br>
@@ -95,10 +95,10 @@
 
 
 
-
+<!--Make a button to call loadpage(), loadpage will then call the instructor_choose view and also pass it the array for your drop down box-->
                 <?php
                 echo"<span> Choose an Applicant to view their Application</span> ";
-                echo " <select name = 'courses'> ";
+                echo " <select name = 'course'> ";
                 foreach ($courses as $row){
                     foreach($row as $key => $value){
                         echo "<option value =".$value.">".$value."</option>";
@@ -110,14 +110,16 @@
                 }
                 echo "</select>";
                 ?>
+		<button onclick="location.href=<?php echo "siteurl('Instructor_controller/get_app')";?>" id="applicant_button">View Applicants</button>
             </div>
 
                 <!--
                 <h1> Computer Science Department </h1>
                 <h2> TA Selection 2015 </h2>
                 <p> If you would like to view the applicants</p>
+>>>>>>> 30ad8c8cebc4c56cae032e523a36e99fb43914d5
 
-                <button onclick="location.href ='Instructor_controller/show_app';" id = "applicant_button"> View Applicant</button>
+                <button onclick="location.href ='Instructor_controller/show_app';" id = "applicant_button"> View Applicants</button>
 
                 Wanted to use JS but have to link it correctly with code ignighter
                 <button id = "applicant_button" >View Applicant</button>
