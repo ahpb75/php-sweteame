@@ -110,22 +110,8 @@
                 }
                 echo "</select>";
                 ?>
+		<button onclick="location.href='Instructor_controller/show_app';" id="applicant_button">View Applicants</button>
             </div>
-
-<?php
-echo"<span> Choose an Applicant to view their Application</span> ";
-echo " <select name = 'course'> ";
-foreach ($courses as $row){
-	foreach($row as $key => $value){
-            echo "<option value =".$value.">".$value."</option>";
-	}
-        //echo "<li>".$key." => ".$value."</li>";
-       // echo "=======================";
-       // echo "<br>";
-       // echo "<br>";
-    }
-echo "</select>"; 
-?>
 
                 <!--
                 <h1> Computer Science Department </h1>
@@ -133,7 +119,7 @@ echo "</select>";
                 <p> If you would like to view the applicants</p>
 >>>>>>> 30ad8c8cebc4c56cae032e523a36e99fb43914d5
 
-                <button onclick="location.href ='Instructor_controller/show_app';" id = "applicant_button"> View Applicant</button>
+                <button onclick="location.href ='Instructor_controller/show_app';" id = "applicant_button"> View Applicants</button>
 
                 Wanted to use JS but have to link it correctly with code ignighter
                 <button id = "applicant_button" >View Applicant</button>
