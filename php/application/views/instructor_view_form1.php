@@ -55,10 +55,10 @@
 	echo "<td>".form_submit($data)."</td>";
 	echo form_close();
 	}
-	else{
+	/*else{
 	echo "<td>".$item."</td>";
 	echo "</tr>";
-	}
+	}*/
 	$counter = $counter + 1;
 	?>
 <?php endforeach;?>
