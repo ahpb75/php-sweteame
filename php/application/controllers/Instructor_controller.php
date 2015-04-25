@@ -3,10 +3,18 @@ class Instructor_controller extends CI_controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('instructor_model');
+		$options=array();
 	}
 
 	public function index(){
-		
+		$courses=$this->get_courses();
+		foreach ($courses as $row){
+			foreach($row as $key=>$value){
+				array_push($options,$value);
+			}
+		}
+		$this->load->view('header_instructor');
+		$this->load->view('instructor_home',$options);
 	}
 
 	/*public function add_note(){
@@ -38,12 +46,12 @@ class Instructor_controller extends CI_controller{
     }
 
 	public function get_app(){
-		$course=$this->input->post('course');
+		$key=$this->input->post('dropdown_menu');
 		if($course==FALSE){
 			$this->load->view('error');
 		}
 		else{
-			$data['userinfo']=$this->instructor_model->get_course_applicants($course);
+			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
 		}
 		$this->load->view('instructor_view_form1',$data);
 	}
