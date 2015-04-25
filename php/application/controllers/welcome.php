@@ -21,6 +21,7 @@ class Welcome extends CI_Controller {
 	{
 		parent::__construct();
 		// $this->load->model('user_model');
+		$this->load->library('../controllers/Instructor_controller');
 	}
 	public function index()
 	{
@@ -35,7 +36,7 @@ class Welcome extends CI_Controller {
 				//$data=$this->get_courses();
 				//$this->announcement();
 				//$this->load->view('instructor_home',$data);
-				$this->load->controller('Instructor_controller');
+				$this->Instructor_controller->index();
 				}
 			else if($this->session->userdata('user_type') == '0')
 			{//admin
