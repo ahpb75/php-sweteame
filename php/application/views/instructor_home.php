@@ -110,7 +110,7 @@
                 }
                 echo "</select>";
                 ?>
-		<button onclick="location.href='Instructor_controller/show_app';" id="applicant_button">View Applicants</button>
+		<button onclick="location.href='Instructor_controller/get_app';" id="applicant_button">View Applicants</button>
             </div>
 
                 <!--
