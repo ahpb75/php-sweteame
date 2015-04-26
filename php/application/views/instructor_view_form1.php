@@ -37,7 +37,7 @@
 	if ($counter%2 == 0)
 	{
 	echo "<tr>";
-	echo form_open('Admin_controller/view_form2');
+	echo form_open('Instructor_controller/view_form2');
 	echo "<td>".$item."</td>";
 	echo form_hidden('username',$item);
 	$data = array(
