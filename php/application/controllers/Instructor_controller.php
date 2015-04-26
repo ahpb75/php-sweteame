@@ -63,6 +63,7 @@ class Instructor_controller extends CI_controller{
 		}*/
 		$selection=$this->input->post('course');
 		if($selection==FALSE){
+			$this->load->view('error');
 			echo "sigh";
 		}
 		else{
