@@ -77,8 +77,8 @@
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
-                            <h3>Search Applicants</h3>
-                            <p>This is where you can search for a specific applicant</p>
+                            <h3>Search Applicants By Name</h3>
+                            <p>This is where you can search for an applicant</p>
                             <p>
                                 <a href="<?php echo site_url("Instructor_controller/loadpage");?>" class="btn btn-primary">View</a>
                             </p>
