@@ -16,6 +16,7 @@ class instructor_model extends CI_model{
         	foreach ($query->result() as $key => $value) {
             		array_push($applicant,$value->username);
             		array_push($applicant,$value->comment);
+			array_push($applicant,$value->courseID);
 		}
 		return $applicant;
 	}
@@ -53,6 +54,24 @@ class instructor_model extends CI_model{
         }
         return $applicant;
     }
+
+	function view_form2()
+    {
+	$sql="SELECT * FROM Application WHERE username=? AND courseID=?";
+	$query=$this->db->query($sql,array('username'=>$this->input->post('username'), 'course'=>$this->input->post('course')));
+        //$query = $this->db->get_where('Application',array('username' => $this->input->post('username')));
+        $application = array();
+        $empty = "";
+        if ($query->num_rows()>0)
+        {
+            foreach ($query->result() as $value)
+            	{
+                	array_push($application,$value);
+            	}
+        	return $application;
+        	}
+        	return $empty;
+	}
 
     function view_comment()
     {

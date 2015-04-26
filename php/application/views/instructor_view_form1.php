@@ -34,12 +34,13 @@
 	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
 <?php 
-	if ($counter%2 == 0)
+	if ($counter%3 == 0)
 	{
 	echo "<tr>";
 	echo form_open('Instructor_controller/view_form2');
 	echo "<td>".$item."</td>";
 	echo form_hidden('username',$item);
+	echo form_hidden('courseID',$item);
 	$data = array(
 		'name' => 'submit',
 		'value' => 'View this Applicant',
