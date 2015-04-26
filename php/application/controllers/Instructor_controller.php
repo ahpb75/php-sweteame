@@ -62,14 +62,18 @@ class Instructor_controller extends CI_controller{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
 		}*/
 		$selection=$this->input->post('course');
-		if($selection==FALSE){
+		$data['selection'] = $selection;
+
+		$pass = $this->load->instructor_model->($selection);
+		$this->load->view('instructor_view_form1', $pass);
+		/*if($selection==FALSE){
 			$this->load->view('error');
 			echo $selection;
 		}
 		else{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
 		}
-		$this->load->view('instructor_view_form1',$data);
+		$this->load->view('instructor_view_form1',$data);*/
 	}
 
 	public function view_form1()
