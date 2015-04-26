@@ -99,7 +99,7 @@
                 <?php
 		$data=array('selection');
                   echo form_open('Instructor_controller/get_app',$data);
-               echo"<span> Choose an Applicant to view their Application</span> ";
+               echo"<span> Choose a course to view it's applicants </span> ";
                 echo " <select name = 'course'> ";
                 foreach ($courses as $row){
                     foreach($row as $key => $value){
@@ -118,7 +118,6 @@
 		$data['selection']=$this->input->post('course');
                 echo form_submit('course_submit','submit');
                 ?>
-		<button onclick="location.href=<?php //echo "siteurl('Instructor_controller/get_app')";?>" id="applicant_button">View Applicants</button>
             </div>
 
                 <!--
