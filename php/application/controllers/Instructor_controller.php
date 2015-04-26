@@ -14,7 +14,7 @@ class Instructor_controller extends CI_controller{
 		$courses=$this->get_courses();
                 foreach ($courses as $row){
                         foreach($row as $key=>$value){
-                                array_push($options,$value);
+                                array_push($options,$value->courseID);
                         }
                 }
                 $this->load->view('header_instructor');
