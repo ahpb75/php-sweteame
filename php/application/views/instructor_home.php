@@ -108,7 +108,7 @@
 
 
 <!--Make a button to call loadpage(), loadpage will then call the instructor_choose view and also pass it the array for your drop down box-->
-                <?php
+           <!--     <?php/*
 		$data=array('selection');
                   echo form_open('Instructor_controller/get_app',$data);
                echo"<span> Choose a course to view it's applicants </span> ";
@@ -129,7 +129,7 @@
                 echo "</select>";
 		$data['selection']=$this->input->post('course');
                 echo form_submit('course_submit','submit');
-                ?>
+            */    ?> -->
             </div>
 
                 <!--
