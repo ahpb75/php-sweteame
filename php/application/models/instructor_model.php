@@ -6,10 +6,18 @@ class instructor_model extends CI_model{
 	}	
 
 	public function get_course_applicants($course){
+		/*
 		$sql='SELECT * FROM Application WHERE courseID=? ORDER BY Last_Name';
 		$query=$this->db->query($sql, $course);
 		/*returns an array containing the whole row, should have all of the applicants application data in the order that the db is holding it.*/
-		return $query->result();
+		//return $query->result();
+		$query = $this->db->get_where('Application',array('courseID' => $course));
+        	$applicant = array();
+        	foreach ($query->result() as $key => $value) {
+            		array_push($applicant,$value->username);
+            		array_push($applicant,$value->comment);
+		}
+		return $applicant;
 	}
 
 	public function add_note($input){
