@@ -11,14 +11,15 @@ class Instructor_controller extends CI_controller{
 	}
 	
 	public function loadpage(){
-		$courses=$this->get_courses();
-                foreach ($courses as $row){
+		$box=$this->get_courses();
+		$data=array('options');
+                foreach ($box['courses'] as $row){
                         foreach($row as $key=>$value){
-                                array_push($options,$value);
+                                array_push($data['options'],$value);
                         }
-                }
+                 }
                 $this->load->view('header_instructor');
-                $this->load->view('instructor_choose',$options);
+                $this->load->view('instructor_choose',$data);
 	}
 
 	/*public function add_note(){
