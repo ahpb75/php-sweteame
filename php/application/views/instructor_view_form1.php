@@ -36,9 +36,9 @@
 <?php 
 	if ($counter%2 == 0)
 	{
-	$stuff=array('username'=>$item->username,'courseID'=>$item->courseID);
+	//$stuff=array('username'=>$item->username,'courseID'=>$item->courseID);
 	echo "<tr>";
-	echo form_open('Instructor_controller/view_form2',$stuff);
+	echo form_open('Instructor_controller/view_form2');
 	echo "<td>".$item."</td>";
 	echo form_hidden('username',$item);
 	//echo form_hidden('courseID',$item);
