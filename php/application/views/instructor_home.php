@@ -95,10 +95,10 @@
                 $data['selection']=$this->input->post('course');
                 echo form_submit('course_submit','submit');
                 ?>
-
+                        <!--
                             <p>
                                 <a href="<?php echo site_url("Instructor_controller/loadpage");?>" class="btn btn-primary">View</a>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
