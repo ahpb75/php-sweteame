@@ -69,7 +69,7 @@ class Instructor_controller extends CI_controller{
 			$this->load->view('header_instructor');
 			$data['userinfo']=$this->instructor_model->get_course_applicants($selection);
 		}
-		echo "".$selection;
+		echo "there she be ".$selection;
 		$this->load->view('instructor_view_form1',$data);
 	}
 
