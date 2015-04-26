@@ -12,11 +12,11 @@ class Instructor_controller extends CI_controller{
 	
 	public function loadpage(){
 		$courses=$this->get_courses();
-                //foreach ($courses as $row){
-                //        foreach($row as $key=>$value){
-                //                array_push($options,$value->courseID);
-                //        }
-                // }
+                foreach ($data['courses'] as $row){
+                        foreach($row as $key=>$value){
+                                array_push($options,$value);
+                        }
+                 }
                 $this->load->view('header_instructor');
                 $this->load->view('instructor_choose',$options);
 	}
