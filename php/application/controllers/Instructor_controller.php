@@ -12,12 +12,15 @@ class Instructor_controller extends CI_controller{
 	
 	public function loadpage(){
 		$box=$this->get_courses();
-		$data=array('options');
+		$data=array();
+		$counter=0;
                 foreach ($box['courses'] as $row){
                         foreach($row as $key=>$value){
-                                array_push($data['options'],$value);
+                                array_push($options["".$counter],$value);
+				$counter++;
                         }
-                 }
+                }
+		array_push($data,$options);
                 $this->load->view('header_instructor');
                 $this->load->view('instructor_choose',$data);
 	}
