@@ -16,7 +16,7 @@ class instructor_model extends CI_model{
         	foreach ($query->result() as $key => $value) {
             		array_push($applicant,$value->username);
             		array_push($applicant,$value->comment);
-			array_push($applicant,$value->courseID);
+			//array_push($applicant,$value->courseID);
 		}
 		return $applicant;
 	}

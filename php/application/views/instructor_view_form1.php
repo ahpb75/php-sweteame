@@ -34,7 +34,7 @@
 	</tr>
 <?php $counter = 0;foreach ($userinfo as $item):?>
 <?php 
-	if ($counter%3 == 0)
+	if ($counter%2 == 0)
 	{
 	$stuff=array('username'=>$item->username,'courseID'=>$item->courseID);
 	echo "<tr>";
