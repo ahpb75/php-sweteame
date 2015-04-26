@@ -6,8 +6,8 @@ class instructor_model extends CI_model{
 	}	
 
 	public function get_course_applicants($course){
-		$sql='SELECT * FROM Application WHERE courseID=? LIMIT 1';
-		$query=$this->db->query($sql, $app);
+		$sql='SELECT * FROM Application WHERE courseID=? ORDER BY lname';
+		$query=$this->db->query($sql, $course);
 		/*returns an array containing the whole row, should have all of the applicants application data in the order that the db is holding it.*/
 		return $query->result();
 	}
