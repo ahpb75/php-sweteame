@@ -54,8 +54,14 @@ class Instructor_controller extends CI_controller{
     }
 
 	public function get_app(){
-		$key=$this->input->post('dropdown_menu');
+		/*$key=$this->input->post('dropdown_menu');
 		if($course==FALSE){
+			$this->load->view('error');
+		}
+		else{
+			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
+		}*/
+		if($selection==FALSE){
 			$this->load->view('error');
 		}
 		else{
