@@ -45,6 +45,7 @@ class Instructor_controller extends CI_controller{
 		$this->load->view('error');
 	}
 	else{
+
         	$this->load->view('instructor_view_form1', $data);
 	}
         //$this->load->view('footer');
@@ -64,7 +65,6 @@ class Instructor_controller extends CI_controller{
 		$selection=$this->input->post('course');
 		if($selection==FALSE){
 			$this->load->view('error');
-			echo $selection;
 		}
 		else{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($selection);
