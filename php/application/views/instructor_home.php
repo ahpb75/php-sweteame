@@ -77,8 +77,25 @@
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
-                            <h3>Search Applicants By Name</h3>
+                            <h3>Search Applicants By Course</h3>
                             <p>This is where you can search for an applicant</p>
+                           
+                            <?php
+                    $data=array('selection');
+                  echo form_open('Instructor_controller/get_app',$data);
+                echo"<span> Choose a course to view it's applicants </span> ";
+                echo " <select name = 'course'> ";
+                foreach ($courses as $row){
+                    foreach($row as $key => $value){
+                        echo "<option value =".$value.">".$value."</option>";
+                    }
+
+                }
+                echo "</select>";
+                $data['selection']=$this->input->post('course');
+                echo form_submit('course_submit','submit');
+                ?>
+
                             <p>
                                 <a href="<?php echo site_url("Instructor_controller/loadpage");?>" class="btn btn-primary">View</a>
                             </p>
