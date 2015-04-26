@@ -20,6 +20,17 @@ class instructor_model extends CI_model{
 		}
 		return $applicant;
 	}
+	
+	public function get_name_applicant($name){
+		 $query = $this->db->get_where('Application',array('username' => $course));
+                $applicant = array();
+                foreach ($query->result() as $key => $value) {
+                        array_push($applicant,$value->username);
+                        array_push($applicant,$value->comment);
+                        //array_push($applicant,$value->courseID);
+                }
+                return $applicant;
+	}
 
 	public function add_note($input){
 		$sql='INSERT INTO Application (note) VALUES (?) WHERE username=?';
@@ -39,6 +50,12 @@ class instructor_model extends CI_model{
 
 	public function get_courses(){
 		$sql='SELECT courseID FROM Course ORDER BY courseID';
+		$data=$this->db->query($sql);
+		return $data->result();
+	}
+
+	public function get_names(){
+		$sql='SELECT username, Last_Name, First_Name FROM User ORDER BY Last_Name';
 		$data=$this->db->query($sql);
 		return $data->result();
 	}

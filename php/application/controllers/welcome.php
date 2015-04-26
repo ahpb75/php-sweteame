@@ -34,7 +34,8 @@ class Welcome extends CI_Controller {
 				//$this->load->view('header'); //want to load standard header before instructor view-chantal
 				//needed names from the db before we called the view in order to populate the drop down box
 				$this->load->view('header_instructor');
-				$data=$this->get_courses();
+				$data['courses']=$this->get_courses();
+				$data['names']=$this->get_names();
 				$this->announcement();
 				$this->load->view('instructor_home',$data);
 				//$this->Instructor_controller->loadpage();
@@ -182,10 +183,18 @@ class Welcome extends CI_Controller {
 	//getting list of names for all applicants for instructor_view drop down box. Needs to be in here since we're calling the view in this index.
 	public function get_courses(){
 		$this->load->model('instructor_model');
-		$data['courses']=$this->instructor_model->get_courses();
+		$data=$this->instructor_model->get_courses();
 		return $data;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
 	}
+
+	public function get_names(){
+                $this->load->model('instructor_model');
+                $data=$this->instructor_model->get_names();
+                return $data;
+                /*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
+        }	
+
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

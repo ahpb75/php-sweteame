@@ -74,6 +74,21 @@ class Instructor_controller extends CI_controller{
 		}
 		$this->load->view('instructor_view_form1',$data);
 	}
+	
+	public function get_app_byname(){
+		$this->load->model('instructor_model');
+		$selection=$this->input->post('username');
+		if($selection==FALSE){
+                        $this->load->view('error');
+                }
+                else{
+                        $data['userinfo']=$this->instructor_model->get_name_applicant($selection);
+                        if(is_null($data['userinfo'])){
+                                $this->load->view('error');
+                        }
+                }
+                $this->load->view('instructor_view_form1',$data);
+	}
 
 	public function view_form1()
 	{
@@ -125,6 +140,12 @@ class Instructor_controller extends CI_controller{
 		$data['courses']=$this->instructor_model->get_courses();
 		return $data;
 		/*$names is NOT an associative array, grab each row then use $row->lname or $row->fname*/
+	}
+	
+	public function get_names(){
+		$this->load->model('instructor_model');
+		$data['names']=$this->instructor_model->get_names();
+		return $data;
 	}
 }
 ?>
