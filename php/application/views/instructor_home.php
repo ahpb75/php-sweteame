@@ -96,14 +96,11 @@
 
 
 <!--Make a button to call loadpage(), loadpage will then call the instructor_choose view and also pass it the array for your drop down box-->
-               
-                <form method="post" accept-charset="utf-8" action="<?php echo site_url("Instructor_controller/get_app"); ?>">
-                <?php  
-		//$data=array('selection');
-                 // echo form_open('Instructor_controller/get_app');
-              // echo"<span> Choose an Applicant to view their Application</span> ";
-               
-                echo " <select name = 'course' onchange='this.form.submit()'> ";
+                <?php
+		$data=array('selection');
+                  echo form_open('Instructor_controller/get_app',$data);
+               echo"<span> Choose an Applicant to view their Application</span> ";
+                echo " <select name = 'course'> ";
                 foreach ($courses as $row){
                     foreach($row as $key => $value){
                         echo "<option value =".$value.">".$value."</option>";
@@ -118,8 +115,7 @@
                     // echo "<br>";
                 }
                 echo "</select>";
-                echo"</form>";
-		//$data['selection']=$this->input->post('course');
+		$data['selection']=$this->input->post('course');
                 echo form_submit('course_submit','submit');
                 ?>
 		<button onclick="location.href=<?php //echo "siteurl('Instructor_controller/get_app')";?>" id="applicant_button">View Applicants</button>

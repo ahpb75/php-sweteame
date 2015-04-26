@@ -45,6 +45,7 @@ class Instructor_controller extends CI_controller{
 		$this->load->view('error');
 	}
 	else{
+
         	$this->load->view('instructor_view_form1', $data);
 	}
         //$this->load->view('footer');
@@ -60,22 +61,13 @@ class Instructor_controller extends CI_controller{
 		else{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
 		}*/
-		$selection=$this->input->post('course');
-		$data['selection'] = $selection;
-
-		$pass = $this->load->instructor_model->($selection);
-		$this->load->view('instructor_view_form1', $pass);
-		/*if($selection==FALSE){
+		if($selection==FALSE){
 			$this->load->view('error');
-			echo $selection;
 		}
 		else{
-			$this->load->view('header_instructor');
-			$data['userinfo']=$this->instructor_model->get_course_applicants($selection);
+			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
 		}
-		echo "there she be ".$selection;
-		$this->load->view('instructor_view_form1',$data);*/
-
+		$this->load->view('instructor_view_form1',$data);
 	}
 
 	public function view_form1()
