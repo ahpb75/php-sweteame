@@ -20,7 +20,7 @@
  $this->load->helper('form');
 echo form_open('Instructor_controller/getapp');
 echo form_dropdown('dropdown_menu', $options);
-echo form_submit('submit','course_submit');
+echo form_submit('course_submit','submit');
  ?>  
 
 
