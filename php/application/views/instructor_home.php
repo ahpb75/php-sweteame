@@ -78,7 +78,7 @@
                         <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
                             <h3>Search Applicants</h3>
-                            <p>This is where you can search for an applicant by the class you are assigned</p>
+                            <p>This is where you can search for a specific applicant</p>
                             <p>
                                 <a href="<?php echo site_url("Instructor_controller/loadpage");?>" class="btn btn-primary">View</a>
                             </p>
