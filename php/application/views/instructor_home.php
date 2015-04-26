@@ -46,6 +46,20 @@
 <section class="success" style="color:black;">
 	<div class="container">
 
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <p> This is where you can view TA applicants, post comments on former TA's, and know which TA's have been assigned to your course.</p>
+            <p><a class="btn btn-primary btn-large" href= "<?php echo site_url("Instructor_controller/view_form1");?>">View All Current Applicants</a>
+            </p>
+            <br>
+            <br>
+            <hr>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Instructor Dashboard</h3>
+                </div>
+            </div>
 
             <div class="row text-center">
 
