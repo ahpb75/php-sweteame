@@ -96,8 +96,8 @@
 
 
 <!--Make a button to call loadpage(), loadpage will then call the instructor_choose view and also pass it the array for your drop down box-->
-                <<?php
-                /*echo"<span> Choose an Applicant to view their Application</span> ";
+                <!--<?php
+              /*  echo"<span> Choose an Applicant to view their Application</span> ";
                 echo " <select name = 'course'> ";
                 foreach ($courses as $row){
                     foreach($row as $key => $value){
@@ -108,9 +108,9 @@
                     // echo "<br>";
                     // echo "<br>";
                 }
-                echo "</select>"; */
+                echo "</select>";*/
                 ?>
-		<button onclick="location.href=<?php echo "siteurl('Instructor_controller/get_app')";?>" id="applicant_button">View Applicants</button>
+		<button onclick="location.href=<?php //echo "siteurl('Instructor_controller/get_app')";?>" id="applicant_button">View Applicants</button>
             </div>
 
                 <!--
@@ -130,9 +130,9 @@
                 </script> -->
 
 
-                <hr />
+               <!-- <hr />
         </header>
-    </section>
+    </section> !-->
 
             <footer class ="text-center">
             <div class="footer-above row">
