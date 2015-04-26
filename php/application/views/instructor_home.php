@@ -83,9 +83,9 @@
                         <img src="../../bootstrap/img/search.png" alt="" width="262px" height="203px">
                         <div class="caption">
                             <h3>Search Applicants</h3>
-                            <p>This is where you can search for an applicant</p>
+                            <p>This is where you can search for an applicant by the class you are assigned</p>
                             <p>
-                                <a href="#" class="btn btn-primary">View</a>
+                                <a href="<?php echo site_url("Instructor_controller/loadpage");?>" class="btn btn-primary">View</a>
                             </p>
                         </div>
                     </div>
@@ -114,10 +114,7 @@
             </div>
 
                 <!--
-                <h1> Computer Science Department </h1>
-                <h2> TA Selection 2015 </h2>
-                <p> If you would like to view the applicants</p>
->>>>>>> 30ad8c8cebc4c56cae032e523a36e99fb43914d5
+
 
                 <button onclick="location.href ='Instructor_controller/show_app';" id = "applicant_button"> View Applicants</button>
 
