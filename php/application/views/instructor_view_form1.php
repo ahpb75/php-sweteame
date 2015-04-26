@@ -36,11 +36,12 @@
 <?php 
 	if ($counter%3 == 0)
 	{
+	$stuff=array('username'=>$item->username,'courseID'=>$item->courseID);
 	echo "<tr>";
-	echo form_open('Instructor_controller/view_form2');
+	echo form_open('Instructor_controller/view_form2',$stuff);
 	echo "<td>".$item."</td>";
 	echo form_hidden('username',$item);
-	echo form_hidden('courseID',$item);
+	//echo form_hidden('courseID',$item);
 	$data = array(
 		'name' => 'submit',
 		'value' => 'View this Applicant',
