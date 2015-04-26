@@ -21,8 +21,8 @@ class Form_controller extends CI_Controller {
         else
         {
 
-            $this->form_validation->set_rules('fname', 'First Name', 'required|xss_clean');
-            $this->form_validation->set_rules('lname', 'Last Name', 'required|xss_clean');
+            $this->form_validation->set_rules('First_Name', 'First Name', 'required|xss_clean');
+            $this->form_validation->set_rules('Last_Name', 'Last Name', 'required|xss_clean');
             $this->form_validation->set_rules('studentID', 'Student ID', 'required|xss_clean');
             $this->form_validation->set_rules('position', 'TA or PLA', 'required|max_length[5]');
             $this->form_validation->set_rules('GPA', 'GPA', 'required|xss_clean|less_than[4.0001]');
@@ -50,8 +50,8 @@ class Form_controller extends CI_Controller {
                 // build array for the model
 
                 $form_data = array(
-                    'fname' => @$this->input->post('First_Name'),
-                    'lname' => @$this->input->post('Last_Name'),
+                    'First_Name' => @$this->input->post('First_Name'),
+                    'Last_Name' => @$this->input->post('Last_Name'),
                     'studentID' => @$this->input->post('studentID'),
                     'position' => @$this->input->post('position'),
                     'GPA' => @$this->input->post('GPA'),

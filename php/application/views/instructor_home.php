@@ -138,18 +138,20 @@
                 </script> -->
 
 
-               <!-- <hr />
+               <hr />
         </header>
-    </section> !-->
+    </section> 
 
-            <footer class ="text-center">
+   <footer class ="text-center">
             <div class="footer-above row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Team E | TA Web Application 2015</p>
                 </div>
             </div>
         </footer>
+    
 </div>
+     
 
 
 

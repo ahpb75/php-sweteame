@@ -61,16 +61,16 @@ echo form_open('Form_controller', $attributes); ?>
 
 
 <div class="form-group">
-    <span class="required"><?php echo form_error('fname'); ?></span>
-    <label for="fname">First Name <span class="required">*</span></label>
-    <input id="fname" type="text" name="fname" class="form-control" placeholder="John" value="<?php echo set_value('fname'); ?>"  />
+    <span class="required"><?php echo form_error('First_Name'); ?></span>
+    <label for="First_Name">First Name <span class="required">*</span></label>
+    <input id="First_Name" type="text" name="First_Name" class="form-control" placeholder="John" value="<?php echo set_value('fname'); ?>"  />
     
 </div>
 
 <div class="form-group">
-     <span class="required"><?php echo form_error('lname'); ?></span>
-    <label for="lname">Last Name <span class="required">*</span></label>
-    <input id="lname" type="text" name="lname" class="form-control" placeholder="Doe" value="<?php echo set_value('lname'); ?>"  />
+     <span class="required"><?php echo form_error('Last_Name'); ?></span>
+    <label for="Last_Name">Last Name <span class="required">*</span></label>
+    <input id="Last_Name" type="text" name="Last_Name" class="form-control" placeholder="Doe" value="<?php echo set_value('lname'); ?>"  />
     
 </div>
 
