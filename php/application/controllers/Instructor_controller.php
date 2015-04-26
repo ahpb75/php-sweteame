@@ -64,7 +64,7 @@ class Instructor_controller extends CI_controller{
 		$selection=$this->input->post('course');
 		if($selection==FALSE){
 			$this->load->view('error');
-			echo "sigh";
+			echo $selection;
 		}
 		else{
 			$data['userinfo']=$this->instructor_model->get_course_applicants($options[$key]);
