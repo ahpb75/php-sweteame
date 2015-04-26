@@ -6,16 +6,22 @@
 <body>
 
 <h1> Computer Science Department </h1>
-<h2> Applicants </h2>
+<h2> Courses </h2>
 
 
-<span> Choose an Applicant to view their Application</span> 
+<span> Choose course to see Applicants</span> 
 <select> 
 	<option value = "first applicant"> First Applicant </option>
 
 </select>
 
-   
+ <?php
+
+ $this->load->helper('form');
+echo form_open('Instructor_controller/getapp');
+echo form_dropdown('dropdown_menu', $options);
+echo form_submit('course_submit','course_submit');
+ ?>  
 
 
 
