@@ -82,6 +82,15 @@ class Instructor_controller extends CI_controller{
     		$this->load->view('instructor_view_form1',$data);
 
 	}
+	
+	public function view_form2()
+    	{
+	$this->load->model('admin_model');
+        $data['application'] = $this->admin_model->view_form2();
+        $this->load->view('header_instructor');
+        $this->load->view('admin_view_form2',$data);
+        // $this->load->view('test');
+   	}
 
 	public function make_comment()
 	{
