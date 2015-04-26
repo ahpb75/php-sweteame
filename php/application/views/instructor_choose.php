@@ -18,7 +18,7 @@
  <?php
 
 
- $this->load->helper('dropdown');
+// $this->load->helper('dropdown');
  $this->load->helper('form');
 echo form_open('Instructor_controller/getapp');
 echo form_dropdown('dropdown_menu', $options, '0');
