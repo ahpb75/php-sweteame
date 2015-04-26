@@ -58,8 +58,8 @@ class instructor_model extends CI_model{
 	function view_form2()
     {
 	$sql="SELECT * FROM Application WHERE username=? AND courseID=?";
-	$query=$this->db->query($sql,array('username'=>$this->input->post('username'), 'course'=>$this->input->post('course')));
-        //$query = $this->db->get_where('Application',array('username' => $this->input->post('username')));
+	//$query=$this->db->query($sql,array('username'=>$this->input->post('username'), 'course'=>$this->input->post('course')));
+        $query = $this->db->get_where('Application',array('username' => $this->input->post('username')));
         $application = array();
         $empty = "";
         if ($query->num_rows()>0)
