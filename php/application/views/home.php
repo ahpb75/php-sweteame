@@ -122,19 +122,19 @@
                     <h3>Around the Web</h3>
                     <ul class="list-inline">
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/Mizzou?ref=br_rs" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            <a href="https://plus.google.com/107400514289737620756/posts" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            <a href="https://twitter.com/mizzou" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/edu/university-of-missouri-columbia-18720" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            <a href="http://www.mutigers.com/" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
                         </li>
                     </ul>
                 </div>

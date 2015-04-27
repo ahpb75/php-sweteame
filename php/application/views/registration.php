@@ -36,7 +36,7 @@
 					<br>
 					<input type="radio" name="permissions" value="1" /> Staff 
 					<br>
-					<input type="submit" name="submit" value="submit" class="btn btn-lg btn-primary btn-block" />
+					<input type="submit" name="submit" value="Submit" class="btn btn-lg btn-primary btn-block" />
 					<?php echo form_close();?>
 
                 <div class="form-links">
