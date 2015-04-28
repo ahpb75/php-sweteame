@@ -100,7 +100,7 @@
                 <P>The purpose of this software is to make the process where accepted applicants can apply to  become a TA or PLA easier and more convenient.  By adapting the old paper and pen process to a digital version of itself, our software will also save paper and streamline the managing of TA/PLA applications.</P>
             </div>
             <div class="col-lg-4">
-                <p>This improvement will make it easier for instructors to make comments on TA/PLA applicants and converse with other instructors about whether a TA/PLA is good or bad.   </p>
+                <p>This improvement will make it easier for instructors to make comments on TA/PLA applicants and converse with other instructors on their performance. </p>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
             </div>
         </div>
@@ -141,7 +141,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Contact Us</h3>
                     <p>573-882-2121</p>
-                    <p>Visit the <a href="http://missouri.edu/">University of Columbia-Missouri</a> homepage.</p>
+                    <p>Visit the <a href="http://missouri.edu/"><font size ="6">University of Missouri-Columbia</font></a> homepage.</p>
                 </div>
             </div>
         </div>

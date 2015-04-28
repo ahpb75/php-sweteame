@@ -98,8 +98,8 @@
                 </div>
            <div class="row">
             <hr>
-            <p> This is where you can apply for TA or PLA position, and view information on the application process.</p>
-            <p>You have been assigned to: <?php echo "No assigned course, yet"; ?></p>
+            <p> This is where you can apply for TA or PLA position and view information on the application process.</p>
+            <p>You have been assigned to: <?php echo "No assigned course"; ?></p>
         </div>
             <br>
             <hr>
@@ -120,7 +120,7 @@
                     <div class="thumbnail">
                         <img src="../../bootstrap/img/applicant-icon.png" alt="">
                         <div class="caption">
-                            <h3>Apply for a TA/PLA postion</h3>
+                            <h3>Apply for a TA/PLA position</h3>
                             <p>Submit an TA/PLA application for review.</p>
                             <p>
                                 <a href="<?php echo site_url("Form_controller");?>"class="btn btn-primary">Apply</a>
